@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/plantilla/plantilla.xhtml"
+>
+    <ui:define name="titulo">
+        Administracion de Atributos de Monstruos
+    </ui:define>
+
+    <ui:define name="contenido">
+        <div class="ui-g ui-fluid">
+            <div class="ui-g-12">
+                <div class="card card-w-title">
+                    <h1>Listado de atributos de monstruos</h1>
+                    <h:form>
+                        <p:growl showDetail="true">
+                            <p:autoUpdate/>
+                        </p:growl>
+                        <p:dataTable id="dtListadoAtributos"
+                                     var="atributo"
+                                     value="#{listadoAtributosMonstruosWebBean.atributosMonstruosModel}"
+                                     reflow="true"
+                                     paginator="true"
+                                     rows="10"
+                                     emptyMessage="No se han encontrado datos"
+                                     filteredValue="#{listadoAtributosMonstruosWebBean.atributosMounstrosFilterModel}"
+                                     widgetVar="wdtListadoAtributos"
+                        >
+                            <f:facet name="header">
+                                <p:outputPanel styleClass="headerContenedor">
+                                    <p:outputPanel styleClass="headerLeft" style="width: 35%;"/>
+                                    <p:outputPanel style="width: 30%;">
+                                        <p:commandButton title="Añadir Atributos de Monstruos" icon="ui-icon-plus"
+                                                         action="atributosmonstruosgestion"
+                                                         ajax="false" styleClass="secondary-btn"/>
+                                    </p:outputPanel>
+                                    <p:outputPanel style="width: 35%;">
+                                        <p:inputText id="globalFilter"
+                                                     placeholder="Buscar..."
+                                                     onkeyup="PF('wdtListadoAtributos').filter()"/>
+                                    </p:outputPanel>
+                                </p:outputPanel>
+                            </f:facet>
+                            <p:column headerText="Atributo" filterBy="#{atributo.nombre}" filterMatchMode="contains"
+                                      filterStyle="display: none;">
+                                <h:outputText value="#{atributo.nombre}"/>
+                            </p:column>
+                            <p:column headerText="Acciones">
+                                <p:commandButton title="Editar atributo" icon="ui-icon-edit"
+                                                 action="#{listadoAtributosMonstruosWebBean.enviarAtributo}">
+                                    <f:setPropertyActionListener value="#{atributo}"
+                                                                 target="#{listadoAtributosMonstruosWebBean.atributoMonstruoSeleccionado}"/>
+                                </p:commandButton>
+                                <p:commandButton title="Eliminar Atributo" icon="ui-icon-remove"
+                                                 action="#{listadoAtributosMonstruosWebBean.eliminarAtributo}"
+                                                 styleClass="secondary-btn">
+                                    <f:setPropertyActionListener value="#{atributo}"
+                                                                 target="#{listadoAtributosMonstruosWebBean.atributoMonstruoSeleccionado}"/>
+                                    <p:confirm header="Eliminacion de atributos" icon="ui-icon-warning"
+                                               message="¿Estas seguro de eliminar el atributo #{atributo.nombre}?"/>
+                                </p:commandButton>
+                            </p:column>
+                        </p:dataTable>
+                        <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+                            <p:commandButton value="Si"
+                                             styleClass="ui-confirmdialog-yes"
+                                             icon="ui-icon-check"
+                                             type="submit"/>
+                            <p:commandButton value="No"
+                                             styleClass="ui-confirmdialog-no"
+                                             icon="ui-icon-close"
+                                             type="button"/>
+                        </p:confirmDialog>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>

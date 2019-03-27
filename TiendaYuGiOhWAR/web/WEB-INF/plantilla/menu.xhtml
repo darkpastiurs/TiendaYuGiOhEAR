@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:ps="http://primefaces.org/serenity" xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <div class="layout-sidebar layout-sidebar-dark">
+        <!-- Logo de aplicacion -->
+        <div class="sidebar-logo">
+            <p:link outcome="index">
+                <p:graphicImage name="images/logo-slim.png" library="serenity-layout"/>
+                <span class="app-name">Yu-Gi-Oh!</span>
+            </p:link>
+            <a href="#" class="sidebar-anchor" title="Anclar menu"/>
+        </div>
+
+        <!-- Menu Principal -->
+        <div class="nano">
+            <div class="nano-content sidebar-scroll-content">
+                <div class="layout-menu-container">
+                    <h:form>
+                        <ps:menu model="#{sessionWebBean.menuModel}" />
+                    </h:form>
+                </div>
+            </div>
+        </div>
+    </div>
+</ui:composition>

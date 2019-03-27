@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/TiendaYuGiOhEAR.iml" filepath="$PROJECT_DIR$/TiendaYuGiOhEAR.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TiendaYuGiOhEJB/TiendaYuGiOhEJB.iml" filepath="$PROJECT_DIR$/TiendaYuGiOhEJB/TiendaYuGiOhEJB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TiendaYuGiOhWAR/TiendaYuGiOhWAR.iml" filepath="$PROJECT_DIR$/TiendaYuGiOhWAR/TiendaYuGiOhWAR.iml" />
+    </modules>
+  </component>
+</project>

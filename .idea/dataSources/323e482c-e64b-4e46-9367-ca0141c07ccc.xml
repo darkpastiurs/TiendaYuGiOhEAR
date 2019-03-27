@@ -1,0 +1,1736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="TIenda">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.14">
+    <root id="1">
+      <ServerVersion>10.4</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="agencia_vuelo">
+      <ObjectId>61795</ObjectId>
+      <StateNumber>3971</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="3" parent="1" name="arbol_genealogico">
+      <ObjectId>62064</ObjectId>
+      <StateNumber>4164</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="4" parent="1" name="mail">
+      <ObjectId>43256</ObjectId>
+      <StateNumber>1868</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="5" parent="1" name="movieplex">
+      <ObjectId>25863</ObjectId>
+      <StateNumber>1331</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="6" parent="1" name="postgres">
+      <ObjectId>12938</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <StateNumber>554</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="7" parent="1" name="so_ventas">
+      <ObjectId>42497</ObjectId>
+      <StateNumber>1720</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="8" parent="1" name="tienda_yugioh">
+      <ObjectId>61328</ObjectId>
+      <StateNumber>3814</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>506</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+      <Relations>sequence|table|61343|61338|1
+sequence|table|61380|61376|1
+sequence|table|61386|61382|1
+sequence|table|61336|61332|1
+sequence|table|61352|61348|1
+sequence|table|61363|61359|1
+sequence|table|61369|61365|1
+sequence|table|61357|61354|1
+sequence|table|61374|61371|1
+sequence|table|61460|61457|1
+sequence|table|61417|61414|1
+sequence|table|61431|61427|1
+sequence|table|61412|61405|1
+sequence|table|61755|61757|1
+</Relations>
+    </database>
+    <database id="9" parent="1" name="unab_carga">
+      <ObjectId>25500</ObjectId>
+      <StateNumber>1160</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <role id="10" parent="1" name="jamesUser">
+      <ObjectId>43257</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="11" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="12" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="13" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="14" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="15" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="16" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="17" parent="8" name="cat">
+      <ObjectId>61329</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionTimestamp>2018-12-18.14:41:36.697</IntrospectionTimestamp>
+      <IntrospectionStateNumber>4142</IntrospectionStateNumber>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="18" parent="8" name="information_schema">
+      <ObjectId>12648</ObjectId>
+      <StateNumber>354</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="19" parent="8" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+      <StateNumber>351</StateNumber>
+      <Owner>postgres</Owner>
+      <Current>1</Current>
+    </schema>
+    <schema id="20" parent="8" name="pg_temp_1">
+      <ObjectId>11736</ObjectId>
+      <StateNumber>114</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="21" parent="8" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+      <StateNumber>1</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="22" parent="8" name="pg_toast_temp_1">
+      <ObjectId>11737</ObjectId>
+      <StateNumber>114</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="23" parent="8" name="sis">
+      <ObjectId>61330</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionTimestamp>2018-12-18.14:41:36.880</IntrospectionTimestamp>
+      <IntrospectionStateNumber>3919</IntrospectionStateNumber>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="24" parent="8" name="teo">
+      <ObjectId>61331</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionTimestamp>2018-12-18.14:41:36.970</IntrospectionTimestamp>
+      <IntrospectionStateNumber>4142</IntrospectionStateNumber>
+      <Visible>1</Visible>
+    </schema>
+    <access-method id="25" parent="8" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.bthandler</Handler>
+      <HandlerId>330</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="26" parent="8" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.hashhandler</Handler>
+      <HandlerId>331</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="27" parent="8" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.gisthandler</Handler>
+      <HandlerId>332</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="28" parent="8" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.ginhandler</Handler>
+      <HandlerId>333</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="29" parent="8" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.spghandler</Handler>
+      <HandlerId>334</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="30" parent="8" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.brinhandler</Handler>
+      <HandlerId>335</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <extension id="31" parent="8" name="plpgsql">
+      <ObjectId>12924</ObjectId>
+      <Comment>PL/pgSQL procedural language</Comment>
+      <StateNumber>506</StateNumber>
+      <Version>1.0</Version>
+      <SchemaName>pg_catalog</SchemaName>
+      <SchemaId>11</SchemaId>
+    </extension>
+    <sequence id="32" parent="17" name="atributos_mounstros_id_seq">
+      <ObjectId>61336</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3815</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="33" parent="17" name="categorias_cartas_id_seq">
+      <ObjectId>61343</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3815</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="34" parent="17" name="componentes_deck_id_seq">
+      <ObjectId>61352</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3815</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="35" parent="17" name="estados_cartas_id_seq">
+      <ObjectId>61357</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3815</StateNumber>
+      <SequenceIdentity>1..32767</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>smallint</DataType>
+    </sequence>
+    <sequence id="36" parent="17" name="flechas_links_id_seq">
+      <ObjectId>61363</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3815</StateNumber>
+      <SequenceIdentity>1..32767</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>smallint</DataType>
+    </sequence>
+    <sequence id="37" parent="17" name="limitaciones_cartas_id_seq">
+      <ObjectId>61369</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3815</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="38" parent="17" name="tipos_escalas_id_seq">
+      <ObjectId>61374</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3815</StateNumber>
+      <SequenceIdentity>1..32767</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>smallint</DataType>
+    </sequence>
+    <sequence id="39" parent="17" name="tipos_monstruos_id_seq">
+      <ObjectId>61380</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3815</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <table id="40" parent="17" name="atributos_mounstros">
+      <ObjectId>61332</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>4139</StateNumber>
+    </table>
+    <table id="41" parent="17" name="categorias_cartas">
+      <ObjectId>61338</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3851</StateNumber>
+    </table>
+    <table id="42" parent="17" name="componente_categoria_carta">
+      <ObjectId>61345</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3815</StateNumber>
+    </table>
+    <table id="43" parent="17" name="componentes_deck">
+      <ObjectId>61348</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3815</StateNumber>
+    </table>
+    <table id="44" parent="17" name="estados_cartas">
+      <ObjectId>61354</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3815</StateNumber>
+    </table>
+    <table id="45" parent="17" name="flechas_links">
+      <ObjectId>61359</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>4142</StateNumber>
+    </table>
+    <table id="46" parent="17" name="limitaciones_cartas">
+      <ObjectId>61365</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3815</StateNumber>
+    </table>
+    <table id="47" parent="17" name="tipos_escalas">
+      <ObjectId>61371</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>4139</StateNumber>
+    </table>
+    <table id="48" parent="17" name="tipos_monstruos">
+      <ObjectId>61376</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>4140</StateNumber>
+    </table>
+    <sequence id="49" parent="23" name="niveles_id_seq">
+      <ObjectId>61388</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3815</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="50" parent="23" name="menus_id_seq">
+      <ObjectId>61386</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3815</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <table id="51" parent="23" name="menus">
+      <ObjectId>61382</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3815</StateNumber>
+    </table>
+    <table id="52" parent="23" name="niveles">
+      <ObjectId>61390</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3815</StateNumber>
+    </table>
+    <table id="53" parent="23" name="niveles_menus">
+      <ObjectId>61395</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3815</StateNumber>
+    </table>
+    <table id="54" parent="23" name="niveles_usuarios">
+      <ObjectId>61398</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3815</StateNumber>
+    </table>
+    <table id="55" parent="23" name="usuarios">
+      <ObjectId>61401</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3919</StateNumber>
+    </table>
+    <sequence id="56" parent="24" name="cartas_id_seq">
+      <ObjectId>61412</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3815</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="57" parent="24" name="historial_limitacion_id_seq">
+      <ObjectId>61417</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3815</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="58" parent="24" name="imagenes_id_seq">
+      <ObjectId>61755</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3959</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="59" parent="24" name="inventarios_id_seq">
+      <ObjectId>61431</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3815</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="60" parent="24" name="tiendas_id_seq">
+      <ObjectId>61460</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>3815</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <table id="61" parent="24" name="cartas">
+      <ObjectId>61405</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>4139</StateNumber>
+    </table>
+    <table id="62" parent="24" name="cartas_categorias">
+      <ObjectId>61675</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>4132</StateNumber>
+    </table>
+    <table id="63" parent="24" name="historial_limitacion">
+      <ObjectId>61414</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>4132</StateNumber>
+    </table>
+    <table id="64" parent="24" name="imagenes">
+      <ObjectId>61757</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>4132</StateNumber>
+    </table>
+    <table id="65" parent="24" name="inventarios">
+      <ObjectId>61427</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>4132</StateNumber>
+    </table>
+    <table id="66" parent="24" name="links">
+      <ObjectId>62049</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>4142</StateNumber>
+    </table>
+    <table id="67" parent="24" name="monstruos">
+      <ObjectId>61996</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>4142</StateNumber>
+    </table>
+    <table id="68" parent="24" name="monstruos_tipos">
+      <ObjectId>62020</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>4140</StateNumber>
+    </table>
+    <table id="69" parent="24" name="pendulos">
+      <ObjectId>62035</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>4141</StateNumber>
+    </table>
+    <table id="70" parent="24" name="tiendas">
+      <ObjectId>61457</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>4132</StateNumber>
+    </table>
+    <column id="71" parent="40" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>nextval(&apos;cat.atributos_mounstros_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="72" parent="40" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="73" parent="40" name="estado">
+      <Position>3</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <index id="74" parent="40" name="pk_atributo_monstruo">
+      <ObjectId>61478</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="75" parent="40" name="pk_atributo_monstruo">
+      <ObjectId>61479</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_atributo_monstruo</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="76" parent="41" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>nextval(&apos;cat.categorias_cartas_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="77" parent="41" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="78" parent="41" name="idcategoriasuperior">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>3815</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="79" parent="41" name="estado">
+      <Position>4</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="80" parent="41" name="color">
+      <Position>5</Position>
+      <DataType>char(7)|0s</DataType>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>&apos;#BDBDBD&apos;::bpchar</DefaultExpression>
+      <TypeId>1042</TypeId>
+    </column>
+    <index id="81" parent="41" name="pk_categoria">
+      <ObjectId>61480</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="82" parent="41" name="pk_categoria">
+      <ObjectId>61481</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_categoria</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="83" parent="41" name="fk_categoria_categoriasuperior">
+      <ObjectId>61528</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>idcategoriasuperior</ColNames>
+      <RefTableId>61338</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>categorias_cartas</RefTableName>
+      <RefKeyName>pk_categoria</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="84" parent="42" name="idcomponente">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="85" parent="42" name="idcategoria">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="86" parent="42" name="pk_componente_categoria">
+      <ObjectId>61482</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>idcomponente
+idcategoria</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="87" parent="42" name="pk_componente_categoria">
+      <ObjectId>61483</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>idcomponente
+idcategoria</ColNames>
+      <UnderlyingIndexName>pk_componente_categoria</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="88" parent="42" name="fk_componente_categoria_carta_componente_deck">
+      <ObjectId>61538</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>idcomponente</ColNames>
+      <RefTableId>61348</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>componentes_deck</RefTableName>
+      <RefKeyName>pk_componente_deck</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="89" parent="42" name="fk_componente_categoria_carta_categoria">
+      <ObjectId>61533</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>idcategoria</ColNames>
+      <RefTableId>61338</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>categorias_cartas</RefTableName>
+      <RefKeyName>pk_categoria</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="90" parent="43" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>nextval(&apos;cat.componentes_deck_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="91" parent="43" name="seccion">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>3815</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="92" parent="43" name="numero_minimo_carta">
+      <Position>3</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>21</TypeId>
+    </column>
+    <column id="93" parent="43" name="numero_maximo_carta">
+      <Position>4</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>21</TypeId>
+    </column>
+    <column id="94" parent="43" name="estado">
+      <Position>5</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <index id="95" parent="43" name="pk_componente_deck">
+      <ObjectId>61484</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="96" parent="43" name="pk_componente_deck">
+      <ObjectId>61485</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_componente_deck</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="97" parent="44" name="id">
+      <Position>1</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>nextval(&apos;cat.estados_cartas_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>21</TypeId>
+    </column>
+    <column id="98" parent="44" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(25)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="99" parent="44" name="pk_estadocarta">
+      <ObjectId>61486</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="100" parent="44" name="pk_estadocarta">
+      <ObjectId>61487</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_estadocarta</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="101" parent="45" name="id">
+      <Position>1</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>nextval(&apos;cat.flechas_links_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>21</TypeId>
+    </column>
+    <column id="102" parent="45" name="direccion">
+      <Position>2</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="103" parent="45" name="estado">
+      <Position>3</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="104" parent="45" name="icono">
+      <Position>4</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <StateNumber>3815</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="105" parent="45" name="pk_flecha_link">
+      <ObjectId>61488</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="106" parent="45" name="pk_flecha_link">
+      <ObjectId>61489</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_flecha_link</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="107" parent="46" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>nextval(&apos;cat.limitaciones_cartas_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="108" parent="46" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="109" parent="46" name="cantidad">
+      <Position>3</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>21</TypeId>
+    </column>
+    <column id="110" parent="46" name="estado">
+      <Position>4</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <index id="111" parent="46" name="pk_limitacion">
+      <ObjectId>61490</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="112" parent="46" name="pk_limitacion">
+      <ObjectId>61491</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_limitacion</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="113" parent="47" name="id">
+      <Position>1</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>nextval(&apos;cat.tipos_escalas_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>21</TypeId>
+    </column>
+    <column id="114" parent="47" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="115" parent="47" name="pk_tipo_escala">
+      <ObjectId>61492</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="116" parent="47" name="pk_tipo_escala">
+      <ObjectId>61493</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_tipo_escala</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="117" parent="48" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>nextval(&apos;cat.tipos_monstruos_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="118" parent="48" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="119" parent="48" name="estado">
+      <Position>3</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <index id="120" parent="48" name="pk_tipo_monstruo">
+      <ObjectId>61494</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="121" parent="48" name="pk_tipo_monstruo">
+      <ObjectId>61495</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_tipo_monstruo</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="122" parent="51" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>nextval(&apos;sis.menus_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="123" parent="51" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="124" parent="51" name="icono">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="125" parent="51" name="direccion">
+      <Position>4</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>3815</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="126" parent="51" name="estado">
+      <Position>5</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="127" parent="51" name="idmenusuperior">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>3815</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="128" parent="51" name="pk_menu">
+      <ObjectId>61496</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="129" parent="51" name="pk_menu">
+      <ObjectId>61497</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_menu</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="130" parent="51" name="fk_menu_menusuperior">
+      <ObjectId>61543</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>idmenusuperior</ColNames>
+      <RefTableId>61382</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>menus</RefTableName>
+      <RefKeyName>pk_menu</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="131" parent="52" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>nextval(&apos;sis.niveles_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="132" parent="52" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="133" parent="52" name="estado">
+      <Position>3</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <index id="134" parent="52" name="pk_nivel">
+      <ObjectId>61498</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="135" parent="52" name="pk_nivel">
+      <ObjectId>61499</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_nivel</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="136" parent="53" name="idnivel">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="137" parent="53" name="idmenu">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="138" parent="53" name="pk_nivel_menu">
+      <ObjectId>61500</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>idnivel
+idmenu</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="139" parent="53" name="pk_nivel_menu">
+      <ObjectId>61501</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>idnivel
+idmenu</ColNames>
+      <UnderlyingIndexName>pk_nivel_menu</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="140" parent="53" name="fk_nivel_menu_nivel">
+      <ObjectId>61553</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>idnivel</ColNames>
+      <RefTableId>61390</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>niveles</RefTableName>
+      <RefKeyName>pk_nivel</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="141" parent="53" name="fk_nivel_menu_menu">
+      <ObjectId>61548</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>idmenu</ColNames>
+      <RefTableId>61382</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>menus</RefTableName>
+      <RefKeyName>pk_menu</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="142" parent="54" name="idusuario">
+      <Position>1</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="143" parent="54" name="idnivel">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="144" parent="54" name="pk_nivel_usuario">
+      <ObjectId>61502</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>idusuario
+idnivel</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="145" parent="54" name="pk_nivel_usuario">
+      <ObjectId>61503</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>idusuario
+idnivel</ColNames>
+      <UnderlyingIndexName>pk_nivel_usuario</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="146" parent="54" name="fk_nivel_usuario_usuario">
+      <ObjectId>61563</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>idusuario</ColNames>
+      <RefTableId>61401</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>usuarios</RefTableName>
+      <RefKeyName>pk_usuario</RefKeyName>
+      <RefColNames>username</RefColNames>
+    </foreign-key>
+    <foreign-key id="147" parent="54" name="fk_nivel_usuario_nivel">
+      <ObjectId>61558</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>idnivel</ColNames>
+      <RefTableId>61390</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>niveles</RefTableName>
+      <RefKeyName>pk_nivel</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="148" parent="55" name="username">
+      <Position>1</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="149" parent="55" name="contrasena">
+      <Position>2</Position>
+      <DataType>char(32)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <column id="150" parent="55" name="estado">
+      <Position>3</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="151" parent="55" name="correo">
+      <Position>4</Position>
+      <DataType>varchar(80)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="152" parent="55" name="idimagen">
+      <Position>5</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>3815</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="153" parent="55" name="pk_usuario">
+      <ObjectId>61504</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>username</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="154" parent="55" name="pk_usuario">
+      <ObjectId>61505</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>username</ColNames>
+      <UnderlyingIndexName>pk_usuario</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="155" parent="61" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>nextval(&apos;teo.cartas_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="156" parent="61" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(200)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="157" parent="61" name="efecto">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="158" parent="61" name="idlimitacion">
+      <Position>5</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>21</TypeId>
+    </column>
+    <column id="159" parent="61" name="estado">
+      <Position>6</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="160" parent="61" name="idimagen">
+      <Position>8</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>3919</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="161" parent="61" name="pk_carta">
+      <ObjectId>61506</ObjectId>
+      <StateNumber>4132</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="162" parent="61" name="unq_imagen">
+      <ObjectId>61763</ObjectId>
+      <StateNumber>4132</StateNumber>
+      <ColNames>idimagen</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="163" parent="61" name="pk_carta">
+      <ObjectId>61507</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_carta</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="164" parent="61" name="unq_imagen">
+      <ObjectId>61764</ObjectId>
+      <StateNumber>3960</StateNumber>
+      <ColNames>idimagen</ColNames>
+      <UnderlyingIndexName>unq_imagen</UnderlyingIndexName>
+    </key>
+    <foreign-key id="165" parent="61" name="fk_carta_limitacion">
+      <ObjectId>61583</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>idlimitacion</ColNames>
+      <RefTableId>61365</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefSchemaName>cat</RefSchemaName>
+      <RefTableName>limitaciones_cartas</RefTableName>
+      <RefKeyName>pk_limitacion</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="166" parent="61" name="fk_carta_imagen">
+      <ObjectId>61765</ObjectId>
+      <StateNumber>3960</StateNumber>
+      <ColNames>idimagen</ColNames>
+      <RefTableId>61757</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>imagenes</RefTableName>
+      <RefKeyName>pk_imagen</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="167" parent="62" name="idcarta">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3851</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="168" parent="62" name="idcategoria">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3851</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="169" parent="62" name="pk_carta_categoria">
+      <ObjectId>61678</ObjectId>
+      <StateNumber>4132</StateNumber>
+      <ColNames>idcarta
+idcategoria</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="170" parent="62" name="pk_carta_categoria">
+      <ObjectId>61679</ObjectId>
+      <StateNumber>3851</StateNumber>
+      <ColNames>idcarta
+idcategoria</ColNames>
+      <UnderlyingIndexName>pk_carta_categoria</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="171" parent="62" name="fk_carta_categoria_carta">
+      <ObjectId>61680</ObjectId>
+      <StateNumber>3851</StateNumber>
+      <ColNames>idcarta</ColNames>
+      <RefTableId>61405</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>cartas</RefTableName>
+      <RefKeyName>pk_carta</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="172" parent="62" name="fk_carta_categoria_categoria">
+      <ObjectId>61685</ObjectId>
+      <StateNumber>3851</StateNumber>
+      <ColNames>idcategoria</ColNames>
+      <RefTableId>61338</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefSchemaName>cat</RefSchemaName>
+      <RefTableName>categorias_cartas</RefTableName>
+      <RefKeyName>pk_categoria</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="173" parent="63" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>nextval(&apos;teo.historial_limitacion_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="174" parent="63" name="fechamodificacion">
+      <Position>2</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>3815</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="175" parent="63" name="idcarta">
+      <Position>3</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="176" parent="63" name="idlimitacion">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="177" parent="63" name="idusuario">
+      <Position>5</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="178" parent="63" name="pk_historial_limitacion">
+      <ObjectId>61508</ObjectId>
+      <StateNumber>4132</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="179" parent="63" name="pk_historial_limitacion">
+      <ObjectId>61509</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_historial_limitacion</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="180" parent="63" name="fk_historial_limitacion_carta">
+      <ObjectId>61588</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>idcarta</ColNames>
+      <RefTableId>61405</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>cartas</RefTableName>
+      <RefKeyName>pk_carta</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="181" parent="63" name="fk_historial_limitacion_limitacion">
+      <ObjectId>61593</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>idlimitacion</ColNames>
+      <RefTableId>61365</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefSchemaName>cat</RefSchemaName>
+      <RefTableName>limitaciones_cartas</RefTableName>
+      <RefKeyName>pk_limitacion</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="182" parent="63" name="fk_historial_limitacion_usuario">
+      <ObjectId>61598</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>idusuario</ColNames>
+      <RefTableId>61401</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefSchemaName>sis</RefSchemaName>
+      <RefTableName>usuarios</RefTableName>
+      <RefKeyName>pk_usuario</RefKeyName>
+      <RefColNames>username</RefColNames>
+    </foreign-key>
+    <column id="183" parent="64" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3959</StateNumber>
+      <DefaultExpression>nextval(&apos;teo.imagenes_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="184" parent="64" name="archivo">
+      <Position>2</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3959</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="185" parent="64" name="pk_imagen">
+      <ObjectId>61761</ObjectId>
+      <StateNumber>4132</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="186" parent="64" name="pk_imagen">
+      <ObjectId>61762</ObjectId>
+      <StateNumber>3959</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_imagen</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="187" parent="65" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>nextval(&apos;teo.inventarios_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="188" parent="65" name="idcarta">
+      <Position>2</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="189" parent="65" name="idestadocarta">
+      <Position>3</Position>
+      <DataType>smallint|0s</DataType>
+      <StateNumber>3815</StateNumber>
+      <TypeId>21</TypeId>
+    </column>
+    <column id="190" parent="65" name="idimagen">
+      <Position>4</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>3815</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="191" parent="65" name="existencia">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="192" parent="65" name="precioventa">
+      <Position>6</Position>
+      <DataType>numeric(8,2 digit)|0s</DataType>
+      <StateNumber>3815</StateNumber>
+      <TypeId>1700</TypeId>
+    </column>
+    <column id="193" parent="65" name="iditienda">
+      <Position>7</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>3815</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="194" parent="65" name="edicion">
+      <Position>8</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>21</TypeId>
+    </column>
+    <index id="195" parent="65" name="pk_inventario">
+      <ObjectId>61512</ObjectId>
+      <StateNumber>4132</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="196" parent="65" name="pk_inventario">
+      <ObjectId>61513</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_inventario</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="197" parent="65" name="fk_inventario_carta">
+      <ObjectId>61603</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>idcarta</ColNames>
+      <RefTableId>61405</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>cartas</RefTableName>
+      <RefKeyName>pk_carta</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="198" parent="65" name="fk_inventario_estadocarta">
+      <ObjectId>61608</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>idestadocarta</ColNames>
+      <RefTableId>61354</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefSchemaName>cat</RefSchemaName>
+      <RefTableName>estados_cartas</RefTableName>
+      <RefKeyName>pk_estadocarta</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="199" parent="65" name="fk_inventario_tienda">
+      <ObjectId>61618</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>iditienda</ColNames>
+      <RefTableId>61457</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>tiendas</RefTableName>
+      <RefKeyName>pk_tienda</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="200" parent="66" name="idmonstruo">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4142</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="201" parent="66" name="idflecha">
+      <Position>2</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4142</StateNumber>
+      <TypeId>21</TypeId>
+    </column>
+    <index id="202" parent="66" name="pk_link">
+      <ObjectId>62052</ObjectId>
+      <StateNumber>4142</StateNumber>
+      <ColNames>idmonstruo
+idflecha</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="203" parent="66" name="pk_link">
+      <ObjectId>62053</ObjectId>
+      <StateNumber>4142</StateNumber>
+      <ColNames>idmonstruo
+idflecha</ColNames>
+      <UnderlyingIndexName>pk_link</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="204" parent="66" name="fk_link_monstruo">
+      <ObjectId>62059</ObjectId>
+      <StateNumber>4142</StateNumber>
+      <ColNames>idmonstruo</ColNames>
+      <RefTableId>61996</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>monstruos</RefTableName>
+      <RefKeyName>pk_monstruo</RefKeyName>
+      <RefColNames>idcarta</RefColNames>
+    </foreign-key>
+    <foreign-key id="205" parent="66" name="fk_link_flechas">
+      <ObjectId>62054</ObjectId>
+      <StateNumber>4142</StateNumber>
+      <ColNames>idflecha</ColNames>
+      <RefTableId>61359</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefSchemaName>cat</RefSchemaName>
+      <RefTableName>flechas_links</RefTableName>
+      <RefKeyName>pk_flecha_link</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="206" parent="67" name="idcarta">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4139</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="207" parent="67" name="ataque">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4139</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="208" parent="67" name="defensa">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>4139</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="209" parent="67" name="idatributo">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4139</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="210" parent="67" name="materialinvocacion">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>4139</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="211" parent="67" name="estado">
+      <Position>6</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4139</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="212" parent="67" name="escala">
+      <Position>7</Position>
+      <DataType>smallint|0s</DataType>
+      <StateNumber>4139</StateNumber>
+      <TypeId>21</TypeId>
+    </column>
+    <column id="213" parent="67" name="idtipoescala">
+      <Position>8</Position>
+      <DataType>smallint|0s</DataType>
+      <StateNumber>4139</StateNumber>
+      <TypeId>21</TypeId>
+    </column>
+    <index id="214" parent="67" name="pk_monstruo">
+      <ObjectId>62003</ObjectId>
+      <StateNumber>4139</StateNumber>
+      <ColNames>idcarta</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="215" parent="67" name="pk_monstruo">
+      <ObjectId>62004</ObjectId>
+      <StateNumber>4139</StateNumber>
+      <ColNames>idcarta</ColNames>
+      <UnderlyingIndexName>pk_monstruo</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="216" parent="67" name="fk_monstruo_carta">
+      <ObjectId>62010</ObjectId>
+      <StateNumber>4139</StateNumber>
+      <ColNames>idcarta</ColNames>
+      <RefTableId>61405</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>cartas</RefTableName>
+      <RefKeyName>pk_carta</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="217" parent="67" name="fk_monstruo_atributo">
+      <ObjectId>62005</ObjectId>
+      <StateNumber>4139</StateNumber>
+      <ColNames>idatributo</ColNames>
+      <RefTableId>61332</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefSchemaName>cat</RefSchemaName>
+      <RefTableName>atributos_mounstros</RefTableName>
+      <RefKeyName>pk_atributo_monstruo</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="218" parent="67" name="fk_monstruo_escala">
+      <ObjectId>62015</ObjectId>
+      <StateNumber>4139</StateNumber>
+      <ColNames>idtipoescala</ColNames>
+      <RefTableId>61371</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefSchemaName>cat</RefSchemaName>
+      <RefTableName>tipos_escalas</RefTableName>
+      <RefKeyName>pk_tipo_escala</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="219" parent="68" name="idmonstruo">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4140</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="220" parent="68" name="idtipomonstruo">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4140</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="221" parent="68" name="pk_monstruo_tipo">
+      <ObjectId>62023</ObjectId>
+      <StateNumber>4140</StateNumber>
+      <ColNames>idmonstruo
+idtipomonstruo</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="222" parent="68" name="pk_monstruo_tipo">
+      <ObjectId>62024</ObjectId>
+      <StateNumber>4140</StateNumber>
+      <ColNames>idmonstruo
+idtipomonstruo</ColNames>
+      <UnderlyingIndexName>pk_monstruo_tipo</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="223" parent="68" name="fk_monstruo_tipo_monstruo">
+      <ObjectId>62025</ObjectId>
+      <StateNumber>4140</StateNumber>
+      <ColNames>idmonstruo</ColNames>
+      <RefTableId>61996</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>monstruos</RefTableName>
+      <RefKeyName>pk_monstruo</RefKeyName>
+      <RefColNames>idcarta</RefColNames>
+    </foreign-key>
+    <foreign-key id="224" parent="68" name="fk_monstruo_tipo_tipo">
+      <ObjectId>62030</ObjectId>
+      <StateNumber>4140</StateNumber>
+      <ColNames>idtipomonstruo</ColNames>
+      <RefTableId>61376</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefSchemaName>cat</RefSchemaName>
+      <RefTableName>tipos_monstruos</RefTableName>
+      <RefKeyName>pk_tipo_monstruo</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="225" parent="69" name="idmonstruo">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4141</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="226" parent="69" name="efecto">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4141</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="227" parent="69" name="escalaizquierda">
+      <Position>3</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4141</StateNumber>
+      <TypeId>21</TypeId>
+    </column>
+    <column id="228" parent="69" name="escaladerecha">
+      <Position>4</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4141</StateNumber>
+      <TypeId>21</TypeId>
+    </column>
+    <column id="229" parent="69" name="estado">
+      <Position>5</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4141</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <index id="230" parent="69" name="pk_pendulo">
+      <ObjectId>62042</ObjectId>
+      <StateNumber>4141</StateNumber>
+      <ColNames>idmonstruo</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="231" parent="69" name="pk_pendulo">
+      <ObjectId>62043</ObjectId>
+      <StateNumber>4141</StateNumber>
+      <ColNames>idmonstruo</ColNames>
+      <UnderlyingIndexName>pk_pendulo</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="232" parent="69" name="fk_pendulo_monstruo">
+      <ObjectId>62044</ObjectId>
+      <StateNumber>4141</StateNumber>
+      <ColNames>idmonstruo</ColNames>
+      <RefTableId>61996</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>monstruos</RefTableName>
+      <RefKeyName>pk_monstruo</RefKeyName>
+      <RefColNames>idcarta</RefColNames>
+    </foreign-key>
+    <column id="233" parent="70" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <DefaultExpression>nextval(&apos;teo.tiendas_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="234" parent="70" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="235" parent="70" name="correo">
+      <Position>3</Position>
+      <DataType>varchar(70)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="236" parent="70" name="idusuarioduenio">
+      <Position>4</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>3815</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="237" parent="70" name="pk_tienda">
+      <ObjectId>61522</ObjectId>
+      <StateNumber>4132</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="238" parent="70" name="pk_tienda">
+      <ObjectId>61523</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_tienda</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="239" parent="70" name="fk_tienda_usuario_duenio">
+      <ObjectId>61663</ObjectId>
+      <StateNumber>3815</StateNumber>
+      <ColNames>idusuarioduenio</ColNames>
+      <RefTableId>61401</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefSchemaName>sis</RefSchemaName>
+      <RefTableName>usuarios</RefTableName>
+      <RefKeyName>pk_usuario</RefKeyName>
+      <RefColNames>username</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>

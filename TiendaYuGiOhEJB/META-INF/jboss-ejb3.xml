@@ -1,0 +1,15 @@
+<jboss-ejb
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/ejb-jar_3_2.xsd"
+        version="3.2"
+        impl-version="2.0">
+
+    <assembly-descriptor>
+        <s:security>
+            <ejb-name>*</ejb-name>
+            <s:security-domain>tienda_yugioh_ejb_domain</s:security-domain>
+        </s:security>
+    </assembly-descriptor>
+
+</jboss-ejb>

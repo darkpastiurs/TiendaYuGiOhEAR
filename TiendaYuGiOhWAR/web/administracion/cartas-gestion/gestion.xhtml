@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:c="http://java.sun.com/jsp/jstl/core"
+                template="/WEB-INF/plantilla/plantilla.xhtml" xmlns:p="http://primefaces.org/ui">
+
+    <f:metadata>
+        <f:viewParam name="cartaNombre" value="#{gestionCartaWebBean.cartaNombreFormateado}"/>
+    </f:metadata>
+    <f:view afterPhase="#{gestionCartaWebBean.destroy}"/>
+
+    <ui:define name="cabeceras">
+        <h:outputScript library="js" name="ActualizarImagen.js"/>
+        <style>
+            .ui-fileupload-filename {
+                display: none;
+            }
+
+            .ui-outputlabel {
+                font-weight: bold;
+            }
+        </style>
+        <script>
+            $(function () {
+                $("input[type='file']").change(function () {
+                    readImage(this, $("[id*=pnlgdImagen]").find("[id*=giIlustracion]"));
+                });
+            });
+        </script>
+    </ui:define>
+
+    <ui:define name="titulo">
+        <c:choose>
+            <c:when test="#{gestionCartaWebBean.cartaSeleccionada == null}">
+                Nueva Carta
+            </c:when>
+            <c:otherwise>
+                Editando Carta
+            </c:otherwise>
+        </c:choose>
+    </ui:define>
+
+    <ui:define name="contenido">
+        <div class="ui-fluid">
+            <h:form id="formPrincipal" enctype="multipart/form-data" styleClass="ui-g">
+                <div class="ui-g-12 ui-lg-3">
+                    <div class="card preview-image-container">
+                        <p:panelGrid layout="grid" columns="1" columnClasses="ui-grid-col-12" id="pnlgdImagen"
+                                     styleClass="ui-panelgrid-blank" style="width: 100%; text-align: center">
+                            <p:graphicImage id="giIlustracion1" library="imagenes" name="unknowncard.jpg"
+                                            rendered="#{gestionCartaWebBean.nombreImagen == null}"
+                                            style="width: 177px; height: 254px;"/>
+                            <p:graphicImage id="giIlustracion2"
+                                            value="/imagenes/ilustraciones/#{gestionCartaWebBean.nombreImagen}"
+                                            rendered="#{gestionCartaWebBean.nombreImagen != null}"
+                                            style="width: 177px; height: 254px;"/>
+                            <p:fileUpload id="fuIlustracion" mode="simple" skinSimple="true"
+                                          label="Selecciona una imagen..."
+                                          value="#{gestionCartaWebBean.imagen}">
+                                <!--<f:validator validatorId="FileNullValidator" />-->
+                            </p:fileUpload>
+                            <!--<p:message id="msgIlustracion" for="fuIlustracion"/>-->
+                        </p:panelGrid>
+                    </div>
+                </div>
+                <div class="ui-lg-9 ui-g-12">
+                    <div class="card card-w-title">
+                        <c:choose>
+                            <c:when test="#{gestionCartaWebBean.cartaSeleccionada == null}">
+                                <h1>Registrar nueva carta</h1>
+                            </c:when>
+                            <c:otherwise>
+                                <h1>Editando Carta:
+                                    <h:outputText value="#{gestionCartaWebBean.cartaSeleccionada.nombre}"
+                                                  style="font-weight: bold"/>
+                                </h1>
+                            </c:otherwise>
+                        </c:choose>
+                        <p:messages showDetail="false" />
+                        <p:panelGrid layout="grid" columns="3"
+                                     columnClasses="ui-grid-col-3, ui-grid-col-6, ui-grid-col-3"
+                                     style="width: 100%">
+                            <f:facet name="header">
+                                <h3 style="margin: 0">Datos generales de la carta</h3>
+                            </f:facet>
+
+                            <p:outputLabel for="txtNombre" value="Nombre:"/>
+                            <p:inputText id="txtNombre" value="#{gestionCartaWebBean.nombre}"/>
+                            <p:message for="txtNombre"/>
+
+                            <p:outputLabel for="cboLimitacion" value="Limitacion en la Banlist:"/>
+                            <p:selectOneMenu id="cboLimitacion" converter="LimitacionConverter"
+                                             value="#{gestionCartaWebBean.limitacionCartaSeleccionada}">
+                                <f:selectItem itemLabel="Selecciona la limitacion de la carta"
+                                              noSelectionOption="true"/>
+                                <f:selectItems value="#{gestionCartaWebBean.limitacionCartasModel}" var="limitacion"
+                                               itemValue="#{limitacion}" itemLabel="#{limitacion.nombre}"/>
+                            </p:selectOneMenu>
+                            <p:message for="cboLimitacion"/>
+
+                            <p:outputLabel for="cboCategoriaCarta" value="Categoria de la carta:"/>
+                            <p:selectOneMenu id="cboCategoriaCarta"
+                                             filterMatchMode="contains"
+                                             value="#{gestionCartaWebBean.categoriaCartaSeleccionada}"
+                                             converter="CategoriaCartaConverter">
+                                <p:ajax immediate="true"/>
+                                <f:selectItem itemLabel="Selecciona una categoria a agregar..."
+                                              noSelectionOption="true"/>
+                                <f:selectItems value="#{gestionCartaWebBean.categoriaCartasModelComponente}"/>
+                            </p:selectOneMenu>
+                            <p:commandButton id="btnAgregarCategoria"
+                                             value="Agregar"
+                                             icon="ui-icon-plus"
+                                             process="@form"
+                                             update="@parent,pnldgContenedor"
+                                             partialSubmit="true"
+                                             immediate="true"
+                                             action="#{gestionCartaWebBean.onClickBtnAgregarCategoria}"/>
+
+                            <p:outputLabel for="dtlstCategorias" value="Categorias de la carta:"/>
+                            <p:dataList id="dtlstCategorias" value="#{gestionCartaWebBean.categoriasCartaSeleccionadas}"
+                                        var="categoria"
+                                        type="ordered" emptyMessage="No has agregado ninguna categoria">
+                                <h:outputText value="#{categoria.nombre}" style="display: inline-block;"/>
+                                <p:commandLink process="@form"
+                                               partialSubmit="true"
+                                               update="@form"
+                                               immediate="true"
+                                               action="#{gestionCartaWebBean.onClickItemDtlstCategorias}">
+                                    <f:setPropertyActionListener value="#{categoria}"
+                                                                 target="#{gestionCartaWebBean.categoriaCartaSeleccionada}"/>
+                                    <h:outputText styleClass="ui-icon ui-icon-clear"
+                                                  style="vertical-align: text-top !important; margin: 0px !important;;"/>
+                                </p:commandLink>
+                            </p:dataList>
+                            <p:message for="dtlstCategorias"/>
+
+                            <p:outputLabel for="txtEfecto" value="Efecto:"
+                                           rendered="#{!gestionCartaWebBean.tipoMonstruoNormal}"/>
+                            <p:inputTextarea id="txtEfecto" value="#{gestionCartaWebBean.efecto}"
+                                             rendered="#{!gestionCartaWebBean.tipoMonstruoNormal}"/>
+                            <p:message for="txtEfecto" rendered="#{!gestionCartaWebBean.tipoMonstruoNormal}"/>
+                        </p:panelGrid>
+                        <h:panelGroup layout="block" id="pnldgContenedor" style="width: 100%;">
+                            <p:panelGrid layout="grid" columns="3"
+                                         rendered="#{gestionCartaWebBean.tipoMonstruoSeleccionado}"
+                                         columnClasses="ui-grid-col-3, ui-grid-col-6, ui-grid-col-3"
+                                         style="width: 100%">
+                                <f:facet name="header">
+                                    <h3 style="margin: 0">Datos de carta de monstruo</h3>
+                                </f:facet>
+                                <p:outputLabel value="Atributo de monstruo:"/>
+                                <p:selectOneMenu id="cboAtributoMonstruo"
+                                                 value="#{gestionCartaWebBean.atributoMonstruoSeleccionado}"
+                                                 converter="AtributoMonstruoConverter">
+                                    <f:selectItem itemLabel="Selecciona un atributo para el monstruo"
+                                                  noSelectionOption="true"/>
+                                    <f:selectItems value="#{gestionCartaWebBean.atributoMonstruosModel}" var="atributo"
+                                                   itemValue="#{atributo}" itemLabel="#{atributo.nombre}"/>
+                                </p:selectOneMenu>
+                                <p:message for="cboAtributoMonstruo"/>
+
+                                <p:outputLabel for="smcTipoMonstruo" value="Tipos de monstruo:"/>
+                                <p:selectManyCheckbox id="smcTipoMonstruo"
+                                                      value="#{gestionCartaWebBean.tipoMounstrosSeleccionados}"
+                                                      layout="responsive" style="width: 100%;" columns="2"
+                                                      converter="TipoMonstruoConverter">
+                                    <f:selectItems value="#{gestionCartaWebBean.tipoMounstrosModel}" var="tipomonstruo"
+                                                   itemValue="#{tipomonstruo}" itemLabel="#{tipomonstruo.nombre}"/>
+                                </p:selectManyCheckbox>
+                                <p:message for="smcTipoMonstruo"/>
+
+                                <p:outputLabel for="txtMateriales" value="Materiales de invocacion:"
+                                               rendered="#{gestionCartaWebBean.tipoMonstruoExtraDeck}"/>
+                                <p:inputTextarea id="txtMateriales" value="#{gestionCartaWebBean.materialesInvocacion}"
+                                                 rendered="#{gestionCartaWebBean.tipoMonstruoExtraDeck}"/>
+                                <p:message for="txtMateriales" rendered="#{gestionCartaWebBean.tipoMonstruoExtraDeck}"/>
+
+                                <p:outputLabel for="spnAtaque" value="Ataque:"/>
+                                <p:spinner id="spnAtaque" value="#{gestionCartaWebBean.ataque}"
+                                           converter="javax.faces.Integer"/>
+                                <p:message for="spnAtaque"/>
+
+                                <p:outputLabel for="spnDefensa" value="Defensa:"/>
+                                <p:spinner id="spnDefensa" value="#{gestionCartaWebBean.defensa}"
+                                           converter="javax.faces.Integer"/>
+                                <p:message for="spnDefensa"/>
+
+                                <p:outputLabel for="cboTipoEscala" value="Tipo de escala:"/>
+                                <p:selectOneMenu id="cboTipoEscala"
+                                                 value="#{gestionCartaWebBean.tipoEscalaSeleccionada}"
+                                                 converter="TipoEscalaConverter">
+                                    <f:selectItem itemLabel="Seleccionauna escala del monstruo:"
+                                                  noSelectionOption="true"/>
+                                    <f:selectItems value="#{gestionCartaWebBean.tipoEscalasModel}" var="escala"
+                                                   itemValue="#{escala}" itemLabel="#{escala.nombre}"/>
+                                </p:selectOneMenu>
+                                <p:message for="cboTipoEscala"/>
+
+                                <p:outputLabel for="spnEscala" value="Escala:"/>
+                                <p:spinner id="spnEscala" value="#{gestionCartaWebBean.escala}" max="12"
+                                           converter="javax.faces.Short"/>
+                                <p:message for="spnEscala"/>
+                            </p:panelGrid>
+                            <p:panelGrid layout="grid" columns="3"
+                                         rendered="#{gestionCartaWebBean.tipoMonstruoPenduloSeleccionado}"
+                                         columnClasses="ui-grid-col-3, ui-grid-col-6, ui-grid-col-3"
+                                         style="width: 100%">
+                                <f:facet name="header">
+                                    <h3 style="margin: 0">Datos de Monstruo Pendúlo</h3>
+                                </f:facet>
+
+                                <p:outputLabel for="txtEfectoPendulo" value="Efecto Pendulo:"/>
+                                <p:inputTextarea id="txtEfectoPendulo" value="#{gestionCartaWebBean.efectoPendulo}"/>
+                                <p:message for="txtEfectoPendulo"/>
+
+                                <p:outputLabel for="spnEscalaIzquierda" value="Escala izquierda"/>
+                                <p:spinner id="spnEscalaIzquierda" value="#{gestionCartaWebBean.escalaIzquierda}"
+                                           max="13" converter="javax.faces.Short"/>
+                                <p:message for="spnEscalaIzquierda"/>
+
+                                <p:outputLabel for="spnEscalaDerecha" value="Escala derecha"/>
+                                <p:spinner id="spnEscalaDerecha" value="#{gestionCartaWebBean.escalaDerecha}" max="13"
+                                           converter="javax.faces.Short"/>
+                                <p:message for="spnEscalaDerecha"/>
+                            </p:panelGrid>
+
+                            <p:panelGrid layout="grid" columns="3"
+                                         rendered="#{gestionCartaWebBean.tipoMonstruoLinkSeleccionado}"
+                                         columnClasses="ui-grid-col-2, ui-grid-col-7, ui-grid-col-3"
+                                         style="width: 100%">
+                                <f:facet name="header">
+                                    <h3 style="margin: 0;">Datos de Monstruo Link</h3>
+                                </f:facet>
+
+                                <p:outputLabel for="smbtnFlechasLink" value="Flechas:"/>
+                                <p:selectManyButton id="smbtnFlechasLink"
+                                                    value="#{gestionCartaWebBean.flechaLinksSeleccionadas}"
+                                                    converter="FlechasLinkConverter">
+                                    <f:selectItems value="#{gestionCartaWebBean.flechaLinksModel}" var="flecha"
+                                                   itemValue="#{flecha}" itemLabel="#{flecha.direccion}"/>
+                                </p:selectManyButton>
+                                <p:message for="smbtnFlechasLink"/>
+                            </p:panelGrid>
+                        </h:panelGroup>
+                        <p:panelGrid layout="grid" columns="3" columnClasses="ui-grid-col-3, ui-grid-col-2"
+                                     styleClass="ui-panelgrid-blank" style="width: 100%">
+                            <p:commandButton icon="ui-icon-save" value="Guardar Carta"
+                                             action="#{gestionCartaWebBean.guardarCarta}" ajax="false"/>
+                            <p:commandButton icon="ui-icon-cancel" value="Cancelar" styleClass="secondary-btn"
+                                             action="cartas" immediate="true"/>
+                        </p:panelGrid>
+                    </div>
+                </div>
+            </h:form>
+        </div>
+    </ui:define>
+</ui:composition>

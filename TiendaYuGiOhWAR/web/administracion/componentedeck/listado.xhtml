@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/plantilla/plantilla.xhtml">
+    <ui:define name="titulo">
+        Estructura del Deck
+    </ui:define>
+    <ui:define name="contenido">
+        <div class="ui-g ui-fluid">
+            <div class="ui-g-12">
+                <div class="card card-w-title">
+                    <h1>Partes del Deck</h1>
+                    <h:form>
+                        <p:dataTable value="#{listadoComponenteWebBean.componenteDeckModel}"
+                                     var="componente"
+                                     selectionMode="single"
+                                     rowKey="#{componente.id}"
+                                     reflow="true"
+                                     paginator="true"
+                                     rows="5"
+                                     emptyMessage="No se han encontrado partes del deck">
+                            <f:facet name="header">
+                                <p:commandButton title="Añadir nuevo componente"
+                                                 icon="ui-icon-plus"
+                                                 ajax="false"
+                                                 action="estructuradeckgestion"
+                                                 styleClass="secondary-btn"/>
+                            </f:facet>
+                            <p:column headerText="Seccion del Deck">
+                                <h:outputText value="#{componente.seccion}"/>
+                            </p:column>
+                            <p:column headerText="Minimo de Cartas">
+                                <h:outputText value="#{componente.numeroMinimo}"/>
+                            </p:column>
+                            <p:column headerText="Maximo de Cartas">
+                                <h:outputText value="#{componente.numeroMaximo}"/>
+                            </p:column>
+                            <p:column headerText="Categorias de Cartas">
+                                <h:outputText value="#{listadoComponenteWebBean.listadoCategoriasCartas(componente)}"/>
+                            </p:column>
+                            <p:column headerText="Acciones">
+                                <p:commandButton title="Editar" icon="ui-icon-edit"
+                                                 action="#{listadoComponenteWebBean.enviarComponenteDeck}"
+                                                 ajax="false">
+                                    <f:setPropertyActionListener value="#{componente}"
+                                                                 target="#{listadoComponenteWebBean.componenteDeckSeleccionado}"/>
+                                </p:commandButton>
+                                <p:commandButton title="Eliminar" icon="ui-icon-delete"
+                                                 action="#{listadoComponenteWebBean.eliminarComponenteDeck}"
+                                                 styleClass="secondary-btn">
+                                    <f:setPropertyActionListener value="#{componente}"
+                                                                 target="#{listadoComponenteWebBean.componenteDeckSeleccionado}"/>
+                                    <p:confirm header="Eliminacion de datos de Partes del deck"
+                                               message="¿Estas seguro de eliminar la parte #{componente.seccion} del deck?"
+                                               icon="ui-icon-warning"/>
+                                </p:commandButton>
+                            </p:column>
+                        </p:dataTable>
+                        <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+                            <p:commandButton value="Si"
+                                             styleClass="ui-confirmdialog-yes"
+                                             icon="ui-icon-check"
+                                             type="submit"/>
+                            <p:commandButton value="No"
+                                             styleClass="ui-confirmdialog-no"
+                                             icon="ui-icon-close"
+                                             type="button"/>
+                        </p:confirmDialog>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>

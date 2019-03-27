@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="TiendaYuGiOhEAR:ear exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/TiendaYuGiOhEAR_ear_exploded.ear</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="TiendaYuGiOhEAR/javaeeApplication/javaEEApplication" />
+      <element id="directory" name="TiendaYuGiOhEJB.jar">
+        <element id="artifact" artifact-name="TiendaYuGiOhEJB:ejb exploded" />
+      </element>
+      <element id="directory" name="TiendaYuGiOhWAR.war">
+        <element id="artifact" artifact-name="TiendaYuGiOhWAR:war exploded" />
+      </element>
+      <element id="directory" name="lib">
+        <element id="library" level="application" name="aopalliance" />
+        <element id="library" level="application" name="Apache Commons" />
+        <element id="library" level="project" name="Serenity Layout" />
+        <element id="library" level="application" name="Primefaces 6.2" />
+        <element id="library" level="project" name="OCPSoft Rewrite" />
+      </element>
+    </root>
+  </artifact>
+</component>

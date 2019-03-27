@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:c="http://java.sun.com/jsp/jstl/core"
+                template="/WEB-INF/plantilla/plantilla.xhtml">
+
+    <f:metadata>
+        <f:viewParam name="atributoSelected" value="#{gestionAtributoMonstruoWebBean.nombreAtributoFormateado}" />
+    </f:metadata>
+    <f:view afterPhase="#{gestionAtributoMonstruoWebBean.destroy}" />
+
+    <ui:define name="titulo">
+        <c:choose>
+            <c:when test="#{gestionAtributoMonstruoWebBean.atributoMonstruoSelected == null}">
+                Creacion de Atributos de Monstruos
+            </c:when>
+            <c:otherwise>
+                Edicion de Atributos de Monstruos
+            </c:otherwise>
+        </c:choose>
+    </ui:define>
+    <ui:define name="contenido">
+        <div class="ui-g ui-fluid">
+            <div class="ui-g-12">
+                <div class="card card-w-title">
+                    <c:choose>
+                        <c:when test="#{gestionAtributoMonstruoWebBean.atributoMonstruoSelected == null}">
+                            <h1>Registro de un nuevo atributo</h1>
+                        </c:when>
+                        <c:otherwise>
+                            <h1>Editando atributo de monstruo <h:outputText value="#{gestionAtributoMonstruoWebBean.atributoMonstruoSelected.nombre}" style="font-weight: bold;"/></h1>
+                        </c:otherwise>
+                    </c:choose>
+                    <h:form>
+                        <p:panelGrid layout="grid" columns="3"
+                                     columnClasses="ui-grid-col-2, ui-grid-col-7, ui-grid-col-3"
+                                     styleClass="ui-panelgrid-blank" style="width: 100%">
+
+                            <p:outputLabel for="txtNombre" value="Nombre del Atributo: "/>
+                            <p:inputText id="txtNombre" value="#{gestionAtributoMonstruoWebBean.nombre}"/>
+                            <p:message for="txtNombre"/>
+
+                            <f:facet name="footer">
+                                <p:panelGrid layout="grid" columns="3" columnClasses="ui-grid-col-3, ui-grid-col-3"
+                                             style="width: 100%" styleClass="ui-panelgrid-blank">
+                                    <p:commandButton value="Guardar Atributo" icon="ui-icon-save"
+                                                     action="#{gestionAtributoMonstruoWebBean.guardar}"
+                                                     styleClass="flat"/>
+                                    <p:commandButton value="Cancelar" icon="ui-icon-cancel" action="atributosmonstruos"
+                                                     styleClass="secondary-btn flat" immediate="true"/>
+                                </p:panelGrid>
+                            </f:facet>
+                        </p:panelGrid>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+    </ui:define>
+
+</ui:composition>

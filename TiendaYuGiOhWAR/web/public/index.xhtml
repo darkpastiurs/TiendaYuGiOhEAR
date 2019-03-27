@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui" 
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="../WEB-INF/plantilla/plantilla.xhtml">
+
+    <ui:define name="titulo">
+        Pagina de Inicio
+    </ui:define>
+
+    <ui:define name="cabeceras">
+        <script type="text/javascript">
+            //<![CDATA[
+            function skinBar() {
+                this.cfg.shadow = false;
+                this.cfg.title = "";
+                this.cfg.seriesColors = ['#00bcd4', '#cddc39'];
+                this.cfg.grid = {
+                    background: '#ffffff',
+                    borderColor: '#ffffff',
+                    gridLineColor: '#EEEEEE',
+                    shadow: false
+                };
+                this.cfg.axesDefaults = {
+                    borderWidth: 0.1,
+                    borderColor: '#dce2e7',
+                    rendererOptions: {
+                        textColor: '#212121'
+                    }
+                };
+                this.cfg.seriesDefaults = {
+                    shadow: false,
+                    lineWidth: 1,
+                    renderer: $.jqplot.BarRenderer,
+                    markerOptions: {
+                        shadow: false,
+                        size: 7,
+                        style: 'circle'
+                    }
+                };
+            }
+
+            //]]>
+        </script>
+        <style>
+            .main-content {
+                padding: 0;
+            }
+
+            .ui-carousel-dropdown {
+                display: none !important;
+            }
+
+            .ui-panelgrid-header {
+                background-color: transparent !important;
+                border: 1px solid #d8d8d8 !important;
+            }
+
+            body .ui-panelgrid .ui-panelgrid-cell {
+                padding: 2px 8px;
+            }
+
+            .dashboard .overview-box.overview-box-1 .overview-box-header {
+                background-color: #7b68ee;
+            }
+
+            .dashboard .overview-box.overview-box-1 .overview-box-content {
+                background-color: #483d8b;
+            }
+
+            .dashboard .overview-box.overview-box-1 .overview-box-content .overview-box-icon {
+                background-color: #483d8b;
+            }
+
+            .dashboard .overview-box.overview-box-3 .overview-box-header {
+                background-color: #00fa9a;
+            }
+
+            .dashboard .overview-box.overview-box-3 .overview-box-content {
+                background-color: #3cb371;
+            }
+
+            .dashboard .overview-box.overview-box-3 .overview-box-content .overview-box-icon {
+                background-color: #3cb371;
+            }
+        </style>
+    </ui:define>
+
+    <ui:define name="contenido">
+        <div class="ui-g dashboard">
+            <div class="ui-g-12 ui-lg-4">
+                <div class="task-box task-box-1">
+                    <div class="task-box-header">
+                        <i class="material-icons">refresh</i>
+                    </div>
+                    <div class="task-box-content">
+                        <h3>¡Cartas nuevas!</h3>
+                        <p>Las siguientes cartas sera nuevas en el juego: </p>
+                    </div>
+                    <div class="task-box-footer">
+                        <span class="task-status">En espera</span>
+                        <p:graphicImage name="unknowuser.png" library="imagenes" style="border-radius: 50%"/>
+                        <p:graphicImage name="unknowuser.png" library="imagenes" style="border-radius: 50%"/>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-g-12 ui-lg-4">
+                <div class="task-box task-box-2">
+                    <div class="task-box-header">
+                        <i class="material-icons">refresh</i>
+                    </div>
+                    <div class="task-box-content">
+                        <h3>Pedido de cartas</h3>
+                        <p>Estan cartas estan a punto de llegar: </p>
+                    </div>
+                    <div class="task-box-footer">
+                        <span class="task-status">En progreso</span>
+                        <p:graphicImage name="unknowuser.png" library="imagenes" style="border-radius: 50%"/>
+                        <p:graphicImage name="unknowuser.png" library="imagenes" style="border-radius: 50%"/>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-g-12 ui-lg-4">
+                <div class="task-box task-box-3">
+                    <div class="task-box-header">
+                        <i class="material-icons">refresh</i>
+                    </div>
+                    <div class="task-box-content">
+                        <h3>Actualizaciones de inventario</h3>
+                        <p>Se han actualizado el inventario de las siguientes cartas: </p>
+                    </div>
+                    <div class="task-box-footer">
+                        <span class="task-status">Listo</span>
+                        <p:graphicImage name="unknowuser.png" library="imagenes" style="border-radius: 50%"/>
+                        <p:graphicImage name="unknowuser.png" library="imagenes" style="border-radius: 50%"/>
+                    </div>
+                </div>
+            </div>
+            <p:outputPanel rendered="#{sessionWebBean.usuarioEnSession != null}" styleClass="ui-g-12" style="width: 100%;">
+                <div class="ui-g-12 ui-md-3">
+                    <div class="overview-box overview-box-1">
+                        <div class="overview-box-header"/>
+                        <div class="overview-box-content">
+                            <div class="overview-box-icon"><i class="material-icons">inbox</i></div>
+                            <div class="overview-box-title">Pedidos pendientes de confirmar</div>
+                            <div class="overview-box-count">2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-g-12 ui-md-3">
+                    <div class="overview-box overview-box-3">
+                        <div class="overview-box-header"/>
+                        <div class="overview-box-content">
+                            <div class="overview-box-icon"><i class="material-icons">flight</i></div>
+                            <div class="overview-box-title">Pedidos en camino</div>
+                            <div class="overview-box-count">5</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-g-12 ui-md-3">
+                    <div class="overview-box overview-box-2">
+                        <div class="overview-box-header"/>
+                        <div class="overview-box-content">
+                            <div class="overview-box-icon"><i class="material-icons">beenhere</i></div>
+                            <div class="overview-box-title">Pedidos Entregados</div>
+                            <div class="overview-box-count">13</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-g-12 ui-md-3">
+                    <div class="overview-box overview-box-4">
+                        <div class="overview-box-header"/>
+                        <div class="overview-box-content">
+                            <div class="overview-box-icon"><i class="material-icons">shopping_cart</i></div>
+                            <div class="overview-box-title">Paquetes en el carrito</div>
+                            <div class="overview-box-count">2</div>
+                        </div>
+                    </div>
+                </div>
+            </p:outputPanel>
+        </div>
+
+        <p:carousel headerText="Cartas de interes" circular="true" numVisible="4"
+                    itemStyle="border-style: none; background-color: transparent; margin-right: 0;" responsive="true">
+            <p:panelGrid layout="grid" columns="1" style="width: 100%;">
+                <f:facet name="header">
+                    <p:link>
+                        <h:graphicImage library="imagenes" name="prueba/1686814.jpg"
+                                        style="width: 20vh; height: 30vh;" title="Ultimaya Tzolkin"/>
+                    </p:link>
+                </f:facet>
+                <p:link value="Ultimaya Tzolkin"/>
+                <h:outputText value="Kaiba Collection" style="color: gray;"/>
+                <h:outputText value="$15.00" style="color: #4caf50"/>
+            </p:panelGrid>
+            <p:panelGrid layout="grid" columns="1" columnClasses="ui-grid-col-12"
+                         style="width: 100%;">
+                <f:facet name="header">
+                    <p:link>
+                        <h:graphicImage library="imagenes" name="prueba/1861629.jpg"
+                                        style="width: 20vh; height: 30vh;" title="Decode Talker"/>
+                    </p:link>
+                </f:facet>
+                <p:link value="Decode Talker"/>
+                <h:outputText value="Kaiba Collection" style="color: gray;"/>
+                <h:outputText value="$15.00" style="color: #4caf50"/>
+            </p:panelGrid>
+            <p:panelGrid layout="grid" columns="1" columnClasses="ui-grid-col-12"
+                         style="width: 100%;">
+                <f:facet name="header">
+                    <p:link>
+                        <h:graphicImage library="imagenes" name="prueba/2009101.jpg"
+                                        style="width: 20vh; height: 30vh;" title="Blackwing - Gale the Whirlwind"/>
+                    </p:link>
+                </f:facet>
+                <p:link value="Blackwing - Gale the Whirlwind"/>
+                <h:outputText value="Kaiba Collection" style="color: gray;"/>
+                <h:outputText value="$15.00" style="color: #4caf50"/>
+            </p:panelGrid>
+            <p:panelGrid layout="grid" columns="1" columnClasses="ui-grid-col-12"
+                         style="width: 100%;">
+                <f:facet name="header">
+                    <p:link>
+                        <h:graphicImage library="imagenes" name="prueba/2295440.jpg"
+                                        style="width: 20vh; height: 30vh;" title="One for One"/>
+                    </p:link>
+                </f:facet>
+                <p:link value="One for one"/>
+                <h:outputText value="Kaiba Collection" style="color: gray;"/>
+                <h:outputText value="$15.00" style="color: #4caf50"/>
+            </p:panelGrid>
+            <p:panelGrid layout="grid" columns="1" columnClasses="ui-grid-col-12"
+                         style="width: 100%;">
+                <f:facet name="header">
+                    <p:link>
+                        <h:graphicImage library="imagenes" name="prueba/2390019.jpg"
+                                        style="width: 20vh; height: 30vh;" title="Ojamadification"/>
+                    </p:link>
+                </f:facet>
+                <p:link value="Ojamadification"/>
+                <h:outputText value="Kaiba Collection" style="color: gray;"/>
+                <h:outputText value="$15.00" style="color: #4caf50"/>
+            </p:panelGrid>
+            <p:panelGrid layout="grid" columns="1" columnClasses="ui-grid-col-12"
+                         style="width: 100%;">
+                <f:facet name="header">
+                    <p:link>
+                        <h:graphicImage library="imagenes" name="prueba/3580032.jpg"
+                                        style="width: 20vh; height: 30vh;" title="Merlín"/>
+                    </p:link>
+                </f:facet>
+                <p:link value="Merlín"/>
+                <h:outputText value="Kaiba Collection" style="color: gray;"/>
+                <h:outputText value="$15.00" style="color: #4caf50"/>
+            </p:panelGrid>
+            <p:panelGrid layout="grid" columns="1" columnClasses="ui-grid-col-12"
+                         style="width: 100%;">
+                <f:facet name="header">
+                    <p:link>
+                        <h:graphicImage library="imagenes" name="prueba/3825890.jpg"
+                                        style="width: 20vh; height: 30vh;" title="Gravekeeper's Visionary"/>
+                    </p:link>
+                </f:facet>
+                <p:link value="Gravekeeper's Visionary"/>
+                <h:outputText value="Kaiba Collection" style="color: gray;"/>
+                <h:outputText value="$15.00" style="color: #4caf50"/>
+            </p:panelGrid>
+        </p:carousel>
+    </ui:define>
+
+</ui:composition>

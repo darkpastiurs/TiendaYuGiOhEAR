@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:c="http://java.sun.com/jsp/jstl/core"
+                template="/WEB-INF/plantilla/plantilla.xhtml"
+                xmlns:p="http://primefaces.org/ui">
+
+    <f:metadata>
+        <f:viewParam name="componenteDeck" value="#{gestionComponenteDeckWebBean.seccionFormateada}"/>
+    </f:metadata>
+    <f:view afterPhase="#{gestionComponenteDeckWebBean.destroy}"/>
+
+    <ui:define name="titulo">
+        <c:choose>
+            <c:when test="#{gestionComponenteDeckWebBean.seccion == null}">
+                Registro de Partes del deck
+            </c:when>
+            <c:otherwise>
+                Edicion de Parte del deck
+            </c:otherwise>
+        </c:choose>
+    </ui:define>
+
+    <ui:define name="contenido">
+        <div class="ui-g ui-fluid">
+            <div class="ui-g-12">
+                <div class="card card-w-title">
+                    <c:choose>
+                        <c:when test="#{gestionComponenteDeckWebBean.seccion == null}">
+                            <h1>Registro de nueva parte del deck</h1>
+                        </c:when>
+                        <c:otherwise>
+                            <h1>
+                                Edicion de la parte del deck:
+                                <h:outputText value="#{gestionComponenteDeckWebBean.seccion}"
+                                              style="font-weight: bold"/>
+                            </h1>
+                        </c:otherwise>
+                    </c:choose>
+                    <h:form>
+                        <p:panelGrid layout="grid" columns="3"
+                                     columnClasses="ui-grid-col-2, ui-grid-col-7, ui-grid-col-3"
+                                     styleClass="ui-panelgrid-blank" style="width: 100%">
+
+                            <p:outputLabel for="txtSeccion" value="Seccion:"/>
+                            <p:inputText id="txtSeccion" value="#{gestionComponenteDeckWebBean.seccion}"/>
+                            <p:message for="txtSeccion"/>
+
+                            <p:outputLabel for="inbMinimo" value="Minimo de cartas:"/>
+                            <p:inputNumber id="inbMinimo" value="#{gestionComponenteDeckWebBean.min}"
+                                           converter="javax.faces.Short" minValue="0" decimalPlaces="0"/>
+                            <p:message for="inbMinimo"/>
+
+                            <p:outputLabel for="inbMaximo" value="Maximo de cartas:"/>
+                            <p:inputNumber id="inbMaximo" value="#{gestionComponenteDeckWebBean.max}"
+                                           converter="javax.faces.Short" minValue="0" decimalPlaces="0"/>
+                            <p:message for="inbMaximo"/>
+
+                            <h:outputLabel value="Seleccione las categorias de cartas:"/>
+                            <h:panelGroup>
+                                <p:selectBooleanCheckbox
+                                        value="#{gestionComponenteDeckWebBean.seleccionarTodos}">
+                                    <p:ajax listener="#{gestionComponenteDeckWebBean.onSelectAll}" update="smcCategoria" />
+                                </p:selectBooleanCheckbox>
+                                <p:outputLabel value="Seleccionar/Deseleccionar Todos"/>
+                            </h:panelGroup>
+                            <p:spacer/>
+
+                            <p:spacer/>
+                            <p:selectManyCheckbox id="smcCategoria" converter="CategoriaCartaConverter"
+                                                  value="#{gestionComponenteDeckWebBean.categoriaCartasSeleccionadasModel}"
+                                                  layout="responsive" columns="3" style="width: 100%"
+                                                  valueChangeListener="#{gestionComponenteDeckWebBean.onChangeSelect}">
+                                <f:ajax/>
+                                <f:selectItems value="#{gestionComponenteDeckWebBean.categoriaCartaSelectModel}"/>
+                            </p:selectManyCheckbox>
+                            <p:message for="smcCategoria"/>
+
+                            <f:facet name="footer">
+                                <p:panelGrid layout="grid" columns="2" columnClasses="ui-grid-col-2, ui-grid-col-2"
+                                             styleClass="ui-panelgrid-blank" style="width: 100%">
+                                    <p:commandButton value="Guardar Parte" icon="ui-icon-save"
+                                                     action="#{gestionComponenteDeckWebBean.guardarComponente}"
+                                                     ajax="true"/>
+                                    <p:commandButton value="Cancelar" icon="ui-icon-cancel" styleClass="secondary-btn"
+                                                     action="estructuradeck" immediate="true" ajax="false"/>
+                                </p:panelGrid>
+                            </f:facet>
+
+                        </p:panelGrid>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+    </ui:define>
+
+</ui:composition>

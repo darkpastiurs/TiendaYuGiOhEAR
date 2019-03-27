@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core" template="/WEB-INF/plantilla/plantilla.xhtml"
+                xmlns:p="http://primefaces.org/ui">
+
+    <ui:define name="titulo">
+        Administracion de Tipos de Monstruos
+    </ui:define>
+
+    <ui:define name="contenido">
+        <div class="ui-g ui-fluid">
+            <div class="ui-g-12">
+                <div class="card card-w-title">
+                    <h1>Listado de Tipos de Monstruos</h1>
+                    <h:form>
+                        <p:dataTable value="#{listadoTiposMonstruosWebBean.tipoMounstrosModel}" var="tipo"
+                                     selectionMode="single" rowKey="#{tipo.id}" paginator="true" rows="10" reflow="true"
+                                     filteredValue="#{listadoTiposMonstruosWebBean.tipoMounstrosFiltradoModel}"
+                                     emptyMessage="No se han encontrado tipos de monstruos"
+                                     widgetVar="wdtTipos">
+                            <f:facet name="header">
+                                <p:outputPanel styleClass="headerContenedor">
+                                    <p:outputPanel styleClass="headerLeft" style="width: 35%;"/>
+                                    <p:outputPanel style="width: 30%">
+                                        <p:commandButton title="Añadir tipo de monstruo" icon="ui-icon-plus"
+                                                         action="tiposmonstruosgestion"
+                                                         styleClass="secondary-btn"/>
+                                    </p:outputPanel>
+                                    <p:outputPanel style="width: 35%">
+                                        <p:inputText id="globalFilter" placeholder="Buscar tipo..."
+                                                     onkeyup="PF('wdtTipos').filter()"/>
+                                    </p:outputPanel>
+                                </p:outputPanel>
+                            </f:facet>
+                            <p:column headerText="Nombre" filterBy="#{tipo.nombre}" filterMatchMode="contains"
+                                      filterStyle="display: none">
+                                <h:outputText value="#{tipo.nombre}"/>
+                            </p:column>
+                            <p:column headerText="Acciones">
+                                <p:commandButton title="Editar tipo de monstruo" icon="ui-icon-edit"
+                                                 action="#{listadoTiposMonstruosWebBean.enviarTipoMonstruo}">
+                                    <f:setPropertyActionListener value="#{tipo}"
+                                                                 target="#{listadoTiposMonstruosWebBean.tipoMounstroSelected}"/>
+
+                                </p:commandButton>
+                                <p:commandButton title="Eliminar tipo de monstruo" icon="ui-icon-remove"
+                                                 action="#{listadoTiposMonstruosWebBean.eliminarTiposMonstruo}"
+                                                 styleClass="secondary-btn" ajax="false">
+                                    <f:setPropertyActionListener value="#{tipo}"
+                                                                 target="#{listadoTiposMonstruosWebBean.tipoMounstroSelected}"/>
+                                    <p:confirm header="Eliminacion de tipos de monstruos"
+                                               message="¿Esta seguro de eliminar el tipo de monstruo #{tipo.nombre}?"
+                                               icon="ui-icon-warning"/>
+                                </p:commandButton>
+                            </p:column>
+                        </p:dataTable>
+                        <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+                            <p:commandButton type="submit" value="Sí" icon="ui-icon-check"
+                                             styleClass="ui-confirmdialog-yes"/>
+                            <p:commandButton type="button" value="No" icon="ui-icon-close"
+                                             styleClass="ui-confirmdialog-no"/>
+                        </p:confirmDialog>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+    </ui:define>
+
+</ui:composition>

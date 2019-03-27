@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="javaeeApplication" name="javaEEApplication">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="application.xml" url="file://$MODULE_DIR$/META-INF/application.xml" />
+          <deploymentDescriptor name="jboss-deployment-structure.xml" url="file://$MODULE_DIR$/META-INF/jboss-deployment-structure.xml" />
+        </descriptors>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="Wildfly 15" level="application_server_libraries" />
+    <orderEntry type="library" name="EclipseLink 2.7.3" level="project" />
+    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
+    <orderEntry type="library" name="OCPSoft Rewrite" level="project" />
+    <orderEntry type="library" name="Serenity Layout" level="project" />
+    <orderEntry type="library" name="aopalliance" level="application" />
+    <orderEntry type="library" name="Apache Commons" level="application" />
+    <orderEntry type="library" name="EJB 3.2" level="application" />
+    <orderEntry type="library" name="Hibernate Bean Validation 5.0.1" level="application" />
+    <orderEntry type="library" name="JBoss Weld CDI 2.0.3" level="application" />
+    <orderEntry type="library" name="PostgreSQL 42.2.5" level="application" />
+    <orderEntry type="library" name="Primefaces 6.2" level="application" />
+  </component>
+</module>

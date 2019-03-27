@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui" xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <div class="layout-topbar">
+        <!-- Logo de la APP -->
+        <p:link outcome="index" class="topbar-logo">
+            <p:graphicImage name="images/logo-slim.png" library="serenity-layout"/>
+            <span class="app-name">Tienda de Cartas de Yu-Gi-Oh</span>
+        </p:link>
+
+        <p:graphicImage name="images/logo-slim.png" library="serenity-layout" styleClass="mobile-logo"/>
+
+        <!-- Icono de menu principal -->
+        <a href="#" class="menu-btn">
+            <i class="material-icons">menu</i>
+        </a>
+
+        <a href="#" class="topbar-menu-btn">
+            <i class="material-icons">account_circle</i>
+        </a>
+        <!-- Usuarios Icono - Menu -->
+        <div class="layout-topbar-menu-wrapper">
+            <!-- Logo cuando el menu esta horizontal -->
+            <div class="sidebar-logo">
+                <p:link outcome="index" class="topbar-logo">
+                    <p:graphicImage name="images/logo-slim.png" library="serenity-layout"/>
+                    <span class="app-name">Tienda de Cartas de Yu-Gi-Oh</span>
+                </p:link>
+                <a href="#" class="sidebar-anchor" title="Anclar menu"/>
+            </div>
+            <ul class="topbar-menu animated">
+                <c:choose>
+                    <c:when test="#{sessionWebBean.usuarioEnSession != null}">
+                        <li class="profile-item">
+                            <a href="#">
+                                <!-- Imagen de perfil -->
+                                <span class="profile-image-wrapper">
+                                    <p:graphicImage name="unknowuser.png" library="imagenes"
+                                                    style="border-radius: 50%"/>
+                                </span>
+                                <!-- Nombre de usuario -->
+                                <span class="topbar-item-name profile-name">#{sessionWebBean.usuarioEnSession.nickname}</span>
+                            </a>
+                            <!-- Menu usuario -->
+                            <ul class="animated">
+                                <li role="menuitem">
+                                    <a href="#">
+                                        <i class="material-icons">persona</i>
+                                        <span>Perfil</span>
+                                    </a>
+                                </li>
+                                <li role="menuitem">
+                                    <a href="#">
+                                        <i class="material-icons">security</i>
+                                        <span>Seguridad de la Cuenta</span>
+                                    </a>
+                                </li>
+                                <li role="menuitem">
+                                    <a href="#">
+                                        <i class="material-icons">settings_applications</i>
+                                        <span>Configuracion de la Cuenta</span>
+                                    </a>
+                                </li>
+                                <li role="menuitem">
+                                    <a href="#">
+                                        <i class="material-icons">favorite</i>
+                                        <span>Cartas Favoritas</span>
+                                    </a>
+                                </li>
+                                <li role="menuitem">
+                                    <p:commandLink action="#{sessionWebBean.cerrarSession}"
+                                                   rendered="#{sessionWebBean.usuarioEnSession != null}">
+                                        <i class="material-icons">exit_to_app</i>
+                                        <span>Cerrar Sesion</span>
+                                    </p:commandLink>
+                                </li>
+                            </ul>
+                            <!-- Menu Usuario Fin -->
+                        </li>
+                        <!-- Mensajes -->
+                        <li>
+                            <a href="#">
+                                <i class="topbar-icon material-icons animated swing">message</i>
+                                <span class="topbar-badge animated rubberBand">5</span>
+                                <span class="topbar-item-name">Mensajes</span>
+                            </a>
+                            <ul class="animated">
+                                <li role="menuitem">
+                                    <a href="#" class="topbar-message">
+                                        <p:graphicImage name="unknowuser.png" library="imagenes" width="35"/>
+                                        <span>Mensaje X</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Fin de Mensajes -->
+                        <!-- Carrito -->
+                        <c:if test="#{sessionWebBean.isNivel('Comprador')}">
+                            <li>
+                                <a href="#">
+                                    <i class="topbar-icon material-icons animated swing">shopping_cart</i>
+                                    <span class="topbar-badge animated rubberBand">4</span>
+                                    <span class="topbar-item-name">Carrito de compras</span>
+                                </a>
+                            </li>
+                        </c:if>
+                        <!-- Fin de carrito -->
+                        <!-- Notificaciones -->
+                        <li>
+                            <a href="#">
+                                <i class="topbar-icon material-icons animated swing">timer</i>
+                                <span class="topbar-badge animated rubberBand">15</span>
+                                <span class="topbar-item-name">Notificaciones</span>
+                            </a>
+                            <ul class="animated">
+                                <li role="menuitem">
+                                    <a href="#">
+                                        <p:graphicImage name="unknowuser.png" library="imagenes" width="35"/>
+                                        <span>Notificacion X</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </c:when>
+                    <c:otherwise>
+                        <li>
+                            <p:link outcome="login">
+                                <i class="topbar-icon material-icons animated swing">account_box</i>
+                                <span class="topbar-item-name">Iniciar Sesion</span>
+                            </p:link>
+                        </li>
+                    </c:otherwise>
+                </c:choose>
+                <li class="search-item">
+                    <h:panelGroup styleClass="md-inputfield" style="width: available;">
+                        <p:inputText style="width: 90%"/>
+                        <label>Buscar cartas...</label>
+                        <i class="topbar-icon material-icons" style="width: 10%">search</i>
+                    </h:panelGroup>
+                </li>
+            </ul>
+        </div>
+    </div>
+</ui:composition>

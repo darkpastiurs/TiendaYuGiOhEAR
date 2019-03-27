@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://java.sun.com/jsf/html" xmlns:c="http://java.sun.com/jsp/jstl/core"
+                template="/WEB-INF/plantilla/plantilla.xhtml">
+
+    <f:metadata>
+        <f:viewParam name="categoriaSelected" value="#{gestionCategoriaBean.nombreCategoriaFormateado}" />
+    </f:metadata>
+    <f:view afterPhase="#{gestionCategoriaBean.destroy}" />
+
+    <ui:define name="titulo">
+        <c:choose>
+            <c:when test="#{gestionCategoriaBean.nombre == null}">
+                Nueva Categoria de Carta
+            </c:when>
+            <c:otherwise>
+                Editar Categoria de Carta
+            </c:otherwise>
+        </c:choose>
+    </ui:define>
+
+    <ui:define name="contenido">
+        <div class="ui-g ui-fluid">
+            <div class="ui-g-12">
+                <div class="card card-w-title">
+                    <c:choose>
+                        <c:when test="#{gestionCategoriaBean.nombre == null}">
+                            <h1>Registro de nueva categoria de cartas</h1>
+                        </c:when>
+                        <c:otherwise>
+                            <h1>Edicion de la categoria de cartas: <h:outputText value="#{gestionCategoriaBean.nombre}" style="font-weight: bold;" /></h1>
+                        </c:otherwise>
+                    </c:choose>
+                    <h:form id="formCategoria">
+                        <p:panelGrid layout="grid" columns="3"
+                                     columnClasses="ui-grid-col-3, ui-grid-col-6, ui-grid-col-3"
+                                     styleClass="ui-panelgrid-blank" style="width: 100%"
+                                     id="pnlgCategoria">
+                            <p:outputLabel value="Nombre" for="txtNombre"/>
+                            <p:inputText id="txtNombre" value="#{gestionCategoriaBean.nombre}"/>
+                            <p:message for="txtNombre"/>
+
+                            <p:outputLabel value="¿Esta es una subcategoria?"/>
+                            <p:selectBooleanCheckbox id="chkSubCategoria" value="#{gestionCategoriaBean.subcategoria}">
+                                <p:ajax event="change" update=":formCategoria:pnlCategoriaSuperior"
+                                        partialSubmit="true"/>
+                            </p:selectBooleanCheckbox>
+                            <p:spacer/>
+                        </p:panelGrid>
+                        <p:panelGrid layout="grid" columns="3"
+                                     columnClasses="ui-grid-col-3, ui-grid-col-6, ui-grid-col-3"
+                                     styleClass="ui-panelgrid-blank" style="width: 100%"
+                                     id="pnlCategoriaSuperior">
+                            <p:outputLabel value="Selecciona la categoria de carta a la que pertenece: "
+                                           for="cboCategoriaSuperior"
+                                           rendered="#{gestionCategoriaBean.subcategoria}"/>
+                            <p:selectOneMenu id="cboCategoriaSuperior"
+                                             value="#{gestionCategoriaBean.categoriaCartaSuperior}" autoWidth="false"
+                                             style="width: 100%" rendered="#{gestionCategoriaBean.subcategoria}"
+                                             converter="CategoriaCartaConverter">
+                                <f:selectItem value="#{null}" itemValue="#{null}" itemLabel="Selecciona una categoria"/>
+                                <f:selectItems value="#{gestionCategoriaBean.categoriaCartasSuperiorModel}"
+                                               var="categoria" itemValue="#{categoria}"
+                                               itemLabel="#{categoria.nombre}"/>
+                            </p:selectOneMenu>
+                            <p:message for="cboCategoriaSuperior" rendered="#{gestionCategoriaBean.subcategoria}"/>
+
+                            <f:facet name="footer">
+                                <p:panelGrid layout="grid" columns="2" columnClasses="ui-grid-col-3, ui-grid-col-3"
+                                             styleClass="ui-panelgrid-blank" style="width: 100%">
+                                    <p:commandButton value="Guardar Categoria" action="#{gestionCategoriaBean.guardar}"
+                                                     styleClass="flat" icon="ui-icon-save" ajax="false"/>
+                                    <p:commandButton value="Cancelar" action="categoriascartas"
+                                                     styleClass="secondary-btn flat" icon="ui-icon-cancel"
+                                                     immediate="true"/>
+                                </p:panelGrid>
+                            </f:facet>
+                        </p:panelGrid>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+    </ui:define>
+
+</ui:composition>

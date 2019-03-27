@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <f:facet name="first">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+    </f:facet>
+    <title><ui:insert name="titulo">Tienda de Cartas de Yu-Gi-Oh!</ui:insert></title>
+    <h:outputScript library="serenity-layout" name="js/nanoscroller.js"/>
+    <h:outputScript library="serenity-layout" name="js/layout.js"/>
+    <h:outputScript library="serenity-layout" name="js/ripple.js"/>
+    <ui:insert name="cabeceras"/>
+</h:head>
+<h:body>
+    <div class="layout-wrapper layout-menu-horizontal">
+        <ui:include src="./menu.xhtml"/>
+
+        <div class="layout-main">
+            <ui:include src="./encabezado.xhtml"/>
+
+            <!-- Preguntar en foro como quitarlo
+            <div class="layout-breadcrumb" style="margin-bottom: 0px">
+                <div class="layout-breadcrumb-options">
+                    <a href="#" title="Respaldar">
+                        <span class="material-icons">backup</span>
+                    </a>
+                    <a href="#" title="Bookmark">
+                        <em class="material-icons">bookmark</em>
+                    </a>
+                    <a href="#" title="Logout">
+                        <span class="material-icons">power_settings_new</span>
+                    </a>
+                </div>
+            </div>-->
+
+            <div class="layout-content-custom">
+                <ui:insert name="contenido"/>
+            </div>
+
+            <ui:include src="./pie.xhtml"/>
+
+            <div class="layout-main-mask"/>
+        </div>
+    </div>
+
+    <p:ajaxStatus style="width:  32px;height: 32px; position: fixed; right: 7px; bottom: 7px">
+        <f:facet name="start">
+            <span class="fa fa-circle-o-notch fa-spin ajax-loader" aria-hidden="true"/>
+        </f:facet>
+        <f:facet name="complete">
+            <h:outputText value=""/>
+        </f:facet>
+    </p:ajaxStatus>
+
+    <h:outputStylesheet library="serenity-layout" name="css/nanoscroller.css"/>
+    <h:outputStylesheet library="serenity-layout" name="css/ripple.css"/>
+    <h:outputStylesheet library="serenity-layout" name="css/layout-bluegrey.css"/>
+    <style type="text/css">
+        form {
+            margin: 0 !important;
+        }
+
+        @media only screen and (min-width: 190px) {
+            .layout-content-custom {
+                padding: 85px 17px 24px 17px !important;
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+            .layout-content-custom {
+                padding: 125px 17px 24px 17px !important;
+            }
+        }
+
+        .headerContenedor {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+
+        @media only screen and (min-width: 190px){
+            .headerLeft{ display: none;}
+        }
+
+        @media only screen and (min-width: 600px){
+            .headerLeft{ display: flex;}
+            .preview-image-container{
+                position: fixed;
+            }
+        }
+    </style>
+</h:body>
+</html>

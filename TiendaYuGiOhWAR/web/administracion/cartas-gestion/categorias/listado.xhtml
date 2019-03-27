@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="/WEB-INF/plantilla/plantilla.xhtml"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui"
+>
+
+    <ui:define name="titulo">Categoria de Cartas</ui:define>
+
+    <ui:define name="contenido">
+        <div class="ui-g ui-fluid">
+            <div class="ui-g-12">
+                <div class="card card-w-title">
+                    <h1>Categorias de Cartas</h1>
+                    <h:form>
+                        <p:growl showDetail="true">
+                            <p:autoUpdate/>
+                        </p:growl>
+                        <p:dataTable value="#{listaCategoriaWebBean.categoriaCartaDataModel}"
+                                     var="categoria"
+                                     selectionMode="single"
+                                     rowKey="#{categoria.id}"
+                                     paginator="true"
+                                     rows="10"
+                                     reflow="true"
+                                     emptyMessage="No se han encontrado categorias registradas">
+                            <f:facet name="header">
+                                <p:commandButton title="Nueva categoria" icon="ui-icon-plus"
+                                                 action="categoriascartasgestion" styleClass="secondary-btn"/>
+                            </f:facet>
+                            <p:column headerText="Categoria">
+                                <h:outputText value="#{categoria.nombre}"/>
+                            </p:column>
+                            <p:column headerText="Categoria Superior">
+                                <h:outputText value="#{categoria.categoriaCartaSuperior.nombre}"
+                                              rendered="#{categoria.categoriaCartaSuperior != null}"/>
+                                <h:outputText value="No" rendered="#{categoria.categoriaCartaSuperior == null}"/>
+                            </p:column>
+                            <p:column headerText="Acciones">
+                                <p:commandButton title="Editar Categoria" icon="ui-icon-edit"
+                                                 action="#{listaCategoriaWebBean.enviarCategoria}" ajax="false"/>
+                                <p:commandButton title="Eliminar Categoria" icon="ui-icon-remove"
+                                                 styleClass="secondary-btn"
+                                                 action="#{listaCategoriaWebBean.eliminarCategoria}">
+                                    <p:confirm header="Eliminar categoria"
+                                               message="¿Estas seguro de eliminar la categoria de cartas #{categoria.nombre}?#{categoria.subcategorias != null and categoria.subcategorias.size() > 0 ? ' (Se eliminaran las subcategorias tambien)' : ''}"
+                                               icon="ui-icon-warning"/>
+                                </p:commandButton>
+                            </p:column>
+                        </p:dataTable>
+                        <p:confirmDialog showEffect="fade" hideEffect="fade" global="true">
+                            <p:commandButton value="Si"
+                                             styleClass="ui-confirmdialog-yes"
+                                             icon="ui-icon-check"
+                                             type="submit"/>
+                            <p:commandButton value="No"
+                                             styleClass="ui-confirmdialog-no"
+                                             icon="ui-icon-close"
+                                             type="button"/>
+                        </p:confirmDialog>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>
