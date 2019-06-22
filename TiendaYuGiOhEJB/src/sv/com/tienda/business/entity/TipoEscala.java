@@ -1,4 +1,4 @@
-lñocvzokm oij, WQJ´2    '305q827package sv.com.tienda.business.entity;
+package sv.com.tienda.business.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
