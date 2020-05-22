@@ -17,17 +17,16 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="Wildfly 15" level="application_server_libraries" />
+    <orderEntry type="library" scope="PROVIDED" name="Wildfly 19.1.0.Final" level="application_server_libraries" />
     <orderEntry type="library" name="EclipseLink 2.7.3" level="project" />
     <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
     <orderEntry type="library" name="OCPSoft Rewrite" level="project" />
     <orderEntry type="library" name="Serenity Layout" level="project" />
-    <orderEntry type="library" name="aopalliance" level="application" />
     <orderEntry type="library" name="Apache Commons" level="application" />
-    <orderEntry type="library" name="EJB 3.2" level="application" />
-    <orderEntry type="library" name="Hibernate Bean Validation 5.0.1" level="application" />
-    <orderEntry type="library" name="JBoss Weld CDI 2.0.3" level="application" />
-    <orderEntry type="library" name="PostgreSQL 42.2.5" level="application" />
-    <orderEntry type="library" name="Primefaces 6.2" level="application" />
+    <orderEntry type="library" name="EJB 3.2.2" level="application" />
+    <orderEntry type="library" name="aopalliance:aopalliance:1.0" level="application" />
+    <orderEntry type="library" name="Hibernate Validation API 2.0.1" level="application" />
+    <orderEntry type="library" name="Primefaces 8.0" level="application" />
+    <orderEntry type="library" name="JBoss Weld 3.1" level="application" />
   </component>
 </module>

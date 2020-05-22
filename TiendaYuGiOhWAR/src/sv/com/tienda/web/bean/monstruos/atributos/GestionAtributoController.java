@@ -1,6 +1,6 @@
 package sv.com.tienda.web.bean.monstruos.atributos;
 
-import org.hibernate.validator.constraints.NotEmpty;
+import javax.validation.constraints.NotEmpty;
 import sv.com.tienda.business.ejb.CartaBeanLocal;
 import sv.com.tienda.business.entity.AtributoMonstruo;
 import sv.com.tienda.business.utils.Constantes;

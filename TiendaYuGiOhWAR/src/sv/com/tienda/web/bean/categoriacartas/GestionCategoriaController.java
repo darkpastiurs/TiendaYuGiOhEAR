@@ -1,7 +1,7 @@
 package sv.com.tienda.web.bean.categoriacartas;
 
 import org.apache.commons.collections.EnumerationUtils;
-import org.hibernate.validator.constraints.NotEmpty;
+import javax.validation.constraints.NotEmpty;
 import sv.com.tienda.business.ejb.CartaBeanLocal;
 import sv.com.tienda.business.entity.CategoriaCarta;
 import sv.com.tienda.business.utils.Constantes;

@@ -2,25 +2,31 @@ package sv.com.tienda.web.bean.usuario;
 
 import org.apache.commons.collections.EnumerationUtils;
 import org.apache.commons.lang.StringUtils;
-import org.primefaces.model.menu.DefaultMenuItem;
-import org.primefaces.model.menu.DefaultMenuModel;
-import org.primefaces.model.menu.DefaultSubMenu;
-import org.primefaces.model.menu.MenuModel;
+import org.primefaces.model.menu.*;
+import sv.com.tienda.business.ejb.UsuarioBeanLocal;
 import sv.com.tienda.business.entity.Menu;
 import sv.com.tienda.business.entity.Nivel;
+import sv.com.tienda.business.entity.Token;
 import sv.com.tienda.business.entity.Usuario;
+import sv.com.tienda.business.utils.Constantes;
 
 import javax.annotation.PostConstruct;
+import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
+import javax.faces.application.ConfigurableNavigationHandler;
+import javax.faces.application.NavigationCase;
+import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.Serializable;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.security.Principal;
+import java.time.LocalDateTime;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -33,6 +39,9 @@ public class SessionController implements Serializable {
     private static final long serialVersionUID = 1382165441560764139L;
     private static final Logger LOG = Logger.getLogger(SessionController.class.getName());
 
+    @EJB(lookup = Constantes.JDNI_USUARIO_BEAN)
+    private UsuarioBeanLocal usuarioBean;
+
     private Usuario usuarioEnSession;
 
     private List<Nivel> nivelesUsuario;
@@ -41,7 +50,40 @@ public class SessionController implements Serializable {
 
     @PostConstruct
     private void init() {
-        LOG.log(INFO, "[SessionController][init]");
+        LOG.log(Level.INFO, "[SessionController][init]");
+        if (usuarioEnSession == null) {
+            loadSession();
+        }
+    }
+
+    public void loadSession() {
+        LOG.info("[SessionController][loadSession]");
+        try {
+//            if (usuarioEnSession == null) {
+            ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
+            HttpServletRequest request = (HttpServletRequest) ec.getRequest();
+            Usuario usuarioLogged;
+            if (request.getCookies() != null && request.getUserPrincipal() == null) {
+                Cookie cookie = Arrays.stream(request.getCookies())
+                        .filter(cookie1 -> StringUtils.equals("tid", cookie1.getName()))
+                        .findFirst()
+                        .orElse(null);
+                if (cookie != null) {
+                    Token token = usuarioBean.obtenerTokenPorReferencia(cookie.getValue());
+                    if (token != null && token.getFechaCaducidad().isAfter(LocalDateTime.now())) {
+                        usuarioLogged = token.getUsuario();
+                        request.login(usuarioLogged.getNickname(), usuarioLogged.getContraseña());
+                        Principal logged = request.getUserPrincipal();
+                        if (logged != null) {
+                            ec.getSessionMap().put("usuarioEnSesion", usuarioLogged);
+                        }
+                    }
+                }
+            }
+//            }
+        } catch (Exception ex) {
+            LOG.log(Level.SEVERE, "[SessionController][loadSession][Exception] -> ", ex);
+        }
     }
 
     public Usuario getUsuarioEnSession() {
@@ -73,45 +115,63 @@ public class SessionController implements Serializable {
     private void construirMenu() {
         LOG.log(Level.INFO, "[SessionController][construirMenu]");
         menuModel = new DefaultMenuModel();
-        DefaultMenuItem inicioItem = new DefaultMenuItem("Inicio");
-        inicioItem.setIcon("home");
-        inicioItem.setCommand("index");
-        inicioItem.setAjax(false);
-        menuModel.addElement(inicioItem);
+        DefaultMenuItem inicioItem = DefaultMenuItem.builder()
+                .value("Inicio")
+                .icon("home")
+                .command("index")
+                .ajax(false)
+                .build();
+        menuModel.getElements().add(inicioItem);
         nivelesUsuario = usuarioEnSession != null ? usuarioEnSession.getNiveles() : null;
         if (nivelesUsuario != null && !nivelesUsuario.isEmpty()) {
             nivelesUsuario.stream().forEach((Nivel lvl) -> {
                 Collections.sort(lvl.getMenus(), Comparator.comparing(Menu::getId));
                 lvl.getMenus().stream().forEach((Menu menu) -> {
-                    if (menu.getSubmenus() != null && !menu.getSubmenus().isEmpty()) {
-                        Collections.sort(menu.getSubmenus(), Comparator.comparing(Menu::getId));
-                        DefaultSubMenu menuSuperior = new DefaultSubMenu(menu.getNombre());
-                        menuSuperior.setIcon(menu.getIcono());
-                        menu.getSubmenus().stream().forEach((Menu submenu) -> {
-                            if (submenu.isEstado()) {
-                                DefaultMenuItem menuItem = new DefaultMenuItem(submenu.getNombre());
-                                menuItem.setIcon(submenu.getIcono());
-                                menuItem.setOutcome(submenu.getDireccion());
-                                //menuItem.setCommand(submenu.getDireccion());
-                                //menuItem.setAjax(false);
-                                menuSuperior.addElement(menuItem);
-                            }
-                        });
-                        menuModel.addElement(menuSuperior);
-                    } else if (menu.getMenuSuperior() == null) {
-                        if (menu.isEstado()) {
-                            DefaultMenuItem menuItem = new DefaultMenuItem(menu.getNombre());
-                            menuItem.setIcon(menu.getIcono());
-                            if (menu.getNombre().contains("Cart")) {
-                                menuItem.setOutcome(menu.getDireccion());
-                            }
-                            menuModel.addElement(menuItem);
-                        }
+                    try {
+                        menuModel.getElements().add(construirMenuItem(menu));
+                    } catch (Exception e) {
+                        LOG.log(Level.SEVERE, "[SessionController][construirMenu][Menu " + menu.getNombre() + "][Exception] -> ", e);
                     }
                 });
             });
         }
         menuModel.generateUniqueIds();
+    }
+
+    public MenuElement construirMenuItem(Menu menu) throws Exception {
+        LOG.log(INFO, "[SessionController][construirMenuItem] -> {0}", usuarioEnSession);
+        try {
+            if (menu.getSubmenus() != null && !menu.getSubmenus().isEmpty()) {
+                DefaultSubMenu subMenuItem = DefaultSubMenu.builder()
+                        .label(menu.getNombre())
+                        .icon(menu.getIcono())
+                        .build();
+                menu.getSubmenus().forEach(submenu -> {
+                    try {
+                        subMenuItem.getElements().add(construirMenuItem(submenu));
+                    } catch (Exception e) {
+                        LOG.log(Level.SEVERE, "[SessionController][construirMenuItem][Menu " + submenu.getNombre() + "][Exception]", e);
+                    }
+                });
+                return subMenuItem;
+            } else {
+                DefaultMenuItem menuItem = DefaultMenuItem.builder()
+                        .value(menu.getNombre())
+                        .icon(menu.getIcono())
+                        .ajax(false)
+                        .build();
+                ConfigurableNavigationHandler configNav = (ConfigurableNavigationHandler) FacesContext.getCurrentInstance().getApplication().getNavigationHandler();
+                Map<String, Set<NavigationCase>> navCases = configNav.getNavigationCases();
+
+                if (navCases.entrySet().stream().flatMap(entry -> entry.getValue().stream()).anyMatch(navCase -> StringUtils.equals(navCase.getFromOutcome(), menu.getDireccion()))) {
+                    menuItem.setOutcome(menu.getDireccion());
+                }
+                return menuItem;
+            }
+        } catch (Exception e) {
+            LOG.log(Level.SEVERE, "[SessionController][construirMenuItem][Excepcion] -> ", e);
+            throw e;
+        }
     }
 
     public MenuModel getMenuModel() {

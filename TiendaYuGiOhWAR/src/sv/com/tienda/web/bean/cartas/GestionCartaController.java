@@ -2,8 +2,8 @@ package sv.com.tienda.web.bean.cartas;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang.StringUtils;
-import org.hibernate.validator.constraints.NotEmpty;
-import org.primefaces.model.UploadedFile;
+import javax.validation.constraints.NotEmpty;
+import org.primefaces.model.file.UploadedFile;
 import sv.com.tienda.business.ejb.CartaBeanLocal;
 import sv.com.tienda.business.entity.*;
 import sv.com.tienda.business.utils.Constantes;
@@ -551,8 +551,8 @@ public class GestionCartaController implements Serializable {
      * @throws Exception
      */
     public Imagen subirIlustracion() throws Exception {
-        LOG.log(Level.INFO, "[GestionCartaController][subirIlustracion]");
-        try (InputStream ins = imagen.getInputstream()) {
+        LOG.log(INFO, "[GestionCartaController][subirIlustracion]");
+        try (InputStream ins = imagen.getInputStream()) {
             Path carpetaSubida = gestionArchivos.getDirectorioSubida(Constantes.CARPETA_IMAGENES_ILUSTRACIONES);
             if (carpetaSubida != null) {
                 StringJoiner nombreArchivo = new StringJoiner(".");

@@ -10,11 +10,10 @@
         <element id="artifact" artifact-name="TiendaYuGiOhWAR:war exploded" />
       </element>
       <element id="directory" name="lib">
-        <element id="library" level="application" name="aopalliance" />
         <element id="library" level="application" name="Apache Commons" />
         <element id="library" level="project" name="Serenity Layout" />
-        <element id="library" level="application" name="Primefaces 6.2" />
-        <element id="library" level="project" name="OCPSoft Rewrite" />
+        <element id="library" level="application" name="Primefaces 8.0" />
+        <element id="library" level="application" name="aopalliance:aopalliance:1.0" />
       </element>
     </root>
   </artifact>

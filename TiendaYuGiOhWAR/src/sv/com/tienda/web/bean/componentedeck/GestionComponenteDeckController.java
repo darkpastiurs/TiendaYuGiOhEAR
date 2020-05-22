@@ -1,6 +1,6 @@
 package sv.com.tienda.web.bean.componentedeck;
 
-import org.hibernate.validator.constraints.NotEmpty;
+import javax.validation.constraints.NotEmpty;
 import sv.com.tienda.business.ejb.CartaBeanLocal;
 import sv.com.tienda.business.entity.CategoriaCarta;
 import sv.com.tienda.business.entity.ComponenteDeck;

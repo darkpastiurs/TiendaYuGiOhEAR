@@ -2,12 +2,13 @@ package sv.com.tienda.business.entity.converters;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
 
 @Converter(autoApply = true)
-public class LocalDateTimeConverter implements AttributeConverter<LocalDateTime, Date> {
+public class LocalDateTimeConverter implements AttributeConverter<LocalDateTime, Timestamp> {
     /**
      * Converts the value stored in the entity attribute into the
      * data representation to be stored in the database.
@@ -17,8 +18,8 @@ public class LocalDateTimeConverter implements AttributeConverter<LocalDateTime,
      * column
      */
     @Override
-    public Date convertToDatabaseColumn(LocalDateTime attribute) {
-        return attribute != null ? Date.from(attribute.atZone(ZoneId.systemDefault()).toInstant()) : null;
+    public Timestamp convertToDatabaseColumn(LocalDateTime attribute) {
+        return attribute != null ? Timestamp.from(attribute.atZone(ZoneId.systemDefault()).toInstant()) : null;
     }
 
     /**
@@ -35,7 +36,7 @@ public class LocalDateTimeConverter implements AttributeConverter<LocalDateTime,
      * attribute
      */
     @Override
-    public LocalDateTime convertToEntityAttribute(Date dbData) {
-        return LocalDateTime.from(dbData.toInstant());
+    public LocalDateTime convertToEntityAttribute(Timestamp dbData) {
+        return dbData != null ? dbData.toLocalDateTime() : null;
     }
 }

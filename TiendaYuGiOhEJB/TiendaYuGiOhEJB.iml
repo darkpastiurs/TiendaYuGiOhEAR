@@ -17,7 +17,7 @@
         <setting name="provider-name" value="EclipseLink" />
         <datasource-mapping>
           <factory-entry name="NewPersistenceUnit" value="323e482c-e64b-4e46-9367-ca0141c07ccc" />
-          <factory-entry name="TiendaPU" />
+          <factory-entry name="TiendaPU" value="323e482c-e64b-4e46-9367-ca0141c07ccc" />
         </datasource-mapping>
         <naming-strategy-map />
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/META-INF/persistence.xml" />
@@ -31,12 +31,11 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="Wildfly 15" level="application_server_libraries" />
-    <orderEntry type="library" scope="PROVIDED" name="EJB 3.2" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="Hibernate Bean Validation 5.0.1" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="EclipseLink 2.7.3" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="PostgreSQL 42.2.5" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="Java EE 6-Java EE 6" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Wildfly 19.1.0.Final" level="application_server_libraries" />
     <orderEntry type="library" scope="PROVIDED" name="Apache Commons" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="Hibernate Validation API 2.0.1" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="EclipseLink 2.7.3" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Java EE 6-Java EE 6" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="EJB 3.2.2" level="application" />
   </component>
 </module>

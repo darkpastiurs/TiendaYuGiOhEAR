@@ -1,166 +1,1494 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="TIenda">
-  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.14">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.18">
     <root id="1">
-      <ServerVersion>10.4</ServerVersion>
+      <ServerVersion>12.2</ServerVersion>
+      <DateStyle>dmy</DateStyle>
+      <TimeZones>true ACDT
+true ACSST
+false ACST
+false ACT
+false ACWST
+true ADT
+true AEDT
+true AESST
+false AEST
+false AFT
+true AKDT
+false AKST
+true ALMST
+false ALMT
+false AMST
+false AMT
+false ANAST
+false ANAT
+false ARST
+false ART
+false AST
+true AWSST
+false AWST
+true AZOST
+false AZOT
+false AZST
+false AZT
+false Africa/Abidjan
+false Africa/Accra
+false Africa/Addis_Ababa
+false Africa/Algiers
+false Africa/Asmara
+false Africa/Asmera
+false Africa/Bamako
+false Africa/Bangui
+false Africa/Banjul
+false Africa/Bissau
+false Africa/Blantyre
+false Africa/Brazzaville
+false Africa/Bujumbura
+false Africa/Cairo
+true Africa/Casablanca
+true Africa/Ceuta
+false Africa/Conakry
+false Africa/Dakar
+false Africa/Dar_es_Salaam
+false Africa/Djibouti
+false Africa/Douala
+true Africa/El_Aaiun
+false Africa/Freetown
+false Africa/Gaborone
+false Africa/Harare
+false Africa/Johannesburg
+false Africa/Juba
+false Africa/Kampala
+false Africa/Khartoum
+false Africa/Kigali
+false Africa/Kinshasa
+false Africa/Lagos
+false Africa/Libreville
+false Africa/Lome
+false Africa/Luanda
+false Africa/Lubumbashi
+false Africa/Lusaka
+false Africa/Malabo
+false Africa/Maputo
+false Africa/Maseru
+false Africa/Mbabane
+false Africa/Mogadishu
+false Africa/Monrovia
+false Africa/Nairobi
+false Africa/Ndjamena
+false Africa/Niamey
+false Africa/Nouakchott
+false Africa/Ouagadougou
+false Africa/Porto-Novo
+false Africa/Sao_Tome
+false Africa/Timbuktu
+false Africa/Tripoli
+false Africa/Tunis
+false Africa/Windhoek
+true America/Adak
+true America/Anchorage
+false America/Anguilla
+false America/Antigua
+false America/Araguaina
+false America/Argentina/Buenos_Aires
+false America/Argentina/Catamarca
+false America/Argentina/ComodRivadavia
+false America/Argentina/Cordoba
+false America/Argentina/Jujuy
+false America/Argentina/La_Rioja
+false America/Argentina/Mendoza
+false America/Argentina/Rio_Gallegos
+false America/Argentina/Salta
+false America/Argentina/San_Juan
+false America/Argentina/San_Luis
+false America/Argentina/Tucuman
+false America/Argentina/Ushuaia
+false America/Aruba
+false America/Asuncion
+false America/Atikokan
+true America/Atka
+false America/Bahia
+true America/Bahia_Banderas
+false America/Barbados
+false America/Belem
+false America/Belize
+false America/Blanc-Sablon
+false America/Boa_Vista
+false America/Bogota
+true America/Boise
+false America/Buenos_Aires
+true America/Cambridge_Bay
+false America/Campo_Grande
+false America/Cancun
+false America/Caracas
+false America/Catamarca
+false America/Cayenne
+false America/Cayman
+true America/Chicago
+true America/Chihuahua
+false America/Coral_Harbour
+false America/Cordoba
+false America/Costa_Rica
+false America/Creston
+false America/Cuiaba
+false America/Curacao
+false America/Danmarkshavn
+false America/Dawson
+false America/Dawson_Creek
+true America/Denver
+true America/Detroit
+false America/Dominica
+true America/Edmonton
+false America/Eirunepe
+false America/El_Salvador
+true America/Ensenada
+false America/Fort_Nelson
+true America/Fort_Wayne
+false America/Fortaleza
+true America/Glace_Bay
+true America/Godthab
+true America/Goose_Bay
+true America/Grand_Turk
+false America/Grenada
+false America/Guadeloupe
+false America/Guatemala
+false America/Guayaquil
+false America/Guyana
+true America/Halifax
+true America/Havana
+false America/Hermosillo
+true America/Indiana/Indianapolis
+true America/Indiana/Knox
+true America/Indiana/Marengo
+true America/Indiana/Petersburg
+true America/Indiana/Tell_City
+true America/Indiana/Vevay
+true America/Indiana/Vincennes
+true America/Indiana/Winamac
+true America/Indianapolis
+true America/Inuvik
+true America/Iqaluit
+false America/Jamaica
+false America/Jujuy
+true America/Juneau
+true America/Kentucky/Louisville
+true America/Kentucky/Monticello
+true America/Knox_IN
+false America/Kralendijk
+false America/La_Paz
+false America/Lima
+true America/Los_Angeles
+true America/Louisville
+false America/Lower_Princes
+false America/Maceio
+false America/Managua
+false America/Manaus
+false America/Marigot
+false America/Martinique
+true America/Matamoros
+true America/Mazatlan
+false America/Mendoza
+true America/Menominee
+true America/Merida
+true America/Metlakatla
+true America/Mexico_City
+true America/Miquelon
+true America/Moncton
+true America/Monterrey
+false America/Montevideo
+true America/Montreal
+false America/Montserrat
+true America/Nassau
+true America/New_York
+true America/Nipigon
+true America/Nome
+false America/Noronha
+true America/North_Dakota/Beulah
+true America/North_Dakota/Center
+true America/North_Dakota/New_Salem
+true America/Nuuk
+true America/Ojinaga
+false America/Panama
+true America/Pangnirtung
+false America/Paramaribo
+false America/Phoenix
+true America/Port-au-Prince
+false America/Port_of_Spain
+false America/Porto_Acre
+false America/Porto_Velho
+false America/Puerto_Rico
+false America/Punta_Arenas
+true America/Rainy_River
+true America/Rankin_Inlet
+false America/Recife
+false America/Regina
+true America/Resolute
+false America/Rio_Branco
+false America/Rosario
+true America/Santa_Isabel
+false America/Santarem
+false America/Santiago
+false America/Santo_Domingo
+false America/Sao_Paulo
+true America/Scoresbysund
+true America/Shiprock
+true America/Sitka
+false America/St_Barthelemy
+true America/St_Johns
+false America/St_Kitts
+false America/St_Lucia
+false America/St_Thomas
+false America/St_Vincent
+false America/Swift_Current
+false America/Tegucigalpa
+true America/Thule
+true America/Thunder_Bay
+true America/Tijuana
+true America/Toronto
+false America/Tortola
+true America/Vancouver
+false America/Virgin
+false America/Whitehorse
+true America/Winnipeg
+true America/Yakutat
+true America/Yellowknife
+false Antarctica/Casey
+false Antarctica/Davis
+false Antarctica/DumontDUrville
+false Antarctica/Macquarie
+false Antarctica/Mawson
+false Antarctica/McMurdo
+false Antarctica/Palmer
+false Antarctica/Rothera
+false Antarctica/South_Pole
+false Antarctica/Syowa
+true Antarctica/Troll
+false Antarctica/Vostok
+true Arctic/Longyearbyen
+false Asia/Aden
+false Asia/Almaty
+true Asia/Amman
+false Asia/Anadyr
+false Asia/Aqtau
+false Asia/Aqtobe
+false Asia/Ashgabat
+false Asia/Ashkhabad
+false Asia/Atyrau
+false Asia/Baghdad
+false Asia/Bahrain
+false Asia/Baku
+false Asia/Bangkok
+false Asia/Barnaul
+true Asia/Beirut
+false Asia/Bishkek
+false Asia/Brunei
+false Asia/Calcutta
+false Asia/Chita
+false Asia/Choibalsan
+false Asia/Chongqing
+false Asia/Chungking
+false Asia/Colombo
+false Asia/Dacca
+true Asia/Damascus
+false Asia/Dhaka
+false Asia/Dili
+false Asia/Dubai
+false Asia/Dushanbe
+true Asia/Famagusta
+true Asia/Gaza
+false Asia/Harbin
+true Asia/Hebron
+false Asia/Ho_Chi_Minh
+false Asia/Hong_Kong
+false Asia/Hovd
+false Asia/Irkutsk
+false Asia/Istanbul
+false Asia/Jakarta
+false Asia/Jayapura
+true Asia/Jerusalem
+false Asia/Kabul
+false Asia/Kamchatka
+false Asia/Karachi
+false Asia/Kashgar
+false Asia/Kathmandu
+false Asia/Katmandu
+false Asia/Khandyga
+false Asia/Kolkata
+false Asia/Krasnoyarsk
+false Asia/Kuala_Lumpur
+false Asia/Kuching
+false Asia/Kuwait
+false Asia/Macao
+false Asia/Macau
+false Asia/Magadan
+false Asia/Makassar
+false Asia/Manila
+false Asia/Muscat
+true Asia/Nicosia
+false Asia/Novokuznetsk
+false Asia/Novosibirsk
+false Asia/Omsk
+false Asia/Oral
+false Asia/Phnom_Penh
+false Asia/Pontianak
+false Asia/Pyongyang
+false Asia/Qatar
+false Asia/Qostanay
+false Asia/Qyzylorda
+false Asia/Rangoon
+false Asia/Riyadh
+false Asia/Saigon
+false Asia/Sakhalin
+false Asia/Samarkand
+false Asia/Seoul
+false Asia/Shanghai
+false Asia/Singapore
+false Asia/Srednekolymsk
+false Asia/Taipei
+false Asia/Tashkent
+false Asia/Tbilisi
+true Asia/Tehran
+true Asia/Tel_Aviv
+false Asia/Thimbu
+false Asia/Thimphu
+false Asia/Tokyo
+false Asia/Tomsk
+false Asia/Ujung_Pandang
+false Asia/Ulaanbaatar
+false Asia/Ulan_Bator
+false Asia/Urumqi
+false Asia/Ust-Nera
+false Asia/Vientiane
+false Asia/Vladivostok
+false Asia/Yakutsk
+false Asia/Yangon
+false Asia/Yekaterinburg
+false Asia/Yerevan
+true Atlantic/Azores
+true Atlantic/Bermuda
+true Atlantic/Canary
+false Atlantic/Cape_Verde
+true Atlantic/Faeroe
+true Atlantic/Faroe
+true Atlantic/Jan_Mayen
+true Atlantic/Madeira
+false Atlantic/Reykjavik
+false Atlantic/South_Georgia
+false Atlantic/St_Helena
+false Atlantic/Stanley
+false Australia/ACT
+false Australia/Adelaide
+false Australia/Brisbane
+false Australia/Broken_Hill
+false Australia/Canberra
+false Australia/Currie
+false Australia/Darwin
+false Australia/Eucla
+false Australia/Hobart
+false Australia/LHI
+false Australia/Lindeman
+false Australia/Lord_Howe
+false Australia/Melbourne
+false Australia/NSW
+false Australia/North
+false Australia/Perth
+false Australia/Queensland
+false Australia/South
+false Australia/Sydney
+false Australia/Tasmania
+false Australia/Victoria
+false Australia/West
+false Australia/Yancowinna
+true BDST
+false BDT
+false BNT
+false BORT
+false BOT
+false BRA
+true BRST
+false BRT
+true BST
+false BTT
+false Brazil/Acre
+false Brazil/DeNoronha
+false Brazil/East
+false Brazil/West
+true CADT
+false CAST
+false CCT
+true CDT
+true CEST
+false CET
+true CETDST
+true CHADT
+false CHAST
+false CHUT
+false CKT
+true CLST
+false CLT
+false COT
+false CST
+true CST6CDT
+false CXT
+true Canada/Atlantic
+true Canada/Central
+true Canada/Eastern
+true Canada/Mountain
+true Canada/Newfoundland
+true Canada/Pacific
+false Canada/Saskatchewan
+false Canada/Yukon
+false Chile/Continental
+false Chile/EasterIsland
+true Cuba
+false DAVT
+false DDUT
+false EASST
+false EAST
+false EAT
+true EDT
+true EEST
+false EET
+true EETDST
+true EGST
+false EGT
+false EST
+true EST5EDT
+false Egypt
+false Eire
+false Etc/GMT
+false Etc/GMT+0
+false Etc/GMT+1
+false Etc/GMT+10
+false Etc/GMT+11
+false Etc/GMT+12
+false Etc/GMT+2
+false Etc/GMT+3
+false Etc/GMT+4
+false Etc/GMT+5
+false Etc/GMT+6
+false Etc/GMT+7
+false Etc/GMT+8
+false Etc/GMT+9
+false Etc/GMT-0
+false Etc/GMT-1
+false Etc/GMT-10
+false Etc/GMT-11
+false Etc/GMT-12
+false Etc/GMT-13
+false Etc/GMT-14
+false Etc/GMT-2
+false Etc/GMT-3
+false Etc/GMT-4
+false Etc/GMT-5
+false Etc/GMT-6
+false Etc/GMT-7
+false Etc/GMT-8
+false Etc/GMT-9
+false Etc/GMT0
+false Etc/Greenwich
+false Etc/UCT
+false Etc/UTC
+false Etc/Universal
+false Etc/Zulu
+true Europe/Amsterdam
+true Europe/Andorra
+false Europe/Astrakhan
+true Europe/Athens
+true Europe/Belfast
+true Europe/Belgrade
+true Europe/Berlin
+true Europe/Bratislava
+true Europe/Brussels
+true Europe/Bucharest
+true Europe/Budapest
+true Europe/Busingen
+true Europe/Chisinau
+true Europe/Copenhagen
+false Europe/Dublin
+true Europe/Gibraltar
+true Europe/Guernsey
+true Europe/Helsinki
+true Europe/Isle_of_Man
+false Europe/Istanbul
+true Europe/Jersey
+false Europe/Kaliningrad
+true Europe/Kiev
+false Europe/Kirov
+true Europe/Lisbon
+true Europe/Ljubljana
+true Europe/London
+true Europe/Luxembourg
+true Europe/Madrid
+true Europe/Malta
+true Europe/Mariehamn
+false Europe/Minsk
+true Europe/Monaco
+false Europe/Moscow
+true Europe/Nicosia
+true Europe/Oslo
+true Europe/Paris
+true Europe/Podgorica
+true Europe/Prague
+true Europe/Riga
+true Europe/Rome
+false Europe/Samara
+true Europe/San_Marino
+true Europe/Sarajevo
+false Europe/Saratov
+false Europe/Simferopol
+true Europe/Skopje
+true Europe/Sofia
+true Europe/Stockholm
+true Europe/Tallinn
+true Europe/Tirane
+true Europe/Tiraspol
+false Europe/Ulyanovsk
+true Europe/Uzhgorod
+true Europe/Vaduz
+true Europe/Vatican
+true Europe/Vienna
+true Europe/Vilnius
+false Europe/Volgograd
+true Europe/Warsaw
+true Europe/Zagreb
+true Europe/Zaporozhye
+true Europe/Zurich
+false FET
+true FJST
+false FJT
+false FKST
+false FKT
+true FNST
+false FNT
+false Factory
+false GALT
+false GAMT
+true GB
+true GB-Eire
+false GEST
+false GET
+false GFT
+false GILT
+false GMT
+false GMT+0
+false GMT-0
+false GMT0
+false GYT
+false Greenwich
+false HKT
+false HST
+false Hongkong
+false ICT
+true IDT
+false IOT
+false IRKST
+false IRKT
+false IRT
+false IST
+false Iceland
+false Indian/Antananarivo
+false Indian/Chagos
+false Indian/Christmas
+false Indian/Cocos
+false Indian/Comoro
+false Indian/Kerguelen
+false Indian/Mahe
+false Indian/Maldives
+false Indian/Mauritius
+false Indian/Mayotte
+false Indian/Reunion
+true Iran
+true Israel
+false JAYT
+false JST
+false Jamaica
+false Japan
+true KDT
+true KGST
+false KGT
+false KOST
+false KRAST
+false KRAT
+false KST
+false Kwajalein
+false LHDT
+false LHST
+false LIGT
+false LINT
+false LKT
+false Libya
+false MAGST
+false MAGT
+false MART
+false MAWT
+true MDT
+true MEST
+true MESZ
+true MET
+true METDST
+false MEZ
+false MHT
+false MMT
+false MPT
+true MSD
+false MSK
+false MST
+true MST7MDT
+true MUST
+false MUT
+false MVT
+false MYT
+true Mexico/BajaNorte
+true Mexico/BajaSur
+true Mexico/General
+true NDT
+false NFT
+false NOVST
+false NOVT
+false NPT
+false NST
+false NUT
+false NZ
+false NZ-CHAT
+true NZDT
+false NZST
+false NZT
+true Navajo
+false OMSST
+false OMST
+true PDT
+false PET
+false PETST
+false PETT
+false PGT
+false PHOT
+false PHT
+true PKST
+false PKT
+true PMDT
+false PMST
+false PONT
+false PRC
+false PST
+true PST8PDT
+false PWT
+true PYST
+false PYT
+false Pacific/Apia
+false Pacific/Auckland
+false Pacific/Bougainville
+false Pacific/Chatham
+false Pacific/Chuuk
+false Pacific/Easter
+false Pacific/Efate
+false Pacific/Enderbury
+false Pacific/Fakaofo
+false Pacific/Fiji
+false Pacific/Funafuti
+false Pacific/Galapagos
+false Pacific/Gambier
+false Pacific/Guadalcanal
+false Pacific/Guam
+false Pacific/Honolulu
+false Pacific/Johnston
+false Pacific/Kiritimati
+false Pacific/Kosrae
+false Pacific/Kwajalein
+false Pacific/Majuro
+false Pacific/Marquesas
+false Pacific/Midway
+false Pacific/Nauru
+false Pacific/Niue
+false Pacific/Norfolk
+false Pacific/Noumea
+false Pacific/Pago_Pago
+false Pacific/Palau
+false Pacific/Pitcairn
+false Pacific/Pohnpei
+false Pacific/Ponape
+false Pacific/Port_Moresby
+false Pacific/Rarotonga
+false Pacific/Saipan
+false Pacific/Samoa
+false Pacific/Tahiti
+false Pacific/Tarawa
+false Pacific/Tongatapu
+false Pacific/Truk
+false Pacific/Wake
+false Pacific/Wallis
+false Pacific/Yap
+true Poland
+true Portugal
+false RET
+false ROC
+false ROK
+true SADT
+false SAST
+false SCT
+false SGT
+false Singapore
+false TAHT
+false TFT
+false TJT
+false TKT
+false TMT
+false TOT
+false TRUT
+false TVT
+false Turkey
+false UCT
+true ULAST
+false ULAT
+true US/Alaska
+true US/Aleutian
+false US/Arizona
+true US/Central
+true US/East-Indiana
+true US/Eastern
+false US/Hawaii
+true US/Indiana-Starke
+true US/Michigan
+true US/Mountain
+true US/Pacific
+true US/Pacific-New
+false US/Samoa
+false UT
+false UTC
+true UYST
+false UYT
+true UZST
+false UZT
+false Universal
+false VET
+false VLAST
+false VLAT
+false VOLT
+false VUT
+false W-SU
+true WADT
+false WAKT
+false WAST
+false WAT
+true WDT
+true WET
+true WETDST
+false WFT
+true WGST
+false WGT
+false XJT
+false YAKST
+false YAKT
+false YAPT
+true YEKST
+false YEKT
+false Z
+false Zulu
+false posix/Africa/Abidjan
+false posix/Africa/Accra
+false posix/Africa/Addis_Ababa
+false posix/Africa/Algiers
+false posix/Africa/Asmara
+false posix/Africa/Asmera
+false posix/Africa/Bamako
+false posix/Africa/Bangui
+false posix/Africa/Banjul
+false posix/Africa/Bissau
+false posix/Africa/Blantyre
+false posix/Africa/Brazzaville
+false posix/Africa/Bujumbura
+false posix/Africa/Cairo
+true posix/Africa/Casablanca
+true posix/Africa/Ceuta
+false posix/Africa/Conakry
+false posix/Africa/Dakar
+false posix/Africa/Dar_es_Salaam
+false posix/Africa/Djibouti
+false posix/Africa/Douala
+true posix/Africa/El_Aaiun
+false posix/Africa/Freetown
+false posix/Africa/Gaborone
+false posix/Africa/Harare
+false posix/Africa/Johannesburg
+false posix/Africa/Juba
+false posix/Africa/Kampala
+false posix/Africa/Khartoum
+false posix/Africa/Kigali
+false posix/Africa/Kinshasa
+false posix/Africa/Lagos
+false posix/Africa/Libreville
+false posix/Africa/Lome
+false posix/Africa/Luanda
+false posix/Africa/Lubumbashi
+false posix/Africa/Lusaka
+false posix/Africa/Malabo
+false posix/Africa/Maputo
+false posix/Africa/Maseru
+false posix/Africa/Mbabane
+false posix/Africa/Mogadishu
+false posix/Africa/Monrovia
+false posix/Africa/Nairobi
+false posix/Africa/Ndjamena
+false posix/Africa/Niamey
+false posix/Africa/Nouakchott
+false posix/Africa/Ouagadougou
+false posix/Africa/Porto-Novo
+false posix/Africa/Sao_Tome
+false posix/Africa/Timbuktu
+false posix/Africa/Tripoli
+false posix/Africa/Tunis
+false posix/Africa/Windhoek
+true posix/America/Adak
+true posix/America/Anchorage
+false posix/America/Anguilla
+false posix/America/Antigua
+false posix/America/Araguaina
+false posix/America/Argentina/Buenos_Aires
+false posix/America/Argentina/Catamarca
+false posix/America/Argentina/ComodRivadavia
+false posix/America/Argentina/Cordoba
+false posix/America/Argentina/Jujuy
+false posix/America/Argentina/La_Rioja
+false posix/America/Argentina/Mendoza
+false posix/America/Argentina/Rio_Gallegos
+false posix/America/Argentina/Salta
+false posix/America/Argentina/San_Juan
+false posix/America/Argentina/San_Luis
+false posix/America/Argentina/Tucuman
+false posix/America/Argentina/Ushuaia
+false posix/America/Aruba
+false posix/America/Asuncion
+false posix/America/Atikokan
+true posix/America/Atka
+false posix/America/Bahia
+true posix/America/Bahia_Banderas
+false posix/America/Barbados
+false posix/America/Belem
+false posix/America/Belize
+false posix/America/Blanc-Sablon
+false posix/America/Boa_Vista
+false posix/America/Bogota
+true posix/America/Boise
+false posix/America/Buenos_Aires
+true posix/America/Cambridge_Bay
+false posix/America/Campo_Grande
+false posix/America/Cancun
+false posix/America/Caracas
+false posix/America/Catamarca
+false posix/America/Cayenne
+false posix/America/Cayman
+true posix/America/Chicago
+true posix/America/Chihuahua
+false posix/America/Coral_Harbour
+false posix/America/Cordoba
+false posix/America/Costa_Rica
+false posix/America/Creston
+false posix/America/Cuiaba
+false posix/America/Curacao
+false posix/America/Danmarkshavn
+false posix/America/Dawson
+false posix/America/Dawson_Creek
+true posix/America/Denver
+true posix/America/Detroit
+false posix/America/Dominica
+true posix/America/Edmonton
+false posix/America/Eirunepe
+false posix/America/El_Salvador
+true posix/America/Ensenada
+false posix/America/Fort_Nelson
+true posix/America/Fort_Wayne
+false posix/America/Fortaleza
+true posix/America/Glace_Bay
+true posix/America/Godthab
+true posix/America/Goose_Bay
+true posix/America/Grand_Turk
+false posix/America/Grenada
+false posix/America/Guadeloupe
+false posix/America/Guatemala
+false posix/America/Guayaquil
+false posix/America/Guyana
+true posix/America/Halifax
+true posix/America/Havana
+false posix/America/Hermosillo
+true posix/America/Indiana/Indianapolis
+true posix/America/Indiana/Knox
+true posix/America/Indiana/Marengo
+true posix/America/Indiana/Petersburg
+true posix/America/Indiana/Tell_City
+true posix/America/Indiana/Vevay
+true posix/America/Indiana/Vincennes
+true posix/America/Indiana/Winamac
+true posix/America/Indianapolis
+true posix/America/Inuvik
+true posix/America/Iqaluit
+false posix/America/Jamaica
+false posix/America/Jujuy
+true posix/America/Juneau
+true posix/America/Kentucky/Louisville
+true posix/America/Kentucky/Monticello
+true posix/America/Knox_IN
+false posix/America/Kralendijk
+false posix/America/La_Paz
+false posix/America/Lima
+true posix/America/Los_Angeles
+true posix/America/Louisville
+false posix/America/Lower_Princes
+false posix/America/Maceio
+false posix/America/Managua
+false posix/America/Manaus
+false posix/America/Marigot
+false posix/America/Martinique
+true posix/America/Matamoros
+true posix/America/Mazatlan
+false posix/America/Mendoza
+true posix/America/Menominee
+true posix/America/Merida
+true posix/America/Metlakatla
+true posix/America/Mexico_City
+true posix/America/Miquelon
+true posix/America/Moncton
+true posix/America/Monterrey
+false posix/America/Montevideo
+true posix/America/Montreal
+false posix/America/Montserrat
+true posix/America/Nassau
+true posix/America/New_York
+true posix/America/Nipigon
+true posix/America/Nome
+false posix/America/Noronha
+true posix/America/North_Dakota/Beulah
+true posix/America/North_Dakota/Center
+true posix/America/North_Dakota/New_Salem
+true posix/America/Nuuk
+true posix/America/Ojinaga
+false posix/America/Panama
+true posix/America/Pangnirtung
+false posix/America/Paramaribo
+false posix/America/Phoenix
+true posix/America/Port-au-Prince
+false posix/America/Port_of_Spain
+false posix/America/Porto_Acre
+false posix/America/Porto_Velho
+false posix/America/Puerto_Rico
+false posix/America/Punta_Arenas
+true posix/America/Rainy_River
+true posix/America/Rankin_Inlet
+false posix/America/Recife
+false posix/America/Regina
+true posix/America/Resolute
+false posix/America/Rio_Branco
+false posix/America/Rosario
+true posix/America/Santa_Isabel
+false posix/America/Santarem
+false posix/America/Santiago
+false posix/America/Santo_Domingo
+false posix/America/Sao_Paulo
+true posix/America/Scoresbysund
+true posix/America/Shiprock
+true posix/America/Sitka
+false posix/America/St_Barthelemy
+true posix/America/St_Johns
+false posix/America/St_Kitts
+false posix/America/St_Lucia
+false posix/America/St_Thomas
+false posix/America/St_Vincent
+false posix/America/Swift_Current
+false posix/America/Tegucigalpa
+true posix/America/Thule
+true posix/America/Thunder_Bay
+true posix/America/Tijuana
+true posix/America/Toronto
+false posix/America/Tortola
+true posix/America/Vancouver
+false posix/America/Virgin
+false posix/America/Whitehorse
+true posix/America/Winnipeg
+true posix/America/Yakutat
+true posix/America/Yellowknife
+false posix/Antarctica/Casey
+false posix/Antarctica/Davis
+false posix/Antarctica/DumontDUrville
+false posix/Antarctica/Macquarie
+false posix/Antarctica/Mawson
+false posix/Antarctica/McMurdo
+false posix/Antarctica/Palmer
+false posix/Antarctica/Rothera
+false posix/Antarctica/South_Pole
+false posix/Antarctica/Syowa
+true posix/Antarctica/Troll
+false posix/Antarctica/Vostok
+true posix/Arctic/Longyearbyen
+false posix/Asia/Aden
+false posix/Asia/Almaty
+true posix/Asia/Amman
+false posix/Asia/Anadyr
+false posix/Asia/Aqtau
+false posix/Asia/Aqtobe
+false posix/Asia/Ashgabat
+false posix/Asia/Ashkhabad
+false posix/Asia/Atyrau
+false posix/Asia/Baghdad
+false posix/Asia/Bahrain
+false posix/Asia/Baku
+false posix/Asia/Bangkok
+false posix/Asia/Barnaul
+true posix/Asia/Beirut
+false posix/Asia/Bishkek
+false posix/Asia/Brunei
+false posix/Asia/Calcutta
+false posix/Asia/Chita
+false posix/Asia/Choibalsan
+false posix/Asia/Chongqing
+false posix/Asia/Chungking
+false posix/Asia/Colombo
+false posix/Asia/Dacca
+true posix/Asia/Damascus
+false posix/Asia/Dhaka
+false posix/Asia/Dili
+false posix/Asia/Dubai
+false posix/Asia/Dushanbe
+true posix/Asia/Famagusta
+true posix/Asia/Gaza
+false posix/Asia/Harbin
+true posix/Asia/Hebron
+false posix/Asia/Ho_Chi_Minh
+false posix/Asia/Hong_Kong
+false posix/Asia/Hovd
+false posix/Asia/Irkutsk
+false posix/Asia/Istanbul
+false posix/Asia/Jakarta
+false posix/Asia/Jayapura
+true posix/Asia/Jerusalem
+false posix/Asia/Kabul
+false posix/Asia/Kamchatka
+false posix/Asia/Karachi
+false posix/Asia/Kashgar
+false posix/Asia/Kathmandu
+false posix/Asia/Katmandu
+false posix/Asia/Khandyga
+false posix/Asia/Kolkata
+false posix/Asia/Krasnoyarsk
+false posix/Asia/Kuala_Lumpur
+false posix/Asia/Kuching
+false posix/Asia/Kuwait
+false posix/Asia/Macao
+false posix/Asia/Macau
+false posix/Asia/Magadan
+false posix/Asia/Makassar
+false posix/Asia/Manila
+false posix/Asia/Muscat
+true posix/Asia/Nicosia
+false posix/Asia/Novokuznetsk
+false posix/Asia/Novosibirsk
+false posix/Asia/Omsk
+false posix/Asia/Oral
+false posix/Asia/Phnom_Penh
+false posix/Asia/Pontianak
+false posix/Asia/Pyongyang
+false posix/Asia/Qatar
+false posix/Asia/Qostanay
+false posix/Asia/Qyzylorda
+false posix/Asia/Rangoon
+false posix/Asia/Riyadh
+false posix/Asia/Saigon
+false posix/Asia/Sakhalin
+false posix/Asia/Samarkand
+false posix/Asia/Seoul
+false posix/Asia/Shanghai
+false posix/Asia/Singapore
+false posix/Asia/Srednekolymsk
+false posix/Asia/Taipei
+false posix/Asia/Tashkent
+false posix/Asia/Tbilisi
+true posix/Asia/Tehran
+true posix/Asia/Tel_Aviv
+false posix/Asia/Thimbu
+false posix/Asia/Thimphu
+false posix/Asia/Tokyo
+false posix/Asia/Tomsk
+false posix/Asia/Ujung_Pandang
+false posix/Asia/Ulaanbaatar
+false posix/Asia/Ulan_Bator
+false posix/Asia/Urumqi
+false posix/Asia/Ust-Nera
+false posix/Asia/Vientiane
+false posix/Asia/Vladivostok
+false posix/Asia/Yakutsk
+false posix/Asia/Yangon
+false posix/Asia/Yekaterinburg
+false posix/Asia/Yerevan
+true posix/Atlantic/Azores
+true posix/Atlantic/Bermuda
+true posix/Atlantic/Canary
+false posix/Atlantic/Cape_Verde
+true posix/Atlantic/Faeroe
+true posix/Atlantic/Faroe
+true posix/Atlantic/Jan_Mayen
+true posix/Atlantic/Madeira
+false posix/Atlantic/Reykjavik
+false posix/Atlantic/South_Georgia
+false posix/Atlantic/St_Helena
+false posix/Atlantic/Stanley
+false posix/Australia/ACT
+false posix/Australia/Adelaide
+false posix/Australia/Brisbane
+false posix/Australia/Broken_Hill
+false posix/Australia/Canberra
+false posix/Australia/Currie
+false posix/Australia/Darwin
+false posix/Australia/Eucla
+false posix/Australia/Hobart
+false posix/Australia/LHI
+false posix/Australia/Lindeman
+false posix/Australia/Lord_Howe
+false posix/Australia/Melbourne
+false posix/Australia/NSW
+false posix/Australia/North
+false posix/Australia/Perth
+false posix/Australia/Queensland
+false posix/Australia/South
+false posix/Australia/Sydney
+false posix/Australia/Tasmania
+false posix/Australia/Victoria
+false posix/Australia/West
+false posix/Australia/Yancowinna
+false posix/Brazil/Acre
+false posix/Brazil/DeNoronha
+false posix/Brazil/East
+false posix/Brazil/West
+true posix/CET
+true posix/CST6CDT
+true posix/Canada/Atlantic
+true posix/Canada/Central
+true posix/Canada/Eastern
+true posix/Canada/Mountain
+true posix/Canada/Newfoundland
+true posix/Canada/Pacific
+false posix/Canada/Saskatchewan
+false posix/Canada/Yukon
+false posix/Chile/Continental
+false posix/Chile/EasterIsland
+true posix/Cuba
+true posix/EET
+false posix/EST
+true posix/EST5EDT
+false posix/Egypt
+false posix/Eire
+false posix/Etc/GMT
+false posix/Etc/GMT+0
+false posix/Etc/GMT+1
+false posix/Etc/GMT+10
+false posix/Etc/GMT+11
+false posix/Etc/GMT+12
+false posix/Etc/GMT+2
+false posix/Etc/GMT+3
+false posix/Etc/GMT+4
+false posix/Etc/GMT+5
+false posix/Etc/GMT+6
+false posix/Etc/GMT+7
+false posix/Etc/GMT+8
+false posix/Etc/GMT+9
+false posix/Etc/GMT-0
+false posix/Etc/GMT-1
+false posix/Etc/GMT-10
+false posix/Etc/GMT-11
+false posix/Etc/GMT-12
+false posix/Etc/GMT-13
+false posix/Etc/GMT-14
+false posix/Etc/GMT-2
+false posix/Etc/GMT-3
+false posix/Etc/GMT-4
+false posix/Etc/GMT-5
+false posix/Etc/GMT-6
+false posix/Etc/GMT-7
+false posix/Etc/GMT-8
+false posix/Etc/GMT-9
+false posix/Etc/GMT0
+false posix/Etc/Greenwich
+false posix/Etc/UCT
+false posix/Etc/UTC
+false posix/Etc/Universal
+false posix/Etc/Zulu
+true posix/Europe/Amsterdam
+true posix/Europe/Andorra
+false posix/Europe/Astrakhan
+true posix/Europe/Athens
+true posix/Europe/Belfast
+true posix/Europe/Belgrade
+true posix/Europe/Berlin
+true posix/Europe/Bratislava
+true posix/Europe/Brussels
+true posix/Europe/Bucharest
+true posix/Europe/Budapest
+true posix/Europe/Busingen
+true posix/Europe/Chisinau
+true posix/Europe/Copenhagen
+false posix/Europe/Dublin
+true posix/Europe/Gibraltar
+true posix/Europe/Guernsey
+true posix/Europe/Helsinki
+true posix/Europe/Isle_of_Man
+false posix/Europe/Istanbul
+true posix/Europe/Jersey
+false posix/Europe/Kaliningrad
+true posix/Europe/Kiev
+false posix/Europe/Kirov
+true posix/Europe/Lisbon
+true posix/Europe/Ljubljana
+true posix/Europe/London
+true posix/Europe/Luxembourg
+true posix/Europe/Madrid
+true posix/Europe/Malta
+true posix/Europe/Mariehamn
+false posix/Europe/Minsk
+true posix/Europe/Monaco
+false posix/Europe/Moscow
+true posix/Europe/Nicosia
+true posix/Europe/Oslo
+true posix/Europe/Paris
+true posix/Europe/Podgorica
+true posix/Europe/Prague
+true posix/Europe/Riga
+true posix/Europe/Rome
+false posix/Europe/Samara
+true posix/Europe/San_Marino
+true posix/Europe/Sarajevo
+false posix/Europe/Saratov
+false posix/Europe/Simferopol
+true posix/Europe/Skopje
+true posix/Europe/Sofia
+true posix/Europe/Stockholm
+true posix/Europe/Tallinn
+true posix/Europe/Tirane
+true posix/Europe/Tiraspol
+false posix/Europe/Ulyanovsk
+true posix/Europe/Uzhgorod
+true posix/Europe/Vaduz
+true posix/Europe/Vatican
+true posix/Europe/Vienna
+true posix/Europe/Vilnius
+false posix/Europe/Volgograd
+true posix/Europe/Warsaw
+true posix/Europe/Zagreb
+true posix/Europe/Zaporozhye
+true posix/Europe/Zurich
+false posix/Factory
+true posix/GB
+true posix/GB-Eire
+false posix/GMT
+false posix/GMT+0
+false posix/GMT-0
+false posix/GMT0
+false posix/Greenwich
+false posix/HST
+false posix/Hongkong
+false posix/Iceland
+false posix/Indian/Antananarivo
+false posix/Indian/Chagos
+false posix/Indian/Christmas
+false posix/Indian/Cocos
+false posix/Indian/Comoro
+false posix/Indian/Kerguelen
+false posix/Indian/Mahe
+false posix/Indian/Maldives
+false posix/Indian/Mauritius
+false posix/Indian/Mayotte
+false posix/Indian/Reunion
+true posix/Iran
+true posix/Israel
+false posix/Jamaica
+false posix/Japan
+false posix/Kwajalein
+false posix/Libya
+true posix/MET
+false posix/MST
+true posix/MST7MDT
+true posix/Mexico/BajaNorte
+true posix/Mexico/BajaSur
+true posix/Mexico/General
+false posix/NZ
+false posix/NZ-CHAT
+true posix/Navajo
+false posix/PRC
+true posix/PST8PDT
+false posix/Pacific/Apia
+false posix/Pacific/Auckland
+false posix/Pacific/Bougainville
+false posix/Pacific/Chatham
+false posix/Pacific/Chuuk
+false posix/Pacific/Easter
+false posix/Pacific/Efate
+false posix/Pacific/Enderbury
+false posix/Pacific/Fakaofo
+false posix/Pacific/Fiji
+false posix/Pacific/Funafuti
+false posix/Pacific/Galapagos
+false posix/Pacific/Gambier
+false posix/Pacific/Guadalcanal
+false posix/Pacific/Guam
+false posix/Pacific/Honolulu
+false posix/Pacific/Johnston
+false posix/Pacific/Kiritimati
+false posix/Pacific/Kosrae
+false posix/Pacific/Kwajalein
+false posix/Pacific/Majuro
+false posix/Pacific/Marquesas
+false posix/Pacific/Midway
+false posix/Pacific/Nauru
+false posix/Pacific/Niue
+false posix/Pacific/Norfolk
+false posix/Pacific/Noumea
+false posix/Pacific/Pago_Pago
+false posix/Pacific/Palau
+false posix/Pacific/Pitcairn
+false posix/Pacific/Pohnpei
+false posix/Pacific/Ponape
+false posix/Pacific/Port_Moresby
+false posix/Pacific/Rarotonga
+false posix/Pacific/Saipan
+false posix/Pacific/Samoa
+false posix/Pacific/Tahiti
+false posix/Pacific/Tarawa
+false posix/Pacific/Tongatapu
+false posix/Pacific/Truk
+false posix/Pacific/Wake
+false posix/Pacific/Wallis
+false posix/Pacific/Yap
+true posix/Poland
+true posix/Portugal
+false posix/ROC
+false posix/ROK
+false posix/Singapore
+false posix/Turkey
+false posix/UCT
+true posix/US/Alaska
+true posix/US/Aleutian
+false posix/US/Arizona
+true posix/US/Central
+true posix/US/East-Indiana
+true posix/US/Eastern
+false posix/US/Hawaii
+true posix/US/Indiana-Starke
+true posix/US/Michigan
+true posix/US/Mountain
+true posix/US/Pacific
+true posix/US/Pacific-New
+false posix/US/Samoa
+false posix/UTC
+false posix/Universal
+false posix/W-SU
+true posix/WET
+false posix/Zulu
+true posixrules
+</TimeZones>
+      <StartupTime>1590107214</StartupTime>
     </root>
-    <database id="2" parent="1" name="agencia_vuelo">
-      <ObjectId>61795</ObjectId>
-      <StateNumber>3971</StateNumber>
-      <Owner>postgres</Owner>
-    </database>
-    <database id="3" parent="1" name="arbol_genealogico">
-      <ObjectId>62064</ObjectId>
-      <StateNumber>4164</StateNumber>
-      <Owner>postgres</Owner>
-    </database>
-    <database id="4" parent="1" name="mail">
-      <ObjectId>43256</ObjectId>
-      <StateNumber>1868</StateNumber>
-      <Owner>postgres</Owner>
-    </database>
-    <database id="5" parent="1" name="movieplex">
-      <ObjectId>25863</ObjectId>
-      <StateNumber>1331</StateNumber>
-      <Owner>postgres</Owner>
-    </database>
-    <database id="6" parent="1" name="postgres">
-      <ObjectId>12938</ObjectId>
+    <database id="2" parent="1" name="postgres">
+      <ObjectId>13459</ObjectId>
       <Comment>default administrative connection database</Comment>
-      <StateNumber>554</StateNumber>
       <Owner>postgres</Owner>
     </database>
-    <database id="7" parent="1" name="so_ventas">
-      <ObjectId>42497</ObjectId>
-      <StateNumber>1720</StateNumber>
+    <database id="3" parent="1" name="tienda_yugioh">
+      <ObjectId>16384</ObjectId>
       <Owner>postgres</Owner>
-    </database>
-    <database id="8" parent="1" name="tienda_yugioh">
-      <ObjectId>61328</ObjectId>
-      <StateNumber>3814</StateNumber>
-      <Owner>postgres</Owner>
-      <IntrospectionStateNumber>506</IntrospectionStateNumber>
+      <IntrospectionStateNumber>711</IntrospectionStateNumber>
       <Current>1</Current>
-      <Visible>1</Visible>
-      <Relations>sequence|table|61343|61338|1
-sequence|table|61380|61376|1
-sequence|table|61386|61382|1
-sequence|table|61336|61332|1
-sequence|table|61352|61348|1
-sequence|table|61363|61359|1
-sequence|table|61369|61365|1
-sequence|table|61357|61354|1
-sequence|table|61374|61371|1
-sequence|table|61460|61457|1
-sequence|table|61417|61414|1
-sequence|table|61431|61427|1
-sequence|table|61412|61405|1
-sequence|table|61755|61757|1
+      <Relations>sequence|table|16392|16388|1
+sequence|table|16399|16394|1
+sequence|table|16408|16404|1
+sequence|table|16413|16410|1
+sequence|table|16419|16415|1
+sequence|table|16425|16421|1
+sequence|table|16430|16427|1
+sequence|table|16436|16432|1
+sequence|table|16442|16438|1
+sequence|table|16461|16457|1
+sequence|table|16477|16467|1
+sequence|table|16482|16479|1
+sequence|table|16487|16484|1
+sequence|table|16493|16489|1
+sequence|table|16518|16515|1
+sequence|table|16728|16730|1
 </Relations>
     </database>
-    <database id="9" parent="1" name="unab_carga">
-      <ObjectId>25500</ObjectId>
-      <StateNumber>1160</StateNumber>
-      <Owner>postgres</Owner>
-    </database>
-    <role id="10" parent="1" name="jamesUser">
-      <ObjectId>43257</ObjectId>
-      <SuperRole>1</SuperRole>
-      <Inherit>1</Inherit>
-      <CreateRole>1</CreateRole>
-      <CreateDb>1</CreateDb>
-      <CanLogin>1</CanLogin>
-      <ConnectionLimit>-1</ConnectionLimit>
+    <role id="4" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
     </role>
-    <role id="11" parent="1" name="pg_monitor">
+    <role id="5" parent="1" name="pg_monitor">
       <ObjectId>3373</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
     </role>
-    <role id="12" parent="1" name="pg_read_all_settings">
+    <role id="6" parent="1" name="pg_read_all_settings">
       <ObjectId>3374</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
     </role>
-    <role id="13" parent="1" name="pg_read_all_stats">
+    <role id="7" parent="1" name="pg_read_all_stats">
       <ObjectId>3375</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
     </role>
-    <role id="14" parent="1" name="pg_signal_backend">
+    <role id="8" parent="1" name="pg_read_server_files">
+      <ObjectId>4569</ObjectId>
+    </role>
+    <role id="9" parent="1" name="pg_signal_backend">
       <ObjectId>4200</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
     </role>
-    <role id="15" parent="1" name="pg_stat_scan_tables">
+    <role id="10" parent="1" name="pg_stat_scan_tables">
       <ObjectId>3377</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
     </role>
-    <role id="16" parent="1" name="postgres">
+    <role id="11" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
+    </role>
+    <role id="12" parent="1" name="postgres">
       <ObjectId>10</ObjectId>
       <SuperRole>1</SuperRole>
-      <Inherit>1</Inherit>
-      <CreateRole>1</CreateRole>
       <CreateDb>1</CreateDb>
+      <CreateRole>1</CreateRole>
       <CanLogin>1</CanLogin>
       <Replication>1</Replication>
-      <ConnectionLimit>-1</ConnectionLimit>
       <BypassRls>1</BypassRls>
     </role>
-    <schema id="17" parent="8" name="cat">
-      <ObjectId>61329</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <schema id="13" parent="3" name="cat">
+      <ObjectId>16385</ObjectId>
+      <StateNumber>488</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2018-12-18.14:41:36.697</IntrospectionTimestamp>
-      <IntrospectionStateNumber>4142</IntrospectionStateNumber>
-      <Visible>1</Visible>
+      <IntrospectionStateNumber>712</IntrospectionStateNumber>
     </schema>
-    <schema id="18" parent="8" name="information_schema">
-      <ObjectId>12648</ObjectId>
-      <StateNumber>354</StateNumber>
+    <schema id="14" parent="3" name="information_schema">
+      <ObjectId>13159</ObjectId>
+      <StateNumber>281</StateNumber>
       <Owner>postgres</Owner>
     </schema>
-    <schema id="19" parent="8" name="pg_catalog">
+    <schema id="15" parent="3" name="pg_catalog">
       <ObjectId>11</ObjectId>
       <Comment>system catalog schema</Comment>
-      <StateNumber>351</StateNumber>
+      <StateNumber>274</StateNumber>
       <Owner>postgres</Owner>
+    </schema>
+    <schema id="16" parent="3" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <StateNumber>275</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>710</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
-    <schema id="20" parent="8" name="pg_temp_1">
-      <ObjectId>11736</ObjectId>
-      <StateNumber>114</StateNumber>
+    <schema id="17" parent="3" name="sis">
+      <ObjectId>16386</ObjectId>
+      <StateNumber>489</StateNumber>
       <Owner>postgres</Owner>
+      <IntrospectionStateNumber>713</IntrospectionStateNumber>
     </schema>
-    <schema id="21" parent="8" name="pg_toast">
-      <ObjectId>99</ObjectId>
-      <Comment>reserved schema for TOAST tables</Comment>
+    <schema id="18" parent="3" name="teo">
+      <ObjectId>16387</ObjectId>
+      <StateNumber>490</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>714</IntrospectionStateNumber>
+    </schema>
+    <access-method id="19" parent="3" name="heap">
+      <ObjectId>2</ObjectId>
+      <Comment>heap table access method</Comment>
       <StateNumber>1</StateNumber>
-      <Owner>postgres</Owner>
-    </schema>
-    <schema id="22" parent="8" name="pg_toast_temp_1">
-      <ObjectId>11737</ObjectId>
-      <StateNumber>114</StateNumber>
-      <Owner>postgres</Owner>
-    </schema>
-    <schema id="23" parent="8" name="sis">
-      <ObjectId>61330</ObjectId>
-      <StateNumber>3815</StateNumber>
-      <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2018-12-18.14:41:36.880</IntrospectionTimestamp>
-      <IntrospectionStateNumber>3919</IntrospectionStateNumber>
-      <Visible>1</Visible>
-    </schema>
-    <schema id="24" parent="8" name="teo">
-      <ObjectId>61331</ObjectId>
-      <StateNumber>3815</StateNumber>
-      <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2018-12-18.14:41:36.970</IntrospectionTimestamp>
-      <IntrospectionStateNumber>4142</IntrospectionStateNumber>
-      <Visible>1</Visible>
-    </schema>
-    <access-method id="25" parent="8" name="btree">
+      <Handler>pg_catalog.heap_tableam_handler</Handler>
+      <HandlerId>3</HandlerId>
+    </access-method>
+    <access-method id="20" parent="3" name="btree">
       <ObjectId>403</ObjectId>
       <Comment>b-tree index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -168,7 +1496,7 @@ sequence|table|61755|61757|1
       <HandlerId>330</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="26" parent="8" name="hash">
+    <access-method id="21" parent="3" name="hash">
       <ObjectId>405</ObjectId>
       <Comment>hash index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -176,7 +1504,7 @@ sequence|table|61755|61757|1
       <HandlerId>331</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="27" parent="8" name="gist">
+    <access-method id="22" parent="3" name="gist">
       <ObjectId>783</ObjectId>
       <Comment>GiST index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -184,7 +1512,7 @@ sequence|table|61755|61757|1
       <HandlerId>332</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="28" parent="8" name="gin">
+    <access-method id="23" parent="3" name="gin">
       <ObjectId>2742</ObjectId>
       <Comment>GIN index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -192,7 +1520,7 @@ sequence|table|61755|61757|1
       <HandlerId>333</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="29" parent="8" name="spgist">
+    <access-method id="24" parent="3" name="spgist">
       <ObjectId>4000</ObjectId>
       <Comment>SP-GiST index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -200,7 +1528,7 @@ sequence|table|61755|61757|1
       <HandlerId>334</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="30" parent="8" name="brin">
+    <access-method id="25" parent="3" name="brin">
       <ObjectId>3580</ObjectId>
       <Comment>block range index (BRIN) access method</Comment>
       <StateNumber>1</StateNumber>
@@ -208,1347 +1536,1493 @@ sequence|table|61755|61757|1
       <HandlerId>335</HandlerId>
       <Type>index</Type>
     </access-method>
-    <extension id="31" parent="8" name="plpgsql">
-      <ObjectId>12924</ObjectId>
+    <extension id="26" parent="3" name="plpgsql">
+      <ObjectId>13445</ObjectId>
       <Comment>PL/pgSQL procedural language</Comment>
-      <StateNumber>506</StateNumber>
+      <StateNumber>436</StateNumber>
       <Version>1.0</Version>
       <SchemaName>pg_catalog</SchemaName>
       <SchemaId>11</SchemaId>
     </extension>
-    <sequence id="32" parent="17" name="atributos_mounstros_id_seq">
-      <ObjectId>61336</ObjectId>
+    <language id="27" parent="3" name="c"/>
+    <language id="28" parent="3" name="internal"/>
+    <language id="29" parent="3" name="plpgsql"/>
+    <language id="30" parent="3" name="sql"/>
+    <sequence id="31" parent="13" name="atributos_mounstros_id_seq">
+      <ObjectId>16392</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3815</StateNumber>
-      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <StateNumber>493</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
-      <DataType>integer</DataType>
+      <DataType>integer|0s</DataType>
     </sequence>
-    <sequence id="33" parent="17" name="categorias_cartas_id_seq">
-      <ObjectId>61343</ObjectId>
+    <sequence id="32" parent="13" name="categorias_cartas_id_seq">
+      <ObjectId>16399</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3815</StateNumber>
-      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <StateNumber>498</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
-      <DataType>integer</DataType>
+      <DataType>integer|0s</DataType>
     </sequence>
-    <sequence id="34" parent="17" name="componentes_deck_id_seq">
-      <ObjectId>61352</ObjectId>
+    <sequence id="33" parent="13" name="componentes_deck_id_seq">
+      <ObjectId>16408</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3815</StateNumber>
-      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <StateNumber>505</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
-      <DataType>integer</DataType>
+      <DataType>integer|0s</DataType>
     </sequence>
-    <sequence id="35" parent="17" name="estados_cartas_id_seq">
-      <ObjectId>61357</ObjectId>
+    <sequence id="34" parent="13" name="constantes_id_seq">
+      <ObjectId>16728</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>699</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint|0s</DataType>
+    </sequence>
+    <sequence id="35" parent="13" name="estados_cartas_id_seq">
+      <ObjectId>16413</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>510</StateNumber>
       <SequenceIdentity>1..32767</SequenceIdentity>
       <CacheSize>1</CacheSize>
-      <DataType>smallint</DataType>
+      <DataType>smallint|0s</DataType>
     </sequence>
-    <sequence id="36" parent="17" name="flechas_links_id_seq">
-      <ObjectId>61363</ObjectId>
+    <sequence id="36" parent="13" name="flechas_links_id_seq">
+      <ObjectId>16419</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>515</StateNumber>
       <SequenceIdentity>1..32767</SequenceIdentity>
       <CacheSize>1</CacheSize>
-      <DataType>smallint</DataType>
+      <DataType>smallint|0s</DataType>
     </sequence>
-    <sequence id="37" parent="17" name="limitaciones_cartas_id_seq">
-      <ObjectId>61369</ObjectId>
+    <sequence id="37" parent="13" name="limitaciones_cartas_id_seq">
+      <ObjectId>16425</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3815</StateNumber>
-      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <StateNumber>520</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
-      <DataType>integer</DataType>
+      <DataType>integer|0s</DataType>
     </sequence>
-    <sequence id="38" parent="17" name="tipos_escalas_id_seq">
-      <ObjectId>61374</ObjectId>
+    <sequence id="38" parent="13" name="tipos_escalas_id_seq">
+      <ObjectId>16430</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>525</StateNumber>
       <SequenceIdentity>1..32767</SequenceIdentity>
       <CacheSize>1</CacheSize>
-      <DataType>smallint</DataType>
+      <DataType>smallint|0s</DataType>
     </sequence>
-    <sequence id="39" parent="17" name="tipos_monstruos_id_seq">
-      <ObjectId>61380</ObjectId>
+    <sequence id="39" parent="13" name="tipos_monstruos_id_seq">
+      <ObjectId>16436</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3815</StateNumber>
-      <SequenceIdentity>1..2147483647</SequenceIdentity>
-      <CacheSize>1</CacheSize>
-      <DataType>integer</DataType>
-    </sequence>
-    <table id="40" parent="17" name="atributos_mounstros">
-      <ObjectId>61332</ObjectId>
-      <Owner>postgres</Owner>
-      <StateNumber>4139</StateNumber>
-    </table>
-    <table id="41" parent="17" name="categorias_cartas">
-      <ObjectId>61338</ObjectId>
-      <Owner>postgres</Owner>
-      <StateNumber>3851</StateNumber>
-    </table>
-    <table id="42" parent="17" name="componente_categoria_carta">
-      <ObjectId>61345</ObjectId>
-      <Owner>postgres</Owner>
-      <StateNumber>3815</StateNumber>
-    </table>
-    <table id="43" parent="17" name="componentes_deck">
-      <ObjectId>61348</ObjectId>
-      <Owner>postgres</Owner>
-      <StateNumber>3815</StateNumber>
-    </table>
-    <table id="44" parent="17" name="estados_cartas">
-      <ObjectId>61354</ObjectId>
-      <Owner>postgres</Owner>
-      <StateNumber>3815</StateNumber>
-    </table>
-    <table id="45" parent="17" name="flechas_links">
-      <ObjectId>61359</ObjectId>
-      <Owner>postgres</Owner>
-      <StateNumber>4142</StateNumber>
-    </table>
-    <table id="46" parent="17" name="limitaciones_cartas">
-      <ObjectId>61365</ObjectId>
-      <Owner>postgres</Owner>
-      <StateNumber>3815</StateNumber>
-    </table>
-    <table id="47" parent="17" name="tipos_escalas">
-      <ObjectId>61371</ObjectId>
-      <Owner>postgres</Owner>
-      <StateNumber>4139</StateNumber>
-    </table>
-    <table id="48" parent="17" name="tipos_monstruos">
-      <ObjectId>61376</ObjectId>
-      <Owner>postgres</Owner>
-      <StateNumber>4140</StateNumber>
-    </table>
-    <sequence id="49" parent="23" name="niveles_id_seq">
-      <ObjectId>61388</ObjectId>
-      <Owner>postgres</Owner>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>530</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
-      <DataType>bigint</DataType>
+      <DataType>integer|0s</DataType>
     </sequence>
-    <sequence id="50" parent="23" name="menus_id_seq">
-      <ObjectId>61386</ObjectId>
+    <table id="40" parent="13" name="atributos_mounstros">
+      <ObjectId>16388</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3815</StateNumber>
-      <SequenceIdentity>1..2147483647</SequenceIdentity>
-      <CacheSize>1</CacheSize>
-      <DataType>integer</DataType>
-    </sequence>
-    <table id="51" parent="23" name="menus">
-      <ObjectId>61382</ObjectId>
-      <Owner>postgres</Owner>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>688</StateNumber>
     </table>
-    <table id="52" parent="23" name="niveles">
-      <ObjectId>61390</ObjectId>
+    <table id="41" parent="13" name="categorias_cartas">
+      <ObjectId>16394</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>667</StateNumber>
     </table>
-    <table id="53" parent="23" name="niveles_menus">
-      <ObjectId>61395</ObjectId>
+    <table id="42" parent="13" name="componente_categoria_carta">
+      <ObjectId>16401</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>668</StateNumber>
     </table>
-    <table id="54" parent="23" name="niveles_usuarios">
-      <ObjectId>61398</ObjectId>
+    <table id="43" parent="13" name="componentes_deck">
+      <ObjectId>16404</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>669</StateNumber>
     </table>
-    <table id="55" parent="23" name="usuarios">
-      <ObjectId>61401</ObjectId>
+    <table id="44" parent="13" name="constantes">
+      <ObjectId>16730</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3919</StateNumber>
+      <StateNumber>699</StateNumber>
     </table>
-    <sequence id="56" parent="24" name="cartas_id_seq">
-      <ObjectId>61412</ObjectId>
+    <table id="45" parent="13" name="estados_cartas">
+      <ObjectId>16410</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>684</StateNumber>
+    </table>
+    <table id="46" parent="13" name="flechas_links">
+      <ObjectId>16415</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>686</StateNumber>
+    </table>
+    <table id="47" parent="13" name="limitaciones_cartas">
+      <ObjectId>16421</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>679</StateNumber>
+    </table>
+    <table id="48" parent="13" name="tipos_escalas">
+      <ObjectId>16427</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>690</StateNumber>
+    </table>
+    <table id="49" parent="13" name="tipos_monstruos">
+      <ObjectId>16432</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>692</StateNumber>
+    </table>
+    <sequence id="50" parent="17" name="niveles_id_seq">
+      <ObjectId>16444</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>538</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
-      <DataType>bigint</DataType>
+      <DataType>bigint|0s</DataType>
     </sequence>
-    <sequence id="57" parent="24" name="historial_limitacion_id_seq">
-      <ObjectId>61417</ObjectId>
+    <sequence id="51" parent="17" name="menus_id_seq">
+      <ObjectId>16442</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>535</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
-      <DataType>bigint</DataType>
+      <DataType>integer|0s</DataType>
     </sequence>
-    <sequence id="58" parent="24" name="imagenes_id_seq">
-      <ObjectId>61755</ObjectId>
+    <sequence id="52" parent="17" name="tokens_id_seq">
+      <ObjectId>16461</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3959</StateNumber>
+      <StateNumber>548</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
-      <DataType>bigint</DataType>
+      <DataType>bigint|0s</DataType>
     </sequence>
-    <sequence id="59" parent="24" name="inventarios_id_seq">
-      <ObjectId>61431</ObjectId>
+    <table id="53" parent="17" name="menus">
+      <ObjectId>16438</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>670</StateNumber>
+    </table>
+    <table id="54" parent="17" name="niveles">
+      <ObjectId>16446</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>672</StateNumber>
+    </table>
+    <table id="55" parent="17" name="niveles_menus">
+      <ObjectId>16451</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>671</StateNumber>
+    </table>
+    <table id="56" parent="17" name="niveles_usuarios">
+      <ObjectId>16454</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>673</StateNumber>
+    </table>
+    <table id="57" parent="17" name="tokens">
+      <ObjectId>16457</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>675</StateNumber>
+    </table>
+    <table id="58" parent="17" name="usuarios">
+      <ObjectId>16463</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>674</StateNumber>
+    </table>
+    <sequence id="59" parent="18" name="cartas_id_seq">
+      <ObjectId>16477</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>557</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
-      <DataType>bigint</DataType>
+      <DataType>bigint|0s</DataType>
     </sequence>
-    <sequence id="60" parent="24" name="tiendas_id_seq">
-      <ObjectId>61460</ObjectId>
+    <sequence id="60" parent="18" name="historial_limitacion_id_seq">
+      <ObjectId>16482</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>562</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
-      <DataType>bigint</DataType>
+      <DataType>bigint|0s</DataType>
     </sequence>
-    <table id="61" parent="24" name="cartas">
-      <ObjectId>61405</ObjectId>
+    <sequence id="61" parent="18" name="imagenes_id_seq">
+      <ObjectId>16487</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>4139</StateNumber>
-    </table>
-    <table id="62" parent="24" name="cartas_categorias">
-      <ObjectId>61675</ObjectId>
+      <StateNumber>567</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint|0s</DataType>
+    </sequence>
+    <sequence id="62" parent="18" name="inventarios_id_seq">
+      <ObjectId>16493</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>4132</StateNumber>
-    </table>
-    <table id="63" parent="24" name="historial_limitacion">
-      <ObjectId>61414</ObjectId>
+      <StateNumber>572</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint|0s</DataType>
+    </sequence>
+    <sequence id="63" parent="18" name="tiendas_id_seq">
+      <ObjectId>16518</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>4132</StateNumber>
-    </table>
-    <table id="64" parent="24" name="imagenes">
-      <ObjectId>61757</ObjectId>
+      <StateNumber>585</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint|0s</DataType>
+    </sequence>
+    <table id="64" parent="18" name="cartas">
+      <ObjectId>16467</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>4132</StateNumber>
+      <StateNumber>676</StateNumber>
     </table>
-    <table id="65" parent="24" name="inventarios">
-      <ObjectId>61427</ObjectId>
+    <table id="65" parent="18" name="cartas_categorias">
+      <ObjectId>16474</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>4132</StateNumber>
+      <StateNumber>676</StateNumber>
     </table>
-    <table id="66" parent="24" name="links">
-      <ObjectId>62049</ObjectId>
+    <table id="66" parent="18" name="historial_limitacion">
+      <ObjectId>16479</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>4142</StateNumber>
+      <StateNumber>680</StateNumber>
     </table>
-    <table id="67" parent="24" name="monstruos">
-      <ObjectId>61996</ObjectId>
+    <table id="67" parent="18" name="imagenes">
+      <ObjectId>16484</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>4142</StateNumber>
+      <StateNumber>678</StateNumber>
     </table>
-    <table id="68" parent="24" name="monstruos_tipos">
-      <ObjectId>62020</ObjectId>
+    <table id="68" parent="18" name="inventarios">
+      <ObjectId>16489</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>4140</StateNumber>
+      <StateNumber>683</StateNumber>
     </table>
-    <table id="69" parent="24" name="pendulos">
-      <ObjectId>62035</ObjectId>
+    <table id="69" parent="18" name="links">
+      <ObjectId>16495</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>4141</StateNumber>
+      <StateNumber>686</StateNumber>
     </table>
-    <table id="70" parent="24" name="tiendas">
-      <ObjectId>61457</ObjectId>
+    <table id="70" parent="18" name="monstruos">
+      <ObjectId>16498</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>4132</StateNumber>
+      <StateNumber>687</StateNumber>
     </table>
-    <column id="71" parent="40" name="id">
+    <table id="71" parent="18" name="monstruos_tipos">
+      <ObjectId>16505</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>691</StateNumber>
+    </table>
+    <table id="72" parent="18" name="pendulos">
+      <ObjectId>16508</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>693</StateNumber>
+    </table>
+    <table id="73" parent="18" name="tiendas">
+      <ObjectId>16515</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>685</StateNumber>
+    </table>
+    <column id="74" parent="40" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>588</StateNumber>
       <DefaultExpression>nextval(&apos;cat.atributos_mounstros_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="72" parent="40" name="nombre">
+    <column id="75" parent="40" name="nombre">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>491</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="73" parent="40" name="estado">
+    <column id="76" parent="40" name="estado">
       <Position>3</Position>
       <DataType>boolean|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>491</StateNumber>
       <DefaultExpression>true</DefaultExpression>
       <TypeId>16</TypeId>
     </column>
-    <index id="74" parent="40" name="pk_atributo_monstruo">
-      <ObjectId>61478</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <index id="77" parent="40" name="pk_atributo_monstruo">
+      <ObjectId>16535</ObjectId>
+      <StateNumber>641</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
-    </index>
-    <key id="75" parent="40" name="pk_atributo_monstruo">
-      <ObjectId>61479</ObjectId>
-      <StateNumber>3815</StateNumber>
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>pk_atributo_monstruo</UnderlyingIndexName>
       <Primary>1</Primary>
+    </index>
+    <key id="78" parent="40" name="pk_atributo_monstruo">
+      <ObjectId>16536</ObjectId>
+      <StateNumber>641</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pk_atributo_monstruo</UnderlyingIndexName>
     </key>
-    <column id="76" parent="41" name="id">
+    <column id="79" parent="41" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>589</StateNumber>
       <DefaultExpression>nextval(&apos;cat.categorias_cartas_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="77" parent="41" name="nombre">
+    <column id="80" parent="41" name="nombre">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>496</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="78" parent="41" name="idcategoriasuperior">
+    <column id="81" parent="41" name="idcategoriasuperior">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>496</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="79" parent="41" name="estado">
+    <column id="82" parent="41" name="estado">
       <Position>4</Position>
       <DataType>boolean|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>496</StateNumber>
       <DefaultExpression>true</DefaultExpression>
       <TypeId>16</TypeId>
     </column>
-    <column id="80" parent="41" name="color">
+    <column id="83" parent="41" name="color">
       <Position>5</Position>
       <DataType>char(7)|0s</DataType>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>496</StateNumber>
       <DefaultExpression>&apos;#BDBDBD&apos;::bpchar</DefaultExpression>
       <TypeId>1042</TypeId>
     </column>
-    <index id="81" parent="41" name="pk_categoria">
-      <ObjectId>61480</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <index id="84" parent="41" name="pk_categoria">
+      <ObjectId>16537</ObjectId>
+      <StateNumber>642</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
-    </index>
-    <key id="82" parent="41" name="pk_categoria">
-      <ObjectId>61481</ObjectId>
-      <StateNumber>3815</StateNumber>
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>pk_categoria</UnderlyingIndexName>
       <Primary>1</Primary>
+    </index>
+    <key id="85" parent="41" name="pk_categoria">
+      <ObjectId>16538</ObjectId>
+      <StateNumber>642</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pk_categoria</UnderlyingIndexName>
     </key>
-    <foreign-key id="83" parent="41" name="fk_categoria_categoriasuperior">
-      <ObjectId>61528</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <foreign-key id="86" parent="41" name="fk_categoria_categoriasuperior">
+      <ObjectId>16587</ObjectId>
+      <StateNumber>667</StateNumber>
       <ColNames>idcategoriasuperior</ColNames>
-      <RefTableId>61338</RefTableId>
+      <RefTableId>16394</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>categorias_cartas</RefTableName>
       <RefKeyName>pk_categoria</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="84" parent="42" name="idcomponente">
+    <column id="87" parent="42" name="idcomponente">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>501</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="85" parent="42" name="idcategoria">
+    <column id="88" parent="42" name="idcategoria">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>501</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="86" parent="42" name="pk_componente_categoria">
-      <ObjectId>61482</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <index id="89" parent="42" name="pk_componente_categoria">
+      <ObjectId>16539</ObjectId>
+      <StateNumber>643</StateNumber>
       <ColNames>idcomponente
 idcategoria</ColNames>
       <Unique>1</Unique>
+      <Primary>1</Primary>
     </index>
-    <key id="87" parent="42" name="pk_componente_categoria">
-      <ObjectId>61483</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <key id="90" parent="42" name="pk_componente_categoria">
+      <ObjectId>16540</ObjectId>
+      <StateNumber>643</StateNumber>
       <ColNames>idcomponente
 idcategoria</ColNames>
-      <UnderlyingIndexName>pk_componente_categoria</UnderlyingIndexName>
       <Primary>1</Primary>
+      <UnderlyingIndexName>pk_componente_categoria</UnderlyingIndexName>
     </key>
-    <foreign-key id="88" parent="42" name="fk_componente_categoria_carta_componente_deck">
-      <ObjectId>61538</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <foreign-key id="91" parent="42" name="fk_componente_categoria_carta_componente_deck">
+      <ObjectId>16597</ObjectId>
+      <StateNumber>669</StateNumber>
       <ColNames>idcomponente</ColNames>
-      <RefTableId>61348</RefTableId>
+      <RefTableId>16404</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>componentes_deck</RefTableName>
       <RefKeyName>pk_componente_deck</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="89" parent="42" name="fk_componente_categoria_carta_categoria">
-      <ObjectId>61533</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <foreign-key id="92" parent="42" name="fk_componente_categoria_carta_categoria">
+      <ObjectId>16592</ObjectId>
+      <StateNumber>668</StateNumber>
       <ColNames>idcategoria</ColNames>
-      <RefTableId>61338</RefTableId>
+      <RefTableId>16394</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>categorias_cartas</RefTableName>
       <RefKeyName>pk_categoria</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="90" parent="43" name="id">
+    <column id="93" parent="43" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>590</StateNumber>
       <DefaultExpression>nextval(&apos;cat.componentes_deck_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="91" parent="43" name="seccion">
+    <column id="94" parent="43" name="seccion">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>503</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="92" parent="43" name="numero_minimo_carta">
+    <column id="95" parent="43" name="numero_minimo_carta">
       <Position>3</Position>
       <DataType>smallint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>503</StateNumber>
       <TypeId>21</TypeId>
     </column>
-    <column id="93" parent="43" name="numero_maximo_carta">
+    <column id="96" parent="43" name="numero_maximo_carta">
       <Position>4</Position>
       <DataType>smallint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>503</StateNumber>
       <TypeId>21</TypeId>
     </column>
-    <column id="94" parent="43" name="estado">
+    <column id="97" parent="43" name="estado">
       <Position>5</Position>
       <DataType>boolean|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>503</StateNumber>
       <DefaultExpression>true</DefaultExpression>
       <TypeId>16</TypeId>
     </column>
-    <index id="95" parent="43" name="pk_componente_deck">
-      <ObjectId>61484</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <index id="98" parent="43" name="pk_componente_deck">
+      <ObjectId>16541</ObjectId>
+      <StateNumber>644</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
-    </index>
-    <key id="96" parent="43" name="pk_componente_deck">
-      <ObjectId>61485</ObjectId>
-      <StateNumber>3815</StateNumber>
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>pk_componente_deck</UnderlyingIndexName>
       <Primary>1</Primary>
+    </index>
+    <key id="99" parent="43" name="pk_componente_deck">
+      <ObjectId>16542</ObjectId>
+      <StateNumber>644</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pk_componente_deck</UnderlyingIndexName>
     </key>
-    <column id="97" parent="44" name="id">
+    <column id="100" parent="44" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>699</StateNumber>
+      <DefaultExpression>nextval(&apos;cat.constantes_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="101" parent="44" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>699</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="102" parent="44" name="valor">
+      <Position>3</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>699</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="103" parent="44" name="pk_constantes">
+      <ObjectId>16737</ObjectId>
+      <StateNumber>699</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="104" parent="44" name="pk_constantes">
+      <ObjectId>16738</ObjectId>
+      <StateNumber>699</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pk_constantes</UnderlyingIndexName>
+    </key>
+    <column id="105" parent="45" name="id">
       <Position>1</Position>
       <DataType>smallint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>591</StateNumber>
       <DefaultExpression>nextval(&apos;cat.estados_cartas_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>21</TypeId>
     </column>
-    <column id="98" parent="44" name="nombre">
+    <column id="106" parent="45" name="nombre">
       <Position>2</Position>
       <DataType>varchar(25)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>508</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="99" parent="44" name="pk_estadocarta">
-      <ObjectId>61486</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <index id="107" parent="45" name="pk_estadocarta">
+      <ObjectId>16543</ObjectId>
+      <StateNumber>645</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
-    </index>
-    <key id="100" parent="44" name="pk_estadocarta">
-      <ObjectId>61487</ObjectId>
-      <StateNumber>3815</StateNumber>
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>pk_estadocarta</UnderlyingIndexName>
       <Primary>1</Primary>
+    </index>
+    <key id="108" parent="45" name="pk_estadocarta">
+      <ObjectId>16544</ObjectId>
+      <StateNumber>645</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pk_estadocarta</UnderlyingIndexName>
     </key>
-    <column id="101" parent="45" name="id">
+    <column id="109" parent="46" name="id">
       <Position>1</Position>
       <DataType>smallint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>592</StateNumber>
       <DefaultExpression>nextval(&apos;cat.flechas_links_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>21</TypeId>
     </column>
-    <column id="102" parent="45" name="direccion">
+    <column id="110" parent="46" name="direccion">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>513</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="103" parent="45" name="estado">
+    <column id="111" parent="46" name="estado">
       <Position>3</Position>
       <DataType>boolean|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>513</StateNumber>
       <DefaultExpression>true</DefaultExpression>
       <TypeId>16</TypeId>
     </column>
-    <column id="104" parent="45" name="icono">
+    <column id="112" parent="46" name="icono">
       <Position>4</Position>
       <DataType>varchar(30)|0s</DataType>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>513</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="105" parent="45" name="pk_flecha_link">
-      <ObjectId>61488</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <index id="113" parent="46" name="pk_flecha_link">
+      <ObjectId>16545</ObjectId>
+      <StateNumber>646</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
-    </index>
-    <key id="106" parent="45" name="pk_flecha_link">
-      <ObjectId>61489</ObjectId>
-      <StateNumber>3815</StateNumber>
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>pk_flecha_link</UnderlyingIndexName>
       <Primary>1</Primary>
+    </index>
+    <key id="114" parent="46" name="pk_flecha_link">
+      <ObjectId>16546</ObjectId>
+      <StateNumber>646</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pk_flecha_link</UnderlyingIndexName>
     </key>
-    <column id="107" parent="46" name="id">
+    <column id="115" parent="47" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>593</StateNumber>
       <DefaultExpression>nextval(&apos;cat.limitaciones_cartas_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="108" parent="46" name="nombre">
+    <column id="116" parent="47" name="nombre">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>518</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="109" parent="46" name="cantidad">
+    <column id="117" parent="47" name="cantidad">
       <Position>3</Position>
       <DataType>smallint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>518</StateNumber>
       <TypeId>21</TypeId>
     </column>
-    <column id="110" parent="46" name="estado">
+    <column id="118" parent="47" name="estado">
       <Position>4</Position>
       <DataType>boolean|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>518</StateNumber>
       <DefaultExpression>true</DefaultExpression>
       <TypeId>16</TypeId>
     </column>
-    <index id="111" parent="46" name="pk_limitacion">
-      <ObjectId>61490</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <index id="119" parent="47" name="pk_limitacion">
+      <ObjectId>16547</ObjectId>
+      <StateNumber>647</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
-    </index>
-    <key id="112" parent="46" name="pk_limitacion">
-      <ObjectId>61491</ObjectId>
-      <StateNumber>3815</StateNumber>
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>pk_limitacion</UnderlyingIndexName>
       <Primary>1</Primary>
+    </index>
+    <key id="120" parent="47" name="pk_limitacion">
+      <ObjectId>16548</ObjectId>
+      <StateNumber>647</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pk_limitacion</UnderlyingIndexName>
     </key>
-    <column id="113" parent="47" name="id">
+    <column id="121" parent="48" name="id">
       <Position>1</Position>
       <DataType>smallint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>594</StateNumber>
       <DefaultExpression>nextval(&apos;cat.tipos_escalas_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>21</TypeId>
     </column>
-    <column id="114" parent="47" name="nombre">
+    <column id="122" parent="48" name="nombre">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>523</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="115" parent="47" name="pk_tipo_escala">
-      <ObjectId>61492</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <index id="123" parent="48" name="pk_tipo_escala">
+      <ObjectId>16549</ObjectId>
+      <StateNumber>648</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
-    </index>
-    <key id="116" parent="47" name="pk_tipo_escala">
-      <ObjectId>61493</ObjectId>
-      <StateNumber>3815</StateNumber>
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>pk_tipo_escala</UnderlyingIndexName>
       <Primary>1</Primary>
+    </index>
+    <key id="124" parent="48" name="pk_tipo_escala">
+      <ObjectId>16550</ObjectId>
+      <StateNumber>648</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pk_tipo_escala</UnderlyingIndexName>
     </key>
-    <column id="117" parent="48" name="id">
+    <column id="125" parent="49" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>595</StateNumber>
       <DefaultExpression>nextval(&apos;cat.tipos_monstruos_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="118" parent="48" name="nombre">
+    <column id="126" parent="49" name="nombre">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>528</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="119" parent="48" name="estado">
+    <column id="127" parent="49" name="estado">
       <Position>3</Position>
       <DataType>boolean|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>528</StateNumber>
       <DefaultExpression>true</DefaultExpression>
       <TypeId>16</TypeId>
     </column>
-    <index id="120" parent="48" name="pk_tipo_monstruo">
-      <ObjectId>61494</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <index id="128" parent="49" name="pk_tipo_monstruo">
+      <ObjectId>16551</ObjectId>
+      <StateNumber>649</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
-    </index>
-    <key id="121" parent="48" name="pk_tipo_monstruo">
-      <ObjectId>61495</ObjectId>
-      <StateNumber>3815</StateNumber>
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>pk_tipo_monstruo</UnderlyingIndexName>
       <Primary>1</Primary>
+    </index>
+    <key id="129" parent="49" name="pk_tipo_monstruo">
+      <ObjectId>16552</ObjectId>
+      <StateNumber>649</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pk_tipo_monstruo</UnderlyingIndexName>
     </key>
-    <column id="122" parent="51" name="id">
+    <column id="130" parent="53" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>596</StateNumber>
       <DefaultExpression>nextval(&apos;sis.menus_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="123" parent="51" name="nombre">
+    <column id="131" parent="53" name="nombre">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>533</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="124" parent="51" name="icono">
+    <column id="132" parent="53" name="icono">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>533</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="125" parent="51" name="direccion">
+    <column id="133" parent="53" name="direccion">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>533</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="126" parent="51" name="estado">
+    <column id="134" parent="53" name="estado">
       <Position>5</Position>
       <DataType>boolean|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>533</StateNumber>
       <DefaultExpression>true</DefaultExpression>
       <TypeId>16</TypeId>
     </column>
-    <column id="127" parent="51" name="idmenusuperior">
+    <column id="135" parent="53" name="idmenusuperior">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>533</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="128" parent="51" name="pk_menu">
-      <ObjectId>61496</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <index id="136" parent="53" name="pk_menu">
+      <ObjectId>16553</ObjectId>
+      <StateNumber>650</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
-    </index>
-    <key id="129" parent="51" name="pk_menu">
-      <ObjectId>61497</ObjectId>
-      <StateNumber>3815</StateNumber>
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>pk_menu</UnderlyingIndexName>
       <Primary>1</Primary>
+    </index>
+    <key id="137" parent="53" name="pk_menu">
+      <ObjectId>16554</ObjectId>
+      <StateNumber>650</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pk_menu</UnderlyingIndexName>
     </key>
-    <foreign-key id="130" parent="51" name="fk_menu_menusuperior">
-      <ObjectId>61543</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <foreign-key id="138" parent="53" name="fk_menu_menusuperior">
+      <ObjectId>16602</ObjectId>
+      <StateNumber>670</StateNumber>
       <ColNames>idmenusuperior</ColNames>
-      <RefTableId>61382</RefTableId>
+      <RefTableId>16438</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>menus</RefTableName>
       <RefKeyName>pk_menu</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="131" parent="52" name="id">
+    <column id="139" parent="54" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>540</StateNumber>
       <DefaultExpression>nextval(&apos;sis.niveles_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="132" parent="52" name="nombre">
+    <column id="140" parent="54" name="nombre">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>540</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="133" parent="52" name="estado">
+    <column id="141" parent="54" name="estado">
       <Position>3</Position>
       <DataType>boolean|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>540</StateNumber>
       <DefaultExpression>true</DefaultExpression>
       <TypeId>16</TypeId>
     </column>
-    <index id="134" parent="52" name="pk_nivel">
-      <ObjectId>61498</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <index id="142" parent="54" name="pk_nivel">
+      <ObjectId>16555</ObjectId>
+      <StateNumber>651</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
-    </index>
-    <key id="135" parent="52" name="pk_nivel">
-      <ObjectId>61499</ObjectId>
-      <StateNumber>3815</StateNumber>
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>pk_nivel</UnderlyingIndexName>
       <Primary>1</Primary>
+    </index>
+    <key id="143" parent="54" name="pk_nivel">
+      <ObjectId>16556</ObjectId>
+      <StateNumber>651</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pk_nivel</UnderlyingIndexName>
     </key>
-    <column id="136" parent="53" name="idnivel">
+    <column id="144" parent="55" name="idnivel">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>542</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="137" parent="53" name="idmenu">
+    <column id="145" parent="55" name="idmenu">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>542</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="138" parent="53" name="pk_nivel_menu">
-      <ObjectId>61500</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <index id="146" parent="55" name="pk_nivel_menu">
+      <ObjectId>16557</ObjectId>
+      <StateNumber>652</StateNumber>
       <ColNames>idnivel
 idmenu</ColNames>
       <Unique>1</Unique>
+      <Primary>1</Primary>
     </index>
-    <key id="139" parent="53" name="pk_nivel_menu">
-      <ObjectId>61501</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <key id="147" parent="55" name="pk_nivel_menu">
+      <ObjectId>16558</ObjectId>
+      <StateNumber>652</StateNumber>
       <ColNames>idnivel
 idmenu</ColNames>
-      <UnderlyingIndexName>pk_nivel_menu</UnderlyingIndexName>
       <Primary>1</Primary>
+      <UnderlyingIndexName>pk_nivel_menu</UnderlyingIndexName>
     </key>
-    <foreign-key id="140" parent="53" name="fk_nivel_menu_nivel">
-      <ObjectId>61553</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <foreign-key id="148" parent="55" name="fk_nivel_menu_nivel">
+      <ObjectId>16612</ObjectId>
+      <StateNumber>672</StateNumber>
       <ColNames>idnivel</ColNames>
-      <RefTableId>61390</RefTableId>
+      <RefTableId>16446</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>niveles</RefTableName>
       <RefKeyName>pk_nivel</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="141" parent="53" name="fk_nivel_menu_menu">
-      <ObjectId>61548</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <foreign-key id="149" parent="55" name="fk_nivel_menu_menu">
+      <ObjectId>16607</ObjectId>
+      <StateNumber>671</StateNumber>
       <ColNames>idmenu</ColNames>
-      <RefTableId>61382</RefTableId>
+      <RefTableId>16438</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>menus</RefTableName>
       <RefKeyName>pk_menu</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="142" parent="54" name="idusuario">
+    <column id="150" parent="56" name="idusuario">
       <Position>1</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>544</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="143" parent="54" name="idnivel">
+    <column id="151" parent="56" name="idnivel">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>544</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="144" parent="54" name="pk_nivel_usuario">
-      <ObjectId>61502</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <index id="152" parent="56" name="pk_nivel_usuario">
+      <ObjectId>16559</ObjectId>
+      <StateNumber>653</StateNumber>
       <ColNames>idusuario
 idnivel</ColNames>
       <Unique>1</Unique>
+      <Primary>1</Primary>
     </index>
-    <key id="145" parent="54" name="pk_nivel_usuario">
-      <ObjectId>61503</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <key id="153" parent="56" name="pk_nivel_usuario">
+      <ObjectId>16560</ObjectId>
+      <StateNumber>653</StateNumber>
       <ColNames>idusuario
 idnivel</ColNames>
-      <UnderlyingIndexName>pk_nivel_usuario</UnderlyingIndexName>
       <Primary>1</Primary>
+      <UnderlyingIndexName>pk_nivel_usuario</UnderlyingIndexName>
     </key>
-    <foreign-key id="146" parent="54" name="fk_nivel_usuario_usuario">
-      <ObjectId>61563</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <foreign-key id="154" parent="56" name="fk_nivel_usuario_usuario">
+      <ObjectId>16622</ObjectId>
+      <StateNumber>674</StateNumber>
       <ColNames>idusuario</ColNames>
-      <RefTableId>61401</RefTableId>
+      <RefTableId>16463</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>usuarios</RefTableName>
       <RefKeyName>pk_usuario</RefKeyName>
       <RefColNames>username</RefColNames>
     </foreign-key>
-    <foreign-key id="147" parent="54" name="fk_nivel_usuario_nivel">
-      <ObjectId>61558</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <foreign-key id="155" parent="56" name="fk_nivel_usuario_nivel">
+      <ObjectId>16617</ObjectId>
+      <StateNumber>673</StateNumber>
       <ColNames>idnivel</ColNames>
-      <RefTableId>61390</RefTableId>
+      <RefTableId>16446</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>niveles</RefTableName>
       <RefKeyName>pk_nivel</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="148" parent="55" name="username">
+    <column id="156" parent="57" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>597</StateNumber>
+      <DefaultExpression>nextval(&apos;sis.tokens_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="157" parent="57" name="referencia">
+      <Position>2</Position>
+      <DataType>varchar(32)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>546</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="158" parent="57" name="fechacaducidad">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>546</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="159" parent="57" name="idusuario">
+      <Position>4</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>546</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="160" parent="57" name="activo">
+      <Position>5</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>546</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <index id="161" parent="57" name="pk_token">
+      <ObjectId>16561</ObjectId>
+      <StateNumber>654</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="162" parent="57" name="pk_token">
+      <ObjectId>16562</ObjectId>
+      <StateNumber>654</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pk_token</UnderlyingIndexName>
+    </key>
+    <foreign-key id="163" parent="57" name="fk_token_usuario">
+      <ObjectId>16627</ObjectId>
+      <StateNumber>675</StateNumber>
+      <ColNames>idusuario</ColNames>
+      <RefTableId>16463</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>usuarios</RefTableName>
+      <RefKeyName>pk_usuario</RefKeyName>
+      <RefColNames>username</RefColNames>
+    </foreign-key>
+    <column id="164" parent="58" name="username">
       <Position>1</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>551</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="149" parent="55" name="contrasena">
+    <column id="165" parent="58" name="contrasena">
       <Position>2</Position>
       <DataType>char(32)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>551</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="150" parent="55" name="estado">
+    <column id="166" parent="58" name="estado">
       <Position>3</Position>
       <DataType>boolean|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>551</StateNumber>
       <DefaultExpression>true</DefaultExpression>
       <TypeId>16</TypeId>
     </column>
-    <column id="151" parent="55" name="correo">
+    <column id="167" parent="58" name="correo">
       <Position>4</Position>
       <DataType>varchar(80)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>551</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="152" parent="55" name="idimagen">
+    <column id="168" parent="58" name="idimagen">
       <Position>5</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>551</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="153" parent="55" name="pk_usuario">
-      <ObjectId>61504</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <index id="169" parent="58" name="pk_usuario">
+      <ObjectId>16563</ObjectId>
+      <StateNumber>655</StateNumber>
       <ColNames>username</ColNames>
       <Unique>1</Unique>
-    </index>
-    <key id="154" parent="55" name="pk_usuario">
-      <ObjectId>61505</ObjectId>
-      <StateNumber>3815</StateNumber>
-      <ColNames>username</ColNames>
-      <UnderlyingIndexName>pk_usuario</UnderlyingIndexName>
       <Primary>1</Primary>
+    </index>
+    <key id="170" parent="58" name="pk_usuario">
+      <ObjectId>16564</ObjectId>
+      <StateNumber>655</StateNumber>
+      <ColNames>username</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pk_usuario</UnderlyingIndexName>
     </key>
-    <column id="155" parent="61" name="id">
+    <column id="171" parent="64" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>598</StateNumber>
       <DefaultExpression>nextval(&apos;teo.cartas_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="156" parent="61" name="nombre">
+    <column id="172" parent="64" name="nombre">
       <Position>2</Position>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>553</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="157" parent="61" name="efecto">
+    <column id="173" parent="64" name="efecto">
       <Position>3</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>553</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="158" parent="61" name="idlimitacion">
-      <Position>5</Position>
+    <column id="174" parent="64" name="idlimitacion">
+      <Position>4</Position>
       <DataType>smallint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>553</StateNumber>
       <TypeId>21</TypeId>
     </column>
-    <column id="159" parent="61" name="estado">
-      <Position>6</Position>
+    <column id="175" parent="64" name="estado">
+      <Position>5</Position>
       <DataType>boolean|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>553</StateNumber>
       <DefaultExpression>true</DefaultExpression>
       <TypeId>16</TypeId>
     </column>
-    <column id="160" parent="61" name="idimagen">
-      <Position>8</Position>
+    <column id="176" parent="64" name="idimagen">
+      <Position>6</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>3919</StateNumber>
+      <StateNumber>553</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="161" parent="61" name="pk_carta">
-      <ObjectId>61506</ObjectId>
-      <StateNumber>4132</StateNumber>
+    <index id="177" parent="64" name="pk_carta">
+      <ObjectId>16565</ObjectId>
+      <StateNumber>656</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
+      <Primary>1</Primary>
     </index>
-    <index id="162" parent="61" name="unq_imagen">
-      <ObjectId>61763</ObjectId>
-      <StateNumber>4132</StateNumber>
+    <index id="178" parent="64" name="unq_imagen">
+      <ObjectId>16585</ObjectId>
+      <StateNumber>666</StateNumber>
       <ColNames>idimagen</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="163" parent="61" name="pk_carta">
-      <ObjectId>61507</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <key id="179" parent="64" name="pk_carta">
+      <ObjectId>16566</ObjectId>
+      <StateNumber>656</StateNumber>
       <ColNames>id</ColNames>
-      <UnderlyingIndexName>pk_carta</UnderlyingIndexName>
       <Primary>1</Primary>
+      <UnderlyingIndexName>pk_carta</UnderlyingIndexName>
     </key>
-    <key id="164" parent="61" name="unq_imagen">
-      <ObjectId>61764</ObjectId>
-      <StateNumber>3960</StateNumber>
+    <key id="180" parent="64" name="unq_imagen">
+      <ObjectId>16586</ObjectId>
+      <StateNumber>666</StateNumber>
       <ColNames>idimagen</ColNames>
       <UnderlyingIndexName>unq_imagen</UnderlyingIndexName>
     </key>
-    <foreign-key id="165" parent="61" name="fk_carta_limitacion">
-      <ObjectId>61583</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <foreign-key id="181" parent="64" name="fk_carta_limitacion">
+      <ObjectId>16647</ObjectId>
+      <StateNumber>679</StateNumber>
       <ColNames>idlimitacion</ColNames>
-      <RefTableId>61365</RefTableId>
+      <RefTableId>16421</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefSchemaName>cat</RefSchemaName>
       <RefTableName>limitaciones_cartas</RefTableName>
       <RefKeyName>pk_limitacion</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="166" parent="61" name="fk_carta_imagen">
-      <ObjectId>61765</ObjectId>
-      <StateNumber>3960</StateNumber>
+    <foreign-key id="182" parent="64" name="fk_carta_imagen">
+      <ObjectId>16642</ObjectId>
+      <StateNumber>678</StateNumber>
       <ColNames>idimagen</ColNames>
-      <RefTableId>61757</RefTableId>
+      <RefTableId>16484</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>imagenes</RefTableName>
       <RefKeyName>pk_imagen</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="167" parent="62" name="idcarta">
+    <column id="183" parent="65" name="idcarta">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3851</StateNumber>
+      <StateNumber>555</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="168" parent="62" name="idcategoria">
+    <column id="184" parent="65" name="idcategoria">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3851</StateNumber>
+      <StateNumber>555</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="169" parent="62" name="pk_carta_categoria">
-      <ObjectId>61678</ObjectId>
-      <StateNumber>4132</StateNumber>
+    <index id="185" parent="65" name="pk_carta_categoria">
+      <ObjectId>16567</ObjectId>
+      <StateNumber>657</StateNumber>
       <ColNames>idcarta
 idcategoria</ColNames>
       <Unique>1</Unique>
+      <Primary>1</Primary>
     </index>
-    <key id="170" parent="62" name="pk_carta_categoria">
-      <ObjectId>61679</ObjectId>
-      <StateNumber>3851</StateNumber>
+    <key id="186" parent="65" name="pk_carta_categoria">
+      <ObjectId>16568</ObjectId>
+      <StateNumber>657</StateNumber>
       <ColNames>idcarta
 idcategoria</ColNames>
-      <UnderlyingIndexName>pk_carta_categoria</UnderlyingIndexName>
       <Primary>1</Primary>
+      <UnderlyingIndexName>pk_carta_categoria</UnderlyingIndexName>
     </key>
-    <foreign-key id="171" parent="62" name="fk_carta_categoria_carta">
-      <ObjectId>61680</ObjectId>
-      <StateNumber>3851</StateNumber>
+    <foreign-key id="187" parent="65" name="fk_carta_categoria_carta">
+      <ObjectId>16632</ObjectId>
+      <StateNumber>676</StateNumber>
       <ColNames>idcarta</ColNames>
-      <RefTableId>61405</RefTableId>
+      <RefTableId>16467</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>cartas</RefTableName>
       <RefKeyName>pk_carta</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="172" parent="62" name="fk_carta_categoria_categoria">
-      <ObjectId>61685</ObjectId>
-      <StateNumber>3851</StateNumber>
+    <foreign-key id="188" parent="65" name="fk_carta_categoria_categoria">
+      <ObjectId>16637</ObjectId>
+      <StateNumber>677</StateNumber>
       <ColNames>idcategoria</ColNames>
-      <RefTableId>61338</RefTableId>
+      <RefTableId>16394</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefSchemaName>cat</RefSchemaName>
       <RefTableName>categorias_cartas</RefTableName>
       <RefKeyName>pk_categoria</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="173" parent="63" name="id">
+    <column id="189" parent="66" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>599</StateNumber>
       <DefaultExpression>nextval(&apos;teo.historial_limitacion_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="174" parent="63" name="fechamodificacion">
+    <column id="190" parent="66" name="fechamodificacion">
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>560</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="175" parent="63" name="idcarta">
+    <column id="191" parent="66" name="idcarta">
       <Position>3</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>560</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="176" parent="63" name="idlimitacion">
+    <column id="192" parent="66" name="idlimitacion">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>560</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="177" parent="63" name="idusuario">
+    <column id="193" parent="66" name="idusuario">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>560</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="178" parent="63" name="pk_historial_limitacion">
-      <ObjectId>61508</ObjectId>
-      <StateNumber>4132</StateNumber>
+    <index id="194" parent="66" name="pk_historial_limitacion">
+      <ObjectId>16569</ObjectId>
+      <StateNumber>658</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
-    </index>
-    <key id="179" parent="63" name="pk_historial_limitacion">
-      <ObjectId>61509</ObjectId>
-      <StateNumber>3815</StateNumber>
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>pk_historial_limitacion</UnderlyingIndexName>
       <Primary>1</Primary>
+    </index>
+    <key id="195" parent="66" name="pk_historial_limitacion">
+      <ObjectId>16570</ObjectId>
+      <StateNumber>658</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pk_historial_limitacion</UnderlyingIndexName>
     </key>
-    <foreign-key id="180" parent="63" name="fk_historial_limitacion_carta">
-      <ObjectId>61588</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <foreign-key id="196" parent="66" name="fk_historial_limitacion_carta">
+      <ObjectId>16652</ObjectId>
+      <StateNumber>680</StateNumber>
       <ColNames>idcarta</ColNames>
-      <RefTableId>61405</RefTableId>
+      <RefTableId>16467</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>cartas</RefTableName>
       <RefKeyName>pk_carta</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="181" parent="63" name="fk_historial_limitacion_limitacion">
-      <ObjectId>61593</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <foreign-key id="197" parent="66" name="fk_historial_limitacion_limitacion">
+      <ObjectId>16657</ObjectId>
+      <StateNumber>681</StateNumber>
       <ColNames>idlimitacion</ColNames>
-      <RefTableId>61365</RefTableId>
+      <RefTableId>16421</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefSchemaName>cat</RefSchemaName>
       <RefTableName>limitaciones_cartas</RefTableName>
       <RefKeyName>pk_limitacion</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="182" parent="63" name="fk_historial_limitacion_usuario">
-      <ObjectId>61598</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <foreign-key id="198" parent="66" name="fk_historial_limitacion_usuario">
+      <ObjectId>16662</ObjectId>
+      <StateNumber>682</StateNumber>
       <ColNames>idusuario</ColNames>
-      <RefTableId>61401</RefTableId>
+      <RefTableId>16463</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefSchemaName>sis</RefSchemaName>
       <RefTableName>usuarios</RefTableName>
       <RefKeyName>pk_usuario</RefKeyName>
       <RefColNames>username</RefColNames>
     </foreign-key>
-    <column id="183" parent="64" name="id">
+    <column id="199" parent="67" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3959</StateNumber>
+      <StateNumber>600</StateNumber>
       <DefaultExpression>nextval(&apos;teo.imagenes_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="184" parent="64" name="archivo">
+    <column id="200" parent="67" name="archivo">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3959</StateNumber>
+      <StateNumber>565</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="185" parent="64" name="pk_imagen">
-      <ObjectId>61761</ObjectId>
-      <StateNumber>4132</StateNumber>
+    <index id="201" parent="67" name="pk_imagen">
+      <ObjectId>16571</ObjectId>
+      <StateNumber>659</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
-    </index>
-    <key id="186" parent="64" name="pk_imagen">
-      <ObjectId>61762</ObjectId>
-      <StateNumber>3959</StateNumber>
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>pk_imagen</UnderlyingIndexName>
       <Primary>1</Primary>
+    </index>
+    <key id="202" parent="67" name="pk_imagen">
+      <ObjectId>16572</ObjectId>
+      <StateNumber>659</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pk_imagen</UnderlyingIndexName>
     </key>
-    <column id="187" parent="65" name="id">
+    <column id="203" parent="68" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>601</StateNumber>
       <DefaultExpression>nextval(&apos;teo.inventarios_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="188" parent="65" name="idcarta">
+    <column id="204" parent="68" name="idcarta">
       <Position>2</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>570</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="189" parent="65" name="idestadocarta">
+    <column id="205" parent="68" name="idestadocarta">
       <Position>3</Position>
       <DataType>smallint|0s</DataType>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>570</StateNumber>
       <TypeId>21</TypeId>
     </column>
-    <column id="190" parent="65" name="idimagen">
+    <column id="206" parent="68" name="idimagen">
       <Position>4</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>570</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="191" parent="65" name="existencia">
+    <column id="207" parent="68" name="existencia">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>570</StateNumber>
       <DefaultExpression>0</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="192" parent="65" name="precioventa">
+    <column id="208" parent="68" name="precioventa">
       <Position>6</Position>
       <DataType>numeric(8,2 digit)|0s</DataType>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>570</StateNumber>
       <TypeId>1700</TypeId>
     </column>
-    <column id="193" parent="65" name="iditienda">
+    <column id="209" parent="68" name="iditienda">
       <Position>7</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>570</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="194" parent="65" name="edicion">
+    <column id="210" parent="68" name="edicion">
       <Position>8</Position>
       <DataType>smallint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>570</StateNumber>
       <TypeId>21</TypeId>
     </column>
-    <index id="195" parent="65" name="pk_inventario">
-      <ObjectId>61512</ObjectId>
-      <StateNumber>4132</StateNumber>
+    <index id="211" parent="68" name="pk_inventario">
+      <ObjectId>16573</ObjectId>
+      <StateNumber>660</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
-    </index>
-    <key id="196" parent="65" name="pk_inventario">
-      <ObjectId>61513</ObjectId>
-      <StateNumber>3815</StateNumber>
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>pk_inventario</UnderlyingIndexName>
       <Primary>1</Primary>
+    </index>
+    <key id="212" parent="68" name="pk_inventario">
+      <ObjectId>16574</ObjectId>
+      <StateNumber>660</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pk_inventario</UnderlyingIndexName>
     </key>
-    <foreign-key id="197" parent="65" name="fk_inventario_carta">
-      <ObjectId>61603</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <foreign-key id="213" parent="68" name="fk_inventario_carta">
+      <ObjectId>16667</ObjectId>
+      <StateNumber>683</StateNumber>
       <ColNames>idcarta</ColNames>
-      <RefTableId>61405</RefTableId>
+      <RefTableId>16467</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>cartas</RefTableName>
       <RefKeyName>pk_carta</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="198" parent="65" name="fk_inventario_estadocarta">
-      <ObjectId>61608</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <foreign-key id="214" parent="68" name="fk_inventario_estadocarta">
+      <ObjectId>16672</ObjectId>
+      <StateNumber>684</StateNumber>
       <ColNames>idestadocarta</ColNames>
-      <RefTableId>61354</RefTableId>
+      <RefTableId>16410</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefSchemaName>cat</RefSchemaName>
       <RefTableName>estados_cartas</RefTableName>
       <RefKeyName>pk_estadocarta</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="199" parent="65" name="fk_inventario_tienda">
-      <ObjectId>61618</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <foreign-key id="215" parent="68" name="fk_inventario_tienda">
+      <ObjectId>16677</ObjectId>
+      <StateNumber>685</StateNumber>
       <ColNames>iditienda</ColNames>
-      <RefTableId>61457</RefTableId>
+      <RefTableId>16515</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>tiendas</RefTableName>
       <RefKeyName>pk_tienda</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="200" parent="66" name="idmonstruo">
+    <column id="216" parent="69" name="idmonstruo">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>4142</StateNumber>
+      <StateNumber>575</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="201" parent="66" name="idflecha">
+    <column id="217" parent="69" name="idflecha">
       <Position>2</Position>
       <DataType>smallint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>4142</StateNumber>
+      <StateNumber>575</StateNumber>
       <TypeId>21</TypeId>
     </column>
-    <index id="202" parent="66" name="pk_link">
-      <ObjectId>62052</ObjectId>
-      <StateNumber>4142</StateNumber>
+    <index id="218" parent="69" name="pk_link">
+      <ObjectId>16575</ObjectId>
+      <StateNumber>661</StateNumber>
       <ColNames>idmonstruo
 idflecha</ColNames>
       <Unique>1</Unique>
+      <Primary>1</Primary>
     </index>
-    <key id="203" parent="66" name="pk_link">
-      <ObjectId>62053</ObjectId>
-      <StateNumber>4142</StateNumber>
+    <key id="219" parent="69" name="pk_link">
+      <ObjectId>16576</ObjectId>
+      <StateNumber>661</StateNumber>
       <ColNames>idmonstruo
 idflecha</ColNames>
-      <UnderlyingIndexName>pk_link</UnderlyingIndexName>
       <Primary>1</Primary>
+      <UnderlyingIndexName>pk_link</UnderlyingIndexName>
     </key>
-    <foreign-key id="204" parent="66" name="fk_link_monstruo">
-      <ObjectId>62059</ObjectId>
-      <StateNumber>4142</StateNumber>
+    <foreign-key id="220" parent="69" name="fk_link_monstruo">
+      <ObjectId>16687</ObjectId>
+      <StateNumber>687</StateNumber>
       <ColNames>idmonstruo</ColNames>
-      <RefTableId>61996</RefTableId>
+      <RefTableId>16498</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>monstruos</RefTableName>
       <RefKeyName>pk_monstruo</RefKeyName>
       <RefColNames>idcarta</RefColNames>
     </foreign-key>
-    <foreign-key id="205" parent="66" name="fk_link_flechas">
-      <ObjectId>62054</ObjectId>
-      <StateNumber>4142</StateNumber>
+    <foreign-key id="221" parent="69" name="fk_link_flechas">
+      <ObjectId>16682</ObjectId>
+      <StateNumber>686</StateNumber>
       <ColNames>idflecha</ColNames>
-      <RefTableId>61359</RefTableId>
+      <RefTableId>16415</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefSchemaName>cat</RefSchemaName>
       <RefTableName>flechas_links</RefTableName>
       <RefKeyName>pk_flecha_link</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="206" parent="67" name="idcarta">
+    <column id="222" parent="70" name="idcarta">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>4139</StateNumber>
+      <StateNumber>577</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="207" parent="67" name="ataque">
+    <column id="223" parent="70" name="ataque">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>4139</StateNumber>
+      <StateNumber>577</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="208" parent="67" name="defensa">
+    <column id="224" parent="70" name="defensa">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>4139</StateNumber>
+      <StateNumber>577</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="209" parent="67" name="idatributo">
+    <column id="225" parent="70" name="idatributo">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>4139</StateNumber>
+      <StateNumber>577</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="210" parent="67" name="materialinvocacion">
+    <column id="226" parent="70" name="materialinvocacion">
       <Position>5</Position>
       <DataType>text|0s</DataType>
-      <StateNumber>4139</StateNumber>
+      <StateNumber>577</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="211" parent="67" name="estado">
+    <column id="227" parent="70" name="estado">
       <Position>6</Position>
       <DataType>boolean|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>4139</StateNumber>
+      <StateNumber>577</StateNumber>
       <DefaultExpression>true</DefaultExpression>
       <TypeId>16</TypeId>
     </column>
-    <column id="212" parent="67" name="escala">
+    <column id="228" parent="70" name="escala">
       <Position>7</Position>
       <DataType>smallint|0s</DataType>
-      <StateNumber>4139</StateNumber>
+      <StateNumber>577</StateNumber>
       <TypeId>21</TypeId>
     </column>
-    <column id="213" parent="67" name="idtipoescala">
+    <column id="229" parent="70" name="idtipoescala">
       <Position>8</Position>
       <DataType>smallint|0s</DataType>
-      <StateNumber>4139</StateNumber>
+      <StateNumber>577</StateNumber>
       <TypeId>21</TypeId>
     </column>
-    <index id="214" parent="67" name="pk_monstruo">
-      <ObjectId>62003</ObjectId>
-      <StateNumber>4139</StateNumber>
+    <index id="230" parent="70" name="pk_monstruo">
+      <ObjectId>16577</ObjectId>
+      <StateNumber>662</StateNumber>
       <ColNames>idcarta</ColNames>
       <Unique>1</Unique>
-    </index>
-    <key id="215" parent="67" name="pk_monstruo">
-      <ObjectId>62004</ObjectId>
-      <StateNumber>4139</StateNumber>
-      <ColNames>idcarta</ColNames>
-      <UnderlyingIndexName>pk_monstruo</UnderlyingIndexName>
       <Primary>1</Primary>
-    </key>
-    <foreign-key id="216" parent="67" name="fk_monstruo_carta">
-      <ObjectId>62010</ObjectId>
-      <StateNumber>4139</StateNumber>
+    </index>
+    <key id="231" parent="70" name="pk_monstruo">
+      <ObjectId>16578</ObjectId>
+      <StateNumber>662</StateNumber>
       <ColNames>idcarta</ColNames>
-      <RefTableId>61405</RefTableId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pk_monstruo</UnderlyingIndexName>
+    </key>
+    <foreign-key id="232" parent="70" name="fk_monstruo_carta">
+      <ObjectId>16697</ObjectId>
+      <StateNumber>689</StateNumber>
+      <ColNames>idcarta</ColNames>
+      <RefTableId>16467</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>cartas</RefTableName>
       <RefKeyName>pk_carta</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="217" parent="67" name="fk_monstruo_atributo">
-      <ObjectId>62005</ObjectId>
-      <StateNumber>4139</StateNumber>
+    <foreign-key id="233" parent="70" name="fk_monstruo_atributo">
+      <ObjectId>16692</ObjectId>
+      <StateNumber>688</StateNumber>
       <ColNames>idatributo</ColNames>
-      <RefTableId>61332</RefTableId>
+      <RefTableId>16388</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefSchemaName>cat</RefSchemaName>
       <RefTableName>atributos_mounstros</RefTableName>
@@ -1557,11 +3031,11 @@ idflecha</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <foreign-key id="218" parent="67" name="fk_monstruo_escala">
-      <ObjectId>62015</ObjectId>
-      <StateNumber>4139</StateNumber>
+    <foreign-key id="234" parent="70" name="fk_monstruo_escala">
+      <ObjectId>16702</ObjectId>
+      <StateNumber>690</StateNumber>
       <ColNames>idtipoescala</ColNames>
-      <RefTableId>61371</RefTableId>
+      <RefTableId>16427</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefSchemaName>cat</RefSchemaName>
       <RefTableName>tipos_escalas</RefTableName>
@@ -1570,162 +3044,165 @@ idflecha</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <column id="219" parent="68" name="idmonstruo">
+    <column id="235" parent="71" name="idmonstruo">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>4140</StateNumber>
+      <StateNumber>579</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="220" parent="68" name="idtipomonstruo">
+    <column id="236" parent="71" name="idtipomonstruo">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>4140</StateNumber>
+      <StateNumber>579</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="221" parent="68" name="pk_monstruo_tipo">
-      <ObjectId>62023</ObjectId>
-      <StateNumber>4140</StateNumber>
+    <index id="237" parent="71" name="pk_monstruo_tipo">
+      <ObjectId>16579</ObjectId>
+      <StateNumber>663</StateNumber>
       <ColNames>idmonstruo
 idtipomonstruo</ColNames>
       <Unique>1</Unique>
+      <Primary>1</Primary>
     </index>
-    <key id="222" parent="68" name="pk_monstruo_tipo">
-      <ObjectId>62024</ObjectId>
-      <StateNumber>4140</StateNumber>
+    <key id="238" parent="71" name="pk_monstruo_tipo">
+      <ObjectId>16580</ObjectId>
+      <StateNumber>663</StateNumber>
       <ColNames>idmonstruo
 idtipomonstruo</ColNames>
-      <UnderlyingIndexName>pk_monstruo_tipo</UnderlyingIndexName>
       <Primary>1</Primary>
+      <UnderlyingIndexName>pk_monstruo_tipo</UnderlyingIndexName>
     </key>
-    <foreign-key id="223" parent="68" name="fk_monstruo_tipo_monstruo">
-      <ObjectId>62025</ObjectId>
-      <StateNumber>4140</StateNumber>
+    <foreign-key id="239" parent="71" name="fk_monstruo_tipo_monstruo">
+      <ObjectId>16707</ObjectId>
+      <StateNumber>691</StateNumber>
       <ColNames>idmonstruo</ColNames>
-      <RefTableId>61996</RefTableId>
+      <RefTableId>16498</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>monstruos</RefTableName>
       <RefKeyName>pk_monstruo</RefKeyName>
       <RefColNames>idcarta</RefColNames>
     </foreign-key>
-    <foreign-key id="224" parent="68" name="fk_monstruo_tipo_tipo">
-      <ObjectId>62030</ObjectId>
-      <StateNumber>4140</StateNumber>
+    <foreign-key id="240" parent="71" name="fk_monstruo_tipo_tipo">
+      <ObjectId>16712</ObjectId>
+      <StateNumber>692</StateNumber>
       <ColNames>idtipomonstruo</ColNames>
-      <RefTableId>61376</RefTableId>
+      <RefTableId>16432</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefSchemaName>cat</RefSchemaName>
       <RefTableName>tipos_monstruos</RefTableName>
       <RefKeyName>pk_tipo_monstruo</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="225" parent="69" name="idmonstruo">
+    <column id="241" parent="72" name="idmonstruo">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>4141</StateNumber>
+      <StateNumber>581</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="226" parent="69" name="efecto">
+    <column id="242" parent="72" name="efecto">
       <Position>2</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>4141</StateNumber>
+      <StateNumber>581</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="227" parent="69" name="escalaizquierda">
+    <column id="243" parent="72" name="escalaizquierda">
       <Position>3</Position>
       <DataType>smallint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>4141</StateNumber>
+      <StateNumber>581</StateNumber>
       <TypeId>21</TypeId>
     </column>
-    <column id="228" parent="69" name="escaladerecha">
+    <column id="244" parent="72" name="escaladerecha">
       <Position>4</Position>
       <DataType>smallint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>4141</StateNumber>
+      <StateNumber>581</StateNumber>
       <TypeId>21</TypeId>
     </column>
-    <column id="229" parent="69" name="estado">
+    <column id="245" parent="72" name="estado">
       <Position>5</Position>
       <DataType>boolean|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>4141</StateNumber>
+      <StateNumber>581</StateNumber>
       <DefaultExpression>true</DefaultExpression>
       <TypeId>16</TypeId>
     </column>
-    <index id="230" parent="69" name="pk_pendulo">
-      <ObjectId>62042</ObjectId>
-      <StateNumber>4141</StateNumber>
+    <index id="246" parent="72" name="pk_pendulo">
+      <ObjectId>16581</ObjectId>
+      <StateNumber>664</StateNumber>
       <ColNames>idmonstruo</ColNames>
       <Unique>1</Unique>
-    </index>
-    <key id="231" parent="69" name="pk_pendulo">
-      <ObjectId>62043</ObjectId>
-      <StateNumber>4141</StateNumber>
-      <ColNames>idmonstruo</ColNames>
-      <UnderlyingIndexName>pk_pendulo</UnderlyingIndexName>
       <Primary>1</Primary>
-    </key>
-    <foreign-key id="232" parent="69" name="fk_pendulo_monstruo">
-      <ObjectId>62044</ObjectId>
-      <StateNumber>4141</StateNumber>
+    </index>
+    <key id="247" parent="72" name="pk_pendulo">
+      <ObjectId>16582</ObjectId>
+      <StateNumber>664</StateNumber>
       <ColNames>idmonstruo</ColNames>
-      <RefTableId>61996</RefTableId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pk_pendulo</UnderlyingIndexName>
+    </key>
+    <foreign-key id="248" parent="72" name="fk_pendulo_monstruo">
+      <ObjectId>16717</ObjectId>
+      <StateNumber>693</StateNumber>
+      <ColNames>idmonstruo</ColNames>
+      <RefTableId>16498</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>monstruos</RefTableName>
       <RefKeyName>pk_monstruo</RefKeyName>
       <RefColNames>idcarta</RefColNames>
     </foreign-key>
-    <column id="233" parent="70" name="id">
+    <column id="249" parent="73" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>602</StateNumber>
       <DefaultExpression>nextval(&apos;teo.tiendas_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="234" parent="70" name="nombre">
+    <column id="250" parent="73" name="nombre">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>583</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="235" parent="70" name="correo">
+    <column id="251" parent="73" name="correo">
       <Position>3</Position>
       <DataType>varchar(70)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>583</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="236" parent="70" name="idusuarioduenio">
+    <column id="252" parent="73" name="idusuarioduenio">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3815</StateNumber>
+      <StateNumber>583</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="237" parent="70" name="pk_tienda">
-      <ObjectId>61522</ObjectId>
-      <StateNumber>4132</StateNumber>
+    <index id="253" parent="73" name="pk_tienda">
+      <ObjectId>16583</ObjectId>
+      <StateNumber>665</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
-    </index>
-    <key id="238" parent="70" name="pk_tienda">
-      <ObjectId>61523</ObjectId>
-      <StateNumber>3815</StateNumber>
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>pk_tienda</UnderlyingIndexName>
       <Primary>1</Primary>
+    </index>
+    <key id="254" parent="73" name="pk_tienda">
+      <ObjectId>16584</ObjectId>
+      <StateNumber>665</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pk_tienda</UnderlyingIndexName>
     </key>
-    <foreign-key id="239" parent="70" name="fk_tienda_usuario_duenio">
-      <ObjectId>61663</ObjectId>
-      <StateNumber>3815</StateNumber>
+    <foreign-key id="255" parent="73" name="fk_tienda_usuario_duenio">
+      <ObjectId>16722</ObjectId>
+      <StateNumber>694</StateNumber>
       <ColNames>idusuarioduenio</ColNames>
-      <RefTableId>61401</RefTableId>
+      <RefTableId>16463</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefSchemaName>sis</RefSchemaName>
       <RefTableName>usuarios</RefTableName>

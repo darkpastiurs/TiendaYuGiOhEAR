@@ -28,10 +28,10 @@ public class AuthenticationFilter implements Filter {
             HttpServletResponse response = (HttpServletResponse) servletResponse;
             HttpSession session = request.getSession();
             String requestURL = request.getRequestURI();
-            if(StringUtils.containsIgnoreCase(requestURL, "/login.xhtml") || StringUtils.containsIgnoreCase(requestURL, "/inicio.xhtml") || (session != null && session.getAttribute("usuarioEnSesion") != null) || StringUtils.containsIgnoreCase(requestURL, "/public/") || StringUtils.containsIgnoreCase(requestURL, "/javax.faces.resource/")){
+            if(StringUtils.containsIgnoreCase(requestURL, "/login.xhtml") || StringUtils.containsIgnoreCase(requestURL, "/inicio.xhtml") || (session != null && session.getAttribute("usuarioEnSesion") != null) || StringUtils.containsIgnoreCase(requestURL, "/public/") || StringUtils.containsIgnoreCase(requestURL, "/javax.faces.resource/") || StringUtils.containsIgnoreCase(requestURL, "/tienda/")){
                 filterChain.doFilter(servletRequest, servletResponse);
             } else {
-                response.sendRedirect(request.getContextPath() + "/login");
+                response.sendRedirect(request.getContextPath() + "/public/login.xhtml");
             }
         } catch (IOException e) {
             LOG.log(Level.SEVERE, "[AuthenticationFilter][doFilter][IOException] -> ", e);

@@ -4,6 +4,9 @@
               xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
     http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_3.xsd">
     <name>TiendaYuGiOh</name>
+    <!--<application>
+        <view-handler>sv.com.tienda.web.configuracion.CustomViewHandler</view-handler>
+    </application>-->
     <!-- Configuraciones de componentes de Serenity -->
     <component>
         <component-type>org.primefaces.component.SerenityMenu</component-type>
@@ -18,6 +21,15 @@
     </render-kit>
     <!-- END -->
     <!-- Configuracion de las reglas de navegacion -->
+<!--    <navigation-rule>-->
+<!--        <from-view-id>/public/login.xhtml</from-view-id>-->
+<!--        <navigation-case>-->
+<!--            <from-action>index</from-action>-->
+<!--            <from-outcome>success</from-outcome>-->
+<!--            <to-view-id>/public/index.xhtml</to-view-id>-->
+<!--            <redirect/>-->
+<!--        </navigation-case>-->
+<!--    </navigation-rule>-->
     <navigation-rule>
         <from-view-id>*</from-view-id>
         <navigation-case>
@@ -79,6 +91,11 @@
             <from-outcome>cartasgestion</from-outcome>
             <to-view-id>/administracion/cartas-gestion/gestion.xhtml</to-view-id>
             <redirect include-view-params="true" />
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>usuarios</from-outcome>
+            <to-view-id>/administracion/usuarios/listadoUsuario.xhtml</to-view-id>
+            <redirect />
         </navigation-case>
     </navigation-rule>
 </faces-config>

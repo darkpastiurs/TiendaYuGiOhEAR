@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="TiendaYuGiOhEAR:ear exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="41aa08c4-02a4-41b5-87ae-f87591cb6614" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/TiendaYuGiOhEJB/src/sv/com/tienda/business/entity/Token.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TiendaYuGiOhWAR/src/sv/com/tienda/web/bean/usuario/ListadoUsuarioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TiendaYuGiOhWAR/src/sv/com/tienda/web/configuracion/ApplicationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TiendaYuGiOhWAR/src/sv/com/tienda/web/configuracion/CustomViewHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TiendaYuGiOhWAR/web/administracion/usuarios/listadoUsuario.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/TiendaYuGiOhEAR_ear_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/TiendaYuGiOhEAR_ear_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/323e482c-e64b-4e46-9367-ca0141c07ccc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/323e482c-e64b-4e46-9367-ca0141c07ccc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/323e482c-e64b-4e46-9367-ca0141c07ccc/storage_v2/_src_/database/tienda_yugioh.O82drg/schema/cat.1n8BAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/323e482c-e64b-4e46-9367-ca0141c07ccc/storage_v2/_src_/database/tienda_yugioh.O82drg/schema/cat.1n8BAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/323e482c-e64b-4e46-9367-ca0141c07ccc/storage_v2/_src_/database/tienda_yugioh.O82drg/schema/sis.3bwBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/323e482c-e64b-4e46-9367-ca0141c07ccc/storage_v2/_src_/database/tienda_yugioh.O82drg/schema/sis.3bwBAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/323e482c-e64b-4e46-9367-ca0141c07ccc/storage_v2/_src_/database/tienda_yugioh.O82drg/schema/teo.HsABAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/323e482c-e64b-4e46-9367-ca0141c07ccc/storage_v2/_src_/database/tienda_yugioh.O82drg/schema/teo.HsABAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/META-INF/jboss-deployment-structure.xml" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/jboss-deployment-structure.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhEAR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TiendaYuGiOhEAR.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhEJB/TiendaYuGiOhEJB.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TiendaYuGiOhEJB/TiendaYuGiOhEJB.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhEJB/src/sv/com/tienda/business/ejb/UsuarioBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/TiendaYuGiOhEJB/src/sv/com/tienda/business/ejb/UsuarioBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhEJB/src/sv/com/tienda/business/ejb/UsuarioBeanLocal.java" beforeDir="false" afterPath="$PROJECT_DIR$/TiendaYuGiOhEJB/src/sv/com/tienda/business/ejb/UsuarioBeanLocal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhEJB/src/sv/com/tienda/business/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/TiendaYuGiOhEJB/src/sv/com/tienda/business/entity/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhEJB/src/sv/com/tienda/business/entity/converters/LocalDateTimeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/TiendaYuGiOhEJB/src/sv/com/tienda/business/entity/converters/LocalDateTimeConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhEJB/src/sv/com/tienda/business/utils/Constantes.java" beforeDir="false" afterPath="$PROJECT_DIR$/TiendaYuGiOhEJB/src/sv/com/tienda/business/utils/Constantes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhWAR/TiendaYuGiOhWAR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TiendaYuGiOhWAR/TiendaYuGiOhWAR.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhWAR/src/sv/com/tienda/web/bean/cartas/GestionCartaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/TiendaYuGiOhWAR/src/sv/com/tienda/web/bean/cartas/GestionCartaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhWAR/src/sv/com/tienda/web/bean/categoriacartas/GestionCategoriaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/TiendaYuGiOhWAR/src/sv/com/tienda/web/bean/categoriacartas/GestionCategoriaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhWAR/src/sv/com/tienda/web/bean/componentedeck/GestionComponenteDeckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/TiendaYuGiOhWAR/src/sv/com/tienda/web/bean/componentedeck/GestionComponenteDeckController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhWAR/src/sv/com/tienda/web/bean/monstruos/atributos/GestionAtributoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/TiendaYuGiOhWAR/src/sv/com/tienda/web/bean/monstruos/atributos/GestionAtributoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhWAR/src/sv/com/tienda/web/bean/monstruos/tipos/GestionTiposController.java" beforeDir="false" afterPath="$PROJECT_DIR$/TiendaYuGiOhWAR/src/sv/com/tienda/web/bean/monstruos/tipos/GestionTiposController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhWAR/src/sv/com/tienda/web/bean/usuario/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/TiendaYuGiOhWAR/src/sv/com/tienda/web/bean/usuario/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhWAR/src/sv/com/tienda/web/bean/usuario/SessionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/TiendaYuGiOhWAR/src/sv/com/tienda/web/bean/usuario/SessionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhWAR/src/sv/com/tienda/web/configuracion/ReWriteConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhWAR/src/sv/com/tienda/web/configuracion/filter/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/TiendaYuGiOhWAR/src/sv/com/tienda/web/configuracion/filter/AuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhWAR/src/sv/com/tienda/web/validators/FileUploadCustomValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/TiendaYuGiOhWAR/src/sv/com/tienda/web/validators/FileUploadCustomValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhWAR/web/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TiendaYuGiOhWAR/web/WEB-INF/faces-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhWAR/web/WEB-INF/plantilla/encabezado.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/TiendaYuGiOhWAR/web/WEB-INF/plantilla/encabezado.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhWAR/web/WEB-INF/plantilla/menu.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/TiendaYuGiOhWAR/web/WEB-INF/plantilla/menu.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhWAR/web/WEB-INF/plantilla/plantilla.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/TiendaYuGiOhWAR/web/WEB-INF/plantilla/plantilla.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhWAR/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TiendaYuGiOhWAR/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhWAR/web/public/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/TiendaYuGiOhWAR/web/public/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaYuGiOhWAR/web/public/login.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/TiendaYuGiOhWAR/web/public/login.xhtml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1cEid9ICDdD5TadzEzQLVBqpVSP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="true" />
+    <property name="Repository.Attach.Sources" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="/run/media/darkpastiurs/5046012D460114FE/Proyectos/IntelliJ IDEA/TiendaYuGiOhEAR/TiendaYuGiOhEJB/src/sv/com/tienda/business/ejb/UsuarioBeanLocal.java" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.24597701" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="two.files.diff.last.used.file" value="/run/media/darkpastiurs/5046012D460114FE/Proyectos/IntelliJ IDEA/TiendaYuGiOhEAR/TiendaYuGiOhEJB/src/sv/com/tienda/business/ejb/UsuarioBeanLocal.java" />
+    <property name="two.files.diff.last.used.folder" value="/run/media/darkpastiurs/5046012D460114FE/Proyectos/IntelliJ IDEA/TiendaYuGiOhEAR/TiendaYuGiOhWAR" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/TiendaYuGiOhEJB/src/sv/com/tienda/business/entity" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Wildfly 19.1.0.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="Wildfly 19.1.0.Final" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="https://localhost:8443/tienda/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="TiendaYuGiOhEAR:ear exploded">
+          <settings />
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="SERVER" />
+        <option name="BINDING_SET_NAME" value="" />
+        <option name="DOMAIN" value="false" />
+        <option name="SERVER_GROUP" value="main-server-group" />
+        <option name="USERNAME" value="admin" />
+        <option name="CREDENTIAL_ALIAS" value="0b93c00b-c35d-4a1c-be43-10d9cc9f5d7b" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="JBoss" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="46375" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="false" />
+          <option name="SCRIPT" value="/opt/wildfly19.1/bin/standalone.sh" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="-c standalone-full.xml" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="false" />
+          <option name="SCRIPT" value="/opt/wildfly19.1/bin/standalone.sh" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="-c standalone-full.xml" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="TiendaYuGiOhEAR:ear exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="41aa08c4-02a4-41b5-87ae-f87591cb6614" name="Default Changelist" comment="" />
+      <created>1590100237530</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590100237530</updated>
+      <workItem from="1590100239743" duration="6192000" />
+      <workItem from="1590107026409" duration="168000" />
+      <workItem from="1590108949754" duration="1517000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="590" y="252" key="#Assign_Data_Sources" timestamp="1590109437293">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state x="590" y="252" key="#Assign_Data_Sources/0.0.1366.723@0.0.1366.723" timestamp="1590109437293" />
+    <state x="147" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590109429330">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state x="147" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.723@0.0.1366.723" timestamp="1590109429330" />
+    <state x="0" y="0" width="1366" height="723" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1590101479815">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state x="0" y="0" width="1366" height="723" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1366.723@0.0.1366.723" timestamp="1590101479815" />
+    <state x="100" y="100" width="1166" height="523" maximized="true" key="DiffContextDialog" timestamp="1590110468103">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state x="100" y="100" width="1166" height="523" maximized="true" key="DiffContextDialog/0.0.1366.723@0.0.1366.723" timestamp="1590110468103" />
+    <state x="466" y="119" width="424" height="483" key="FileChooserDialogImpl" timestamp="1590110271102">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state x="466" y="119" width="424" height="483" key="FileChooserDialogImpl/0.0.1366.723@0.0.1366.723" timestamp="1590110271102" />
+    <state width="1042" height="183" key="GridCell.Tab.0.bottom" timestamp="1590106822017">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state width="1042" height="183" key="GridCell.Tab.0.bottom/0.0.1366.723@0.0.1366.723" timestamp="1590106822017" />
+    <state width="1042" height="183" key="GridCell.Tab.0.center" timestamp="1590106822017">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state width="1042" height="183" key="GridCell.Tab.0.center/0.0.1366.723@0.0.1366.723" timestamp="1590106822017" />
+    <state width="1042" height="183" key="GridCell.Tab.0.left" timestamp="1590106822017">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state width="1042" height="183" key="GridCell.Tab.0.left/0.0.1366.723@0.0.1366.723" timestamp="1590106822017" />
+    <state width="1042" height="183" key="GridCell.Tab.0.right" timestamp="1590106822017">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state width="1042" height="183" key="GridCell.Tab.0.right/0.0.1366.723@0.0.1366.723" timestamp="1590106822017" />
+    <state width="1042" height="183" key="GridCell.Tab.1.bottom" timestamp="1590106822018">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state width="1042" height="183" key="GridCell.Tab.1.bottom/0.0.1366.723@0.0.1366.723" timestamp="1590106822018" />
+    <state width="1042" height="183" key="GridCell.Tab.1.center" timestamp="1590106822018">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state width="1042" height="183" key="GridCell.Tab.1.center/0.0.1366.723@0.0.1366.723" timestamp="1590106822018" />
+    <state width="1042" height="183" key="GridCell.Tab.1.left" timestamp="1590106822018">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state width="1042" height="183" key="GridCell.Tab.1.left/0.0.1366.723@0.0.1366.723" timestamp="1590106822018" />
+    <state width="1042" height="183" key="GridCell.Tab.1.right" timestamp="1590106822018">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state width="1042" height="183" key="GridCell.Tab.1.right/0.0.1366.723@0.0.1366.723" timestamp="1590106822018" />
+    <state x="171" y="0" key="SettingsEditor" timestamp="1590103182538">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state x="171" y="0" key="SettingsEditor/0.0.1366.723@0.0.1366.723" timestamp="1590103182538" />
+    <state x="391" y="255" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1590101212855">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state x="391" y="255" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1366.723@0.0.1366.723" timestamp="1590101212855" />
+    <state x="387" y="0" width="592" height="723" key="find.popup" timestamp="1590103158079">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state x="387" y="0" width="592" height="723" key="find.popup/0.0.1366.723@0.0.1366.723" timestamp="1590103158079" />
+  </component>
+</project>

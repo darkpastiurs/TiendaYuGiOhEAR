@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fc="http://xmlns.jcp.org/jsf/core"
+                template="/WEB-INF/plantilla/plantilla.xhtml"
+                xmlns:p="http://primefaces.org/ui">
+<!--    <f:metadata>-->
+<!--        <fc:viewAction action="#{sessionWebBean.loadSession}"  onPostback="false" />-->
+<!--    </f:metadata>-->
+
+    <ui:define name="cabeceras"></ui:define>
+    <ui:define name="titulo">
+        Listado de Usuarios
+    </ui:define>
+    <ui:define name="contenido">
+        <div class="ui-g ui-fluid">
+            <div class="ui-g-12">
+                <div class="card card-w-title">
+                    <h1>Usuarios Registrados</h1>
+                    <h:form>
+                        <p:growl id="mgrwlMensaje" showDetail="true" sticky="true"/>
+                        <p:dataTable
+                                emptyMessage="No se han encontrado registros"
+                                var="usuario"
+                                value="#{listadoUsuarioController.listaUsuarios}"
+                                selectionMode="single"
+                                rowKey="#{usuario.nickname}"
+                                reflow="true"
+                                paginator="true"
+                                rows="10"
+                        >
+                            <f:facet name="header">
+                                <!--                                <p:panelGrid layout="grid" columns="3" columnClasses="ui-grid-col-4">-->
+                                <!--                                    <p:button value="Accion 1" icon="ui-icon-add"/>-->
+                                <!--                                    <p:button value="Accion 2" icon="ui-icon-add-box"/>-->
+                                <!--                                    <p:button value="Accion 3" icon="ui-icon-apps"/>-->
+                                <!--                                </p:panelGrid>-->
+                            </f:facet>
+                            <p:column headerText="Nombre de usuario">
+                                <span class="ui-icon ui-icon-check-circle"
+                                      style="color: #{usuario.tokens ne null and usuario.tokens.stream().anyMatch(token -> token.activo) ? 'green' : 'black'}"/>
+                                #{usuario.nickname}
+                            </p:column>
+                            <p:column headerText="Correo">
+                                #{usuario.correo}
+                            </p:column>
+                            <p:column headerText="Permisos Asignados">
+                                #{usuario.niveles.stream().map(lvl -> lvl.nombre).reduce((x,y) -> x.concat(", ").concat(y)).get()}
+                            </p:column>
+                            <p:column headerText="Tokens generados">
+                                <p:repeat value="#{usuario.tokens}" var="token">
+                                    <p:outputLabel
+                                            value="#{token.fechaCaducidad}, #{token.activo ? 'Activo' : 'Inactivo'}"/>
+                                </p:repeat>
+                                <p:outputLabel value="No se han registrado tokens" rendered="#{empty usuario.tokens}"/>
+                            </p:column>
+                            <p:column headerText="Acciones">
+                                <p:commandButton icon="ui-icon-vpn-key" title="Resetear contraseña"
+                                                 action="#{listadoUsuarioController.resetearPassword}"
+                                                 update="@form">
+                                    <f:setPropertyActionListener value="#{usuario}"
+                                                                 target="#{listadoUsuarioController.usuarioSeleccionado}"/>
+                                </p:commandButton>
+                            </p:column>
+                        </p:dataTable>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>

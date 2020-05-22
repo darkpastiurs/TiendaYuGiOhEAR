@@ -10,6 +10,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "usuarios", schema = "sis")
 @NamedQueries({
+        @NamedQuery(name = "Usuarios.findAll", query = "SELECT us FROM Usuario us"),
         @NamedQuery(name = "Usuarios.findAllActivos", query = "SELECT us FROM Usuario us WHERE us.estado = true"),
         @NamedQuery(name = "Usuarios.findByValidacion", query = "SELECT us FROM Usuario us WHERE (us.nickname = :nickOrEmail OR us.correo = :nickOrEmail) AND us.contraseña = :pass")
 })
@@ -39,6 +40,8 @@ public class Usuario implements Serializable {
 
     @OneToMany(mappedBy = "usuarioDueño", cascade = CascadeType.ALL, fetch = FetchType.LAZY, targetEntity = Tienda.class)
     private List<Tienda> tiendas;
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, fetch = FetchType.LAZY, targetEntity = Token.class)
+    private List<Token> tokens;
 
 
     public String getNickname() {
@@ -87,6 +90,14 @@ public class Usuario implements Serializable {
 
     public void setTiendas(List<Tienda> tiendas) {
         this.tiendas = tiendas;
+    }
+
+    public List<Token> getTokens() {
+        return tokens;
+    }
+
+    public void setTokens(List<Token> tokens) {
+        this.tokens = tokens;
     }
 
     @Override

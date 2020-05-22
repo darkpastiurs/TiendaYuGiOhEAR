@@ -1,6 +1,6 @@
 package sv.com.tienda.web.validators;
 
-import org.primefaces.model.UploadedFile;
+import org.primefaces.model.file.UploadedFile;
 import org.primefaces.validate.ClientValidator;
 
 import javax.faces.application.FacesMessage;
